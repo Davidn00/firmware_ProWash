@@ -1,0 +1,8 @@
+D G "__PCH__" 0 70 ""5.083""
+D G "__DEVICE__" 0 70 ""
+D G "__DATE__" 0 70 ""10-Oct-22""
+D G "__TIME__" 0 70 ""22:02:44""
+D G "_UNICODE" 0 70 ""?""
+D G "__EVAL" 0 70 ""?"" "Libreria para el manejo del LCD                                               *"
+C L "byte" 0 0 40 "FUNCTION"
+F N "byte" 0 70 ""

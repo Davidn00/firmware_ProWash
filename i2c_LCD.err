@@ -1,0 +1,4 @@
+Compiling C:\Users\David\Desktop\Prueba\i2c_LCD on 10-oct.-22 at 22:02
+*** Error 128 "C:\Users\David\Desktop\Prueba\i2c_LCD.c" Line 70(15,16): A #DEVICE required before this line
+      1 Errors,  0 Warnings.
+Build Failed.

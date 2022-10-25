@@ -1,0 +1,13 @@
+Compiling C:\Users\David\Desktop\Firmware Lacho\Prueba on 22-oct.-22 at 19:49
+>>> Warning 203 "C:\Program Files (x86)\PICC\Drivers\pic18_usb.c" Line 727(1,1): Condition always TRUE
+*** Error 12 "C:\Users\David\Desktop\Firmware Lacho\Prueba.c" Line 64(29,30): Undefined identifier  -- realloc
+*** Error 28 "C:\Users\David\Desktop\Firmware Lacho\Prueba.c" Line 70(39,43): Expecting an identifier
+*** Error 48 "C:\Users\David\Desktop\Firmware Lacho\Prueba.c" Line 70(45,50): Expecting a (
+*** Error 43 "C:\Users\David\Desktop\Firmware Lacho\Prueba.c" Line 70(52,53): Expecting a declaration
+*** Error 32 "C:\Users\David\Desktop\Firmware Lacho\Prueba.c" Line 71(10,14): Expecting a , or )
+*** Error 48 "C:\Users\David\Desktop\Firmware Lacho\Prueba.c" Line 71(16,21): Expecting a (
+*** Error 48 "C:\Users\David\Desktop\Firmware Lacho\Prueba.c" Line 71(23,28): Expecting a (
+*** Error 43 "C:\Users\David\Desktop\Firmware Lacho\Prueba.c" Line 71(29,30): Expecting a declaration
+*** Error 43 "C:\Users\David\Desktop\Firmware Lacho\Prueba.c" Line 72(1,2): Expecting a declaration
+      9 Errors,  1 Warnings.
+Build Failed.

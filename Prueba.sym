@@ -1,0 +1,517 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A     LCD_ADDR
+01B     lcd_total_rows
+01C     lcd_total_columns
+01D     new_row_request
+01E     BACKLIGHT_LED
+01F     lcd_gotoxy.data
+020-021 strtok.save
+022-025 _Randseed
+026-029 USB_stack_status
+02A     USTATCopy
+02B     usb_state
+02C     __setup_0_tx_size
+02D     USB_address_pending
+02E-02F usb_getdesc_ptr
+030-031 usb_getdesc_len
+032     USB_Interface
+033     K
+034     segundos
+035     minutos
+036     contador
+037     cont_submenu1
+038     cont_submenu2
+039     menu
+03A     opcion
+03B     hinicio
+03C     hfinal
+03D     garaje
+03E-03F @sprintf_string
+040     MAIN.i
+040-043 atan2.y
+041     MAIN.esc
+042     MAIN.k1
+043     MAIN.esc
+044-047 atan2.x
+044     MAIN.esc
+045     MAIN.esc
+046     tecla.c
+046     contador_s.contador
+046     generate_tone.pin_tone
+046     lcd_init.addr
+046     lcd_backlight_led.bl
+046     @PSTRINGC_705.@SCRATCH1
+046     MAIN.@SCRATCH1
+047     @PSTRINGCN_705.P1
+047     @PRINTF_D_705.P2
+047-048 generate_tone.frequency
+047     lcd_init.col
+047     @PSTRINGC_705.@SCRATCH2
+048     lcd_init.row
+048-04B atan2.z
+048     @PRINTF_D_705.P1
+048     @PSTRINGCN_705.@SCRATCH1
+049     lcd_init.i
+049-04A generate_tone.duration
+049     @PRINTF_D_705.@SCRATCH1
+049     @PSTRINGCN_705.@SCRATCH2
+04A     lcd_init.@SCRATCH1
+04A     @PRINTF_D_705.@SCRATCH2
+04B-04E generate_tone.total_delay_time
+04B     @PRINTF_D_705.@SCRATCH3
+04C.0   atan2.sign
+04C     @PRINTF_D_705.@SCRATCH4
+04D     atan2.quad
+04D     LCD_PUTC.in_data
+04D     @DIV88.P1
+04E     @DIV88.P1
+04E     lcd_gotoxy.x
+04F-050 generate_tone.total_ms_delay_time
+04F     lcd_gotoxy.y
+04F     @DIV88.@SCRATCH1
+050     lcd_gotoxy.row
+051-052 generate_tone.total_us_delay_time
+051     lcd_gotoxy.column
+052     lcd_gotoxy.row_addr
+053     lcd_gotoxy.lcd_address
+053     generate_tone.num_us_delays
+054     generate_tone.num_ms_delays
+054     lcd_gotoxy.@SCRATCH1
+055     generate_tone.ms_delay_time
+055     lcd_send_byte.data
+056     generate_tone.us_delay_time
+056     lcd_send_byte.type
+057-058 generate_tone.num_periods
+057     lcd_send_byte.@SCRATCH1
+058     i2c_send_nibble.data
+059     @WRITEBITA.P1
+059     do_delay.ms_delay
+059-05A @DIV1616.P1
+059     i2c_send_nibble.type
+059     generate_tone.@SCRATCH1
+05A     @WRITEBITA.P1
+05A     do_delay.num_ms
+05A     i2c_send_nibble.@SCRATCH1
+05A     generate_tone.@SCRATCH2
+05B-05C @WRITEBITA.P1
+05B     @I2C_WRITE_1.P2
+05B-05C @DIV1616.P3
+05B     do_delay.us_delay
+05B     generate_tone.@SCRATCH3
+05C     do_delay.num_us
+05C     generate_tone.@SCRATCH4
+05D-060 @MUL3232.P1
+05D     do_delay.i
+05D     generate_tone.@SCRATCH5
+05D     @DIV1616.@SCRATCH1
+05E     @delay_us1.P1
+05E     generate_tone.@SCRATCH6
+05F     generate_tone.@SCRATCH7
+060     generate_tone.@SCRATCH8
+061-064 @MUL3232.P1
+061-064 @DIV3232.P2
+065-068 @DIV3232.P1
+065     @MUL3232.@SCRATCH1
+066     @MUL3232.@SCRATCH2
+067     @MUL3232.@SCRATCH3
+068     @MUL3232.@SCRATCH4
+069     @DIV3232.@SCRATCH1
+069     @MUL3232.@SCRATCH5
+06A     @DIV3232.@SCRATCH2
+06A     @MUL3232.@SCRATCH6
+06B     @DIV3232.@SCRATCH3
+06C     @DIV3232.@SCRATCH4
+06D     @DIV3232.@SCRATCH5
+06E     usb_isr.TRNAttempts
+06E     kbd_getc.tecla
+06E     @delay_ms1.P1
+06F     usb_isr_tok_dne.en
+06F     usb_token_reset.i
+06F     usb_isr.@SCRATCH1
+06F     usb_init_ep0_setup.@SCRATCH1
+070     usb_isr_tok_dne.pidKey
+070     usb_init_ep0_setup.@SCRATCH2
+070     usb_token_reset.@SCRATCH1
+071     usb_unstall_ep.endpoint
+071     usb_set_configured.config
+071     usb_isr_tok_in_dne.endpoint
+071     usb_endpoint_stalled.endpoint
+071     usb_isr_tkn_setup_StandardInterface.curr_config
+071     usb_stall_ep.endpoint
+071     usb_isr_tok_out_dne.endpoint
+071     usb_flush_out.endpoint
+071     usb_flush_in.endpoint
+071     usb_isr_tok_dne.@SCRATCH1
+071     usb_token_reset.@SCRATCH2
+072.0   usb_stall_ep.direction
+072     usb_set_address.address
+072-073 usb_flush_in.len
+072.0   usb_endpoint_stalled.direction
+072.0   usb_unstall_ep.direction
+072     usb_Get_Descriptor.i
+072     usb_flush_out.tgl
+072     usb_set_configured.en
+072     usb_isr_tkn_setup_StandardInterface.@SCRATCH1
+073     usb_flush_out.i
+073     usb_endpoint_stalled.st
+073-074 usb_set_configured.addy
+073     usb_copy_desc_seg_to_ep.i
+073     usb_stall_ep.@SCRATCH1
+073     usb_unstall_ep.@SCRATCH1
+073     usb_isr_tkn_setup_StandardInterface.@SCRATCH2
+073     usb_Get_Descriptor.@SCRATCH1
+074     usb_copy_desc_seg_to_ep.c
+074     usb_flush_in.tgl
+074-075 usb_flush_out.len
+074     usb_stall_ep.@SCRATCH2
+074     usb_unstall_ep.@SCRATCH2
+074     usb_endpoint_stalled.@SCRATCH1
+074     usb_Get_Descriptor.@SCRATCH2
+075     usb_request_send_response.len
+075     usb_flush_in.i
+075     usb_set_configured.new_uep
+075     usb_stall_ep.@SCRATCH3
+075     usb_unstall_ep.@SCRATCH3
+075     usb_endpoint_stalled.@SCRATCH2
+075     usb_Get_Descriptor.@SCRATCH3
+075     usb_copy_desc_seg_to_ep.@SCRATCH1
+076-077 usb_set_configured.len
+076     usb_tbe.en
+076     usb_flush_in.@SCRATCH1
+076     usb_flush_out.@SCRATCH1
+076     usb_stall_ep.@SCRATCH4
+076     usb_unstall_ep.@SCRATCH4
+076     usb_copy_desc_seg_to_ep.@SCRATCH2
+077-078 @READ_PROGRAM_MEMORY.P1
+077     usb_tbe.@SCRATCH1
+077     usb_flush_in.@SCRATCH2
+077     usb_flush_out.@SCRATCH2
+078     usb_set_configured.i
+078     usb_tbe.@SCRATCH2
+078     usb_flush_in.@SCRATCH3
+078     usb_flush_out.@SCRATCH3
+079     usb_disable_endpoints.i
+079     usb_tbe.@SCRATCH3
+079     usb_flush_in.@SCRATCH4
+079     usb_flush_out.@SCRATCH4
+079     usb_set_configured.@SCRATCH1
+07A     usb_disable_endpoint.en
+07A     usb_flush_in.@SCRATCH5
+07A     usb_set_configured.@SCRATCH2
+07B     usb_endpoint_is_valid.endpoint
+07B     usb_set_configured.@SCRATCH3
+07B     usb_disable_endpoint.@SCRATCH1
+07C.0   usb_endpoint_is_valid.direction
+07C     usb_set_configured.@SCRATCH4
+07C     usb_disable_endpoint.@SCRATCH2
+07D     usb_disable_endpoint.@SCRATCH3
+07D     usb_endpoint_is_valid.@SCRATCH1
+07E     usb_disable_endpoint.@SCRATCH4
+400-49F g_USBRAM
+F66     UFRML
+F67     UFRMH
+F68.0   UIR_URST
+F68     UIR
+F68.1   UIR_UERR
+F68.2   UIR_ACTV
+F68.3   UIR_TRN
+F68.4   UIR_IDLE
+F68.5   UIR_STALL
+F68.6   UIR_SOF
+F69     UIE
+F69.0   UIE_URST
+F69.1   UIE_UERR
+F69.2   UIE_ACTV
+F69.3   UIE_TRN
+F69.4   UIE_IDLE
+F69.5   UIE_STALL
+F69.6   UIE_SOF
+F6A     UEIR
+F6B     UEIE
+F6C     U1STAT
+F6D     UCON
+F6D.1   UCON_SUSPND
+F6D.2   UCON_RESUME
+F6D.3   UCON_USBEN
+F6D.4   UCON_PKTDIS
+F6D.5   UCON_SE0
+F6D.6   UCON_PPBRST
+F6E     UADDR
+F6F     UCFG
+F70-F7F g_UEP
+F81     puerto_tcl
+F81.0   RB0
+F81.1   RB1
+F81.2   RB2
+F81.3   RB3
+F81.4   RB4
+F81.5   RB5
+F81.6   RB6
+F81.7   RB7
+F83     PORTD
+F83     PSP_DATA
+F84     PORTE
+F96     TRISE
+FA0.5   USBIE
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  usb_clear_trn
+0000C6  LCD_INIT_STRING.call
+0000D6  LCD_INIT_STRING.data
+0000DA  usb_ep_tx_type.call
+0000EA  usb_ep_tx_type.data
+0000FA  usb_ep_tx_size.call
+00010A  usb_ep_tx_size.data
+00012A  USB_CLASS_SPECIFIC_DESC.call
+00013A  USB_CLASS_SPECIFIC_DESC.data
+00015A  USB_CLASS_SPECIFIC_DESC_LOOKUP.call
+00016A  USB_CLASS_SPECIFIC_DESC_LOOKUP.data
+00016C  USB_CLASS_SPECIFIC_DESC_LOOKUP_SIZE.call
+00017C  USB_CLASS_SPECIFIC_DESC_LOOKUP_SIZE.data
+00017E  USB_CONFIG_DESC.call
+00018E  USB_CONFIG_DESC.data
+0001B8  USB_NUM_INTERFACES.call
+0001C8  USB_NUM_INTERFACES.data
+0001CA  USB_CLASS_DESCRIPTORS.call
+0001DA  USB_CLASS_DESCRIPTORS.data
+0001DC  USB_DEVICE_DESC.call
+0001EC  USB_DEVICE_DESC.data
+0001FE  usb_isr_activity
+000210  usb_init_ep0_setup
+00023A  usb_isr_stall
+000248  usb_isr_uerr
+000250  usb_endpoint_is_valid
+000292  usb_disable_endpoint
+0002DE  usb_disable_endpoints
+0002F4  usb_token_reset
+00031E  usb_isr_rst
+00034E  usb_isr_uidle
+000358  usb_isr_sof
+00035E  usb_request_send_response
+000364  usb_request_stall
+000368  @READ_PROGRAM_MEMORY
+000386  usb_copy_desc_seg_to_ep
+000420  @goto39695
+000442  usb_Get_Descriptor
+00056C  usb_set_configured
+0006E2  usb_isr_tkn_setup_StandardDevice
+00078C  usb_isr_tkn_setup_StandardInterface
+000820  usb_unstall_ep
+00087A  usb_stall_ep
+0008C0  usb_endpoint_stalled
+000916  usb_isr_tkn_setup_StandardEndpoint
+000974  usb_isr_tkn_setup_ClassInterface
+000980  usb_isr_tok_setup_dne
+0009B2  usb_flush_out
+000A6E  usb_tbe
+000AB0  usb_flush_in
+000B9C  usb_isr_tok_out_dne
+000BA2  usb_set_address
+000BB8  usb_finish_set_address
+000BC6  usb_isr_tok_in_dne
+000BDE  usb_isr_tok_dne
+000CA8  usb_isr
+000D1A  @const1528.call
+000D1C  @const1533.call
+000D2C  @const1534.call
+000D34  @const1535.call
+000D3C  @const1536.call
+000D46  @const1538.call
+000D48  @const1539.call
+000D54  @const1540.call
+000D68  @const1541.call
+000D70  @const1543.call
+000D72  @const1544.call
+000D7E  @const1545.call
+000D8A  @const1546.call
+000D96  @const1547.call
+000DA0  @const1549.call
+000DA2  @const1550.call
+000DAE  @const1551.call
+000DBC  @const1552.call
+000DCC  @const1553.call
+000DD6  @const1555.call
+000DD8  @const1556.call
+000DE8  @const1557.call
+000DF0  @const1558.call
+000DFA  @const1559.call
+000E04  @const1561.call
+000E06  @const1562.call
+000E10  @const1563.call
+000E1C  @const1564.call
+000E2A  @const1566.call
+000E36  @const1567.call
+000E40  @const1569.call
+000E42  @const1570.call
+000E54  @const1571.call
+000E66  @const1572.call
+000E7A  @const1573.call
+000E8C  @const1575.call
+000E9A  @const1576.call
+000EAE  @const1587.call
+000EB2  timer0_interrupcion
+000ED6  @delay_ms1
+000EFE  kbd_getc
+000FCC  TECLADO_INTERRUPT
+000FF6  @const1601.call
+001000  @const1602.call
+00100C  @const1604.call
+001016  @const1605.call
+001022  @const1607.call
+00102C  @const1608.call
+001038  @const1611.call
+001040  @const1617.call
+001052  @const1619.call
+001054  @const1620.call
+001056  @const1621.call
+001064  @const1622.call
+00106C  @const1623.call
+00107A  @const1624.call
+00107C  @const1625.call
+00107E  @const1626.call
+001080  @const1627.call
+001082  @const1628.call
+001084  @const1629.call
+001092  @const1630.call
+001094  @const1631.call
+001096  @const1632.call
+001098  @const1633.call
+00109A  @const1634.call
+0010A8  @const1635.call
+0010AA  @const1636.call
+0010AC  @const1637.call
+0010AE  @const1640.call
+0010BA  @const1641.call
+0010C6  @I2C_WRITE_1
+00110E  i2c_send_nibble
+00119E  lcd_send_byte
+0011EC  lcd_clear
+00120C  lcd_init
+0012F0  lcd_backlight_led
+001300  lcd_gotoxy
+001362  LCD_PUTC
+0013A4  @PSTRINGC_705
+0013C4  menu_principal
+00141E  tecla
+00143C  menu_lavar
+001486  submenu_lavar1
+0014CE  submenu_lavar2
+0014FE  @DIV88
+001526  @PRINTF_D_705
+0015D0  @PSTRINGCN_705
+0015F0  contador_s
+001638  @DIV3232
+0016C6  @DIV1616
+001708  @MUL3232
+00175E  @delay_us1
+001784  do_delay
+0017D4  @WRITEBITA
+001812  generate_tone
+001A1E  menu_cebar
+001A7A  vselechora
+001ABE  menu_agitar
+001B1C  menu_programar
+001B7E  submenu_crear1
+001BE8  submenu_crear2
+001C1A  MAIN
+001C1A  @cinit1
+001C4E  @cinit2
+0136  StrtoulGO
+0136  StrtolGO
+
+User Memory space: rom
+ 007FC8-007FFF  USB_STRING_DESC
+
+Project Directory:
+    C:\Users\David\Desktop\Firmware Lacho\
+
+Project Files:
+    Prueba.c                                                [21-oct.-22 14:58  CRC=57590BB1]
+    ..\..\..\..\Program Files (x86)\PICC\Devices\18f4550.h  [06-mar.-19 14:30  CRC=1CE50E9D]
+    i2c_LCD.c                                               [18-oct.-22 10:40  CRC=E880C774]
+    Teclado.c                                               [09-oct.-22 11:49  CRC=D18F007D]
+    tonos_buzzer.c                                          [09-oct.-22 11:55  CRC=5B962E84]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\math.h     [22-sep.-16 08:36  CRC=9CF8C837]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\stdio.h    [31-jul.-07 14:24  CRC=4E4534F4]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\string.h   [26-mar.-15 12:34  CRC=C4814297]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h   [30-ene.-19 11:26  CRC=897CEC6C]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h    [03-ene.-08 14:55  CRC=2D1F019F]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h   [30-ene.-19 11:25  CRC=1277854C]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\stdbool.h  [21-may.-12 11:29  CRC=815AEDE8]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\pic18_usb.h [11-mar.-13 17:56  CRC=A13AD10C]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\usb_hw_layer.h [31-ago.-10 15:26  CRC=8105D92F]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\usb_desc_hid.h [10-mar.-15 09:37  CRC=77DE4C7A]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\usb.h      [26-feb.-13 15:40  CRC=0402FA1E]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\usb.c      [20-mar.-15 10:02  CRC=23D6CECB]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\pic18_usb.c [12-dic.-16 10:44  CRC=BA524335]
+
+Source signature=BAAEF7CC
+Program memory checksum=EF34
+Program memory CRC=7A9D
+Hex file CRC=C691
+
+Units:
+    Prueba (main)
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   Prueba.xsym
+    Errors:      Prueba.err
+    Ext Symbols: Prueba.esym
+    INHX32:      Prueba.hex
+    Symbols:     Prueba.sym
+    List:        Prueba.lst
+    Debug/COFF:  Prueba.cof
+    Project:     Prueba.ccspjt
+    Call Tree:   Prueba.tre
+    Statistics:  Prueba.STA

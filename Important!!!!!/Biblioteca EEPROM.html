@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0086)https://download.mikroe.com/documents/compilers/mikrobasic/pic/help/eeprom_library.htm -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Biblioteca EEPROM</title>
+
+
+<meta name="Copyright" content="mikroElektronika 2005.">
+<meta name="Author" content="Nikola Topalovic. mailto:office@mikroe.com">
+
+<link rel="stylesheet" type="text/css" href="./Biblioteca EEPROM_files/help_basic_pic.css">
+
+<script defer="" type="text/javascript" src="./Biblioteca EEPROM_files/pngfix.js.descarga"></script>
+
+
+	
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="./Biblioteca EEPROM_files/print.css" media="print">
+
+<style type="text/css">
+#top {
+  background:transparent url(template/background_pic.png); 
+}
+
+.title{
+	PADDING-RIGHT: 2px; 
+	PADDING-LEFT: 70px; 
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 14px; 
+	PADDING-BOTTOM: 3px; 
+	PADDING-TOP: 0px; 
+	FONT-FAMILY: Verdana;
+  color:white;
+}
+
+.navigation{
+                     PADDING-TOP: -5px;
+	PADDING-RIGHT: 2px; 
+	PADDING-LEFT: 63px; 
+	FONT-SIZE: 11px; 
+	FONT-FAMILY: Verdana;
+                     color:white;
+}
+
+.navigation a:link {text-decoration: none; color: white;}
+.navigation a:visited {text-decoration: none; color: white;}
+.navigation a:active {text-decoration: none; color: white;}
+.navigation a:hover {text-decoration: none; color: white; background:black;}
+
+.nav_bar {
+}
+
+#top td p,td pre {
+	margin:0 0 0 0;
+}
+</style>
+
+<style type="text/css" media="screen">
+#main{
+	border-top: 1px solid #000000;
+  padding-left: 15px;
+  padding-right: 15px;
+	position: absolute;
+	top: 59px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+
+	width: expression(document.body.offsetWidth - 3);
+	height: expression(document.body.offsetHeight -  65);
+	overflow: auto;
+}
+</style>
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./Biblioteca EEPROM_files/translateelement.css"></head>
+
+
+<body>
+
+<div id="top">
+<table height="60" width="100%">
+  <tbody>
+	  <tr>
+		  <td>
+			  <pre class="nav_bar"><div class="title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Biblioteca EEPROM</font></font></div><div class="navigation">&nbsp;&nbsp;<a href="https://download.mikroe.com/documents/compilers/mikrobasic/pic/help/mikrobasic_libraries.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mikroBasic PRO para bibliotecas PIC</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> &gt; </font></font><a href="https://download.mikroe.com/documents/compilers/mikrobasic/pic/help/mikrobasic_hardware_libraries.htm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bibliotecas de hardware</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> &gt;</font></font></div></pre>
+			</td>
+		  <td style="WIDTH: 120px" align="right">
+			  <pre class="nav_bar"><a href="https://download.mikroe.com/documents/compilers/mikrobasic/pic/help/compact_flash_library.htm" title="Anterior"><img src="./Biblioteca EEPROM_files/btn_prev_n.png" border="0"></a>&nbsp;<a title="Parte superior de la página" href="https://download.mikroe.com/documents/compilers/mikrobasic/pic/help/eeprom_library.htm#top_of_page" alt="Parte superior de la página"><img src="./Biblioteca EEPROM_files/btn_up_n.png" border="0"></a>&nbsp;<a href="https://download.mikroe.com/documents/compilers/mikrobasic/pic/help/epson_graphic_lcd_library.htm" title="próximo"><img src="./Biblioteca EEPROM_files/btn_next_n.png" border="0"></a></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+	
+
+
+  <div id="main">
+
+
+    <a name="top_of_page"><h2><acronym title="Eléctricamente programable y borrable memoria de sólo lectura"><font style="vertical-align: inherit;"></font></acronym><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Biblioteca </font><acronym title="Eléctricamente programable y borrable memoria de sólo lectura"><font style="vertical-align: inherit;">EEPROM</font></acronym></font></h2></a>
+
+
+    <p><acronym title="Eléctricamente programable y borrable memoria de sólo lectura"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">La memoria de datos EEPROM</font></font></acronym><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> está disponible con varias MCU PIC. </font><font style="vertical-align: inherit;">mikroBasic PRO for PIC incluye biblioteca para trabajar cómodamente con </font></font><acronym title="Eléctricamente programable y borrable memoria de sólo lectura"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EEPROM</font></font></acronym><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> .</font></font></p>
+
+
+    <!-- -->
+
+
+    <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Rutinas de biblioteca</font></font></h3>
+
+    <ul>
+      <li><a href="https://download.mikroe.com/documents/compilers/mikrobasic/pic/help/eeprom_library.htm#eeprom_read"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EEPROM_Leer</font></font></a></li>
+      <li><a href="https://download.mikroe.com/documents/compilers/mikrobasic/pic/help/eeprom_library.htm#eeprom_write"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EEPROM_Escritura</font></font></a></li>
+    </ul>
+
+
+    <!-- -->
+
+
+    <h3 id="eeprom_read"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EEPROM_Leer</font></font></h3>
+
+
+    <!-- tabela: Eeprom_Read -->
+
+    <table class="routine" width="100%">
+
+      <!--
+      <caption></caption>
+
+      <thead></thead>
+      -->
+
+      <tbody>
+
+        <tr style="background: rgb(248, 248, 248);" onmouseover="this.style.background=&#39;#f8f8f8&#39;;" onmouseout="this.style.background=&#39;white&#39;;">
+          <th width="0" valign="top"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prototipo</font></font></th>
+          <td class="code" width="100%" valign="top">
+            <p>
+              <i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">// para la subfunción </font></font></i><br>          
+              <b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PIC16</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> EEPROM_Read ( </font><font style="vertical-align: inherit;">dirección </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dim </font></font></b><font style="vertical-align: inherit;"></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">como byte</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ) </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">como byte</font></font></b></p>
+            <p></p>
+            <p>
+              <i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">// para la subfunción </font></font></i><br>          
+              <b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PIC18</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> EEPROM_Read ( </font><font style="vertical-align: inherit;">dirección </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dim </font></font></b><font style="vertical-align: inherit;"></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">como palabra</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ) </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">como byte</font></font></b></p>          
+            <p></p>
+          </td>
+        </tr>
+
+        <tr style="background: white;" onmouseover="this.style.background=&#39;#f8f8f8&#39;;" onmouseout="this.style.background=&#39;white&#39;;">
+          <th valign="top"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Devoluciones</font></font></th>
+          <td valign="top">
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Devuelve el byte de la dirección especificada.</font></font></p>
+          </td>
+        </tr>
+
+        <tr style="background: white;" onmouseover="this.style.background=&#39;#f8f8f8&#39;;" onmouseout="this.style.background=&#39;white&#39;;">
+          <th valign="top"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Descripción</font></font></th>
+          <td valign="top">
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lee </font></font><code>data</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">desde especificado </font></font><code>address</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">. </font><font style="vertical-align: inherit;">El parámetro </font></font><code>address</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">depende de MCU; </font><font style="vertical-align: inherit;">para la familia PIC16 es de tipo byte y para la familia PIC18 es de tipo palabra. </font><font style="vertical-align: inherit;">Para MCU PIC18 con más ubicaciones de datos </font></font><acronym title="Eléctricamente programable y borrable memoria de sólo lectura"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EEPROM</font></font></acronym><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> , es responsabilidad del programador configurar el registro SFR EEADRH de manera adecuada.</font></font></p>
+          </td>
+        </tr>
+
+        <tr style="background: white;" onmouseover="this.style.background=&#39;#f8f8f8&#39;;" onmouseout="this.style.background=&#39;white&#39;;">
+          <th valign="top"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Requiere</font></font></th>
+          <td valign="top">
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Requiere </font><font style="vertical-align: inherit;">módulo </font></font><acronym title="Eléctricamente programable y borrable memoria de sólo lectura"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EEPROM .</font></font></acronym><font style="vertical-align: inherit;"></font></p>
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Asegure un retraso mínimo de 20 ms entre el uso sucesivo de rutinas </font></font><code>EEPROM_Write</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">y </font></font><code>EEPROM_Read</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">. </font><font style="vertical-align: inherit;">Aunque PIC escribirá el valor correcto, </font></font><code>EEPROM_Read</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">podría devolver un resultado indefinido.</font></font></p>
+          </td>
+        </tr>
+
+        <tr style="background: white;" onmouseover="this.style.background=&#39;#f8f8f8&#39;;" onmouseout="this.style.background=&#39;white&#39;;">
+          <th valign="top"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ejemplo</font></font></th>
+          <td valign="top">
+
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">tmp = EEPROM_Read ($3F)</font></font></pre>
+
+          </td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+    <!-- kraj tabele -->
+
+
+    <!-- -->
+
+
+    <h3 id="eeprom_write"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EEPROM_Escritura</font></font></h3>
+
+
+    <!-- tabela: Eeprom_Write -->
+
+    <table class="routine" width="100%">
+
+      <!--
+      <caption></caption>
+
+      <thead></thead>
+      -->
+
+      <tbody>
+
+        <tr style="background: white;" onmouseover="this.style.background=&#39;#f8f8f8&#39;;" onmouseout="this.style.background=&#39;white&#39;;">
+          <th width="0" valign="top"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prototipo</font></font></th>
+          <td class="code" width="100%" valign="top">
+            <p>
+              <i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">// para el </font></font></i><br>
+              <b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">subprocedimiento</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> PIC16 EEPROM_Write( </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dim</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Dirección </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">como byte</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> , </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dim</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Datos </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">como byte</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> )
+            </font></font></p>
+            <p>
+              <i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">// para el </font></font></i><br>
+              <b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">subprocedimiento</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> PIC18 EEPROM_Write( </font><font style="vertical-align: inherit;">dirección </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dim </font></font></b><font style="vertical-align: inherit;"></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">como palabra</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> , </font><font style="vertical-align: inherit;">datos </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dim </font></font></b><font style="vertical-align: inherit;"></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">como byte</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> )
+            </font></font></p>
+          </td>
+        </tr>
+
+        <tr style="background: white;" onmouseover="this.style.background=&#39;#f8f8f8&#39;;" onmouseout="this.style.background=&#39;white&#39;;">
+          <th valign="top"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Devoluciones</font></font></th>
+          <td valign="top">
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nada.</font></font></p>
+          </td>
+        </tr>
+
+        <tr style="background: white;" onmouseover="this.style.background=&#39;#f8f8f8&#39;;" onmouseout="this.style.background=&#39;white&#39;;">
+          <th valign="top"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Descripción</font></font></th>
+          <td valign="top">
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Escribe </font></font><code>data</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">en especificado </font></font><code>address</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">. </font><font style="vertical-align: inherit;">El parámetro </font></font><code>address</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">depende de MCU; </font><font style="vertical-align: inherit;">para la familia PIC16 es de tipo byte y para la familia PIC18 es de tipo palabra. </font><font style="vertical-align: inherit;">Para MCU PIC18 con más ubicaciones de datos </font></font><acronym title="Eléctricamente programable y borrable memoria de sólo lectura"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EEPROM</font></font></acronym><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> , es responsabilidad del programador configurar el registro SFR EEADRH de manera adecuada.</font></font></p>
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tenga en cuenta que todas las interrupciones se desactivarán durante la ejecución de la </font></font><code>EEPROM_Write</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">rutina (se borrará el bit GIE del registro INTCON). </font><font style="vertical-align: inherit;">La rutina establecerá este bit al salir.</font></font></p>
+          </td>
+        </tr>
+
+        <tr style="background: white;" onmouseover="this.style.background=&#39;#f8f8f8&#39;;" onmouseout="this.style.background=&#39;white&#39;;">
+          <th valign="top"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Requiere</font></font></th>
+          <td valign="top">
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Requiere </font><font style="vertical-align: inherit;">módulo </font></font><acronym title="Eléctricamente programable y borrable memoria de sólo lectura"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EEPROM .</font></font></acronym><font style="vertical-align: inherit;"></font></p>
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Asegure un retraso mínimo de 20 ms entre el uso sucesivo de rutinas </font></font><code>EEPROM_Write</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">y </font></font><code>EEPROM_Read</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">. </font><font style="vertical-align: inherit;">Aunque PIC escribirá el valor correcto, </font></font><code>EEPROM_Read</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">podría devolver un resultado indefinido.</font></font></p>
+          </td>
+        </tr>
+
+        <tr style="background: white;" onmouseover="this.style.background=&#39;#f8f8f8&#39;;" onmouseout="this.style.background=&#39;white&#39;;">
+          <th valign="top"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ejemplo</font></font></th>
+          <td valign="top">
+
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EEPROM_Escribir ($32, $AA)</font></font></pre>
+
+          </td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+    <!-- kraj tabele -->
+
+
+    <!-- -->
+
+
+    <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ejemplo de biblioteca</font></font></h3>
+
+    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">El ejemplo escribe valores en 20 ubicaciones sucesivas de </font></font><acronym title="Eléctricamente programable y borrable memoria de sólo lectura"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EEPROM</font></font></acronym><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> . </font><font style="vertical-align: inherit;">Luego, lee los datos escritos e imprime en PORTB para una verificación visual.</font></font></p>
+
+<div class="example">
+  <textarea style="display:none;"></textarea> 
+  <span class="copytoclipboard"><a onclick="copyToClipboard(this); return false;" href="https://download.mikroe.com/documents/compilers/mikrobasic/pic/help/eeprom_library.htm#"><img align="absmiddle" alt="Copiar código al portapapeles" src="./Biblioteca EEPROM_files/copy_to_clipboard.png" border="0"><span class="clipboard_text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Copiar código al portapapeles</font></font></span></a></span>
+</div>
+
+<pre class="program"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">programa</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> EEPROM</font></font><font></font>
+<font></font>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dim</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> contador </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">como byte </font></font></b>                     <i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">'variable de bucle</font></font></i><font></font>
+<font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+principal:</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+  ANSEL = 0                             </font></font><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">' Configurar pines AN como E/S digital</font></font></i><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+  ANSEL = 0</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+  C1ON_bit = 0                           </font></font><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">' Deshabilitar comparadores</font></font></i><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+  C2ON_bit = 0</font></font><font></font>
+<font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+  PUERTOB = 0</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+  PUERTO = 0</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+  PUERTO = 0</font></font><font></font>
+<font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+  TRIB = 0</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+  TRISCO = 0</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+  TRISD = 0</font></font><font></font>
+   <font></font>
+  <b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">para</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> contador = 0 </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">a</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 31                  </font></font><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">' Llena el búfer de datos</font></font></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+    EEPROM_Write(0x80+contador, contador) </font></font><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">' Escribe datos en la dirección 0x80+ii </font></font></i>
+  <b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">siguiente</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> contador</font></font><font></font>
+<font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+  EEPROM_Write(0x02,0xAA)                </font></font><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">' Escribe algunos datos en la dirección 2</font></font></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+  EEPROM_Write(0x50,0x55)                </font></font><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">' Escribe algunos datos en la dirección 0150</font></font></i><font></font>
+<font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+  Delay_ms(1000)                         </font></font><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">' Parpadean los diodos PORTB y PORTC</font></font></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+  PORTB = 0xFF                           </font></font><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">' para indicar el inicio de la lectura</font></font></i><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+  PUERTO = 0xFF</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+  Retardo_ms(1000)</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+  PUERTOB = 0x00</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+  PUERTO = 0x00</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+  Retardo_ms(1000)</font></font><font></font>
+<font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+  PORTB = EEPROM_Read(0x02)              </font></font><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">' Leer datos de la dirección 2 y mostrarlos en PORTB</font></font></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+  PORTC = EEPROM_Read(0x50)              </font></font><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">' Leer datos de la dirección 0x50 y mostrarlos en PORTC</font></font></i><font></font>
+<font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+  Retardo_ms(1000)</font></font><font></font>
+  <font></font>
+  <b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">for</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> counter = 0 </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">to</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 31                  </font></font><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">' Leer bloque de 32 bytes desde la dirección 0x100</font></font></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+    PORTD = EEPROM_Read(0x80+counter)    </font></font><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">' y mostrar datos en PORTC</font></font></i><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+    Retardo_ms(100)</font></font><font></font>
+  <b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">siguiente </font></font></b><font style="vertical-align: inherit;"></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">extremo</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> del contador
+ </font><font style="vertical-align: inherit;">.
+</font></font></pre>
+
+
+        <div class="feedback"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+      Copyright (c) 2002-2012 mikroElektronika. </font><font style="vertical-align: inherit;">Reservados todos los derechos.
+      </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Qué opinas sobre este tema ?  </font></font><a href="http://www.mikroe.com/en/support/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">¡Envianos tus comentarios!</font></font></a>
+    </div>
+
+      <div class="libstock"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">¿Quieres más ejemplos y bibliotecas?&nbsp;
+     </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Encuéntralos en
+     </font></font><a href="http://www.libstock.com/" target="_blank"><img alt="LibStock - Un lugar para el código" src="./Biblioteca EEPROM_files/libstock.gif" border="0" align="absmiddle"></a>
+    </div>
+
+  </div><!--/main--><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="./Biblioteca EEPROM_files/translate_24dp.png" width="20" height="20" alt="Google Traductor de Google"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Texto original</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Sugiere una traducción mejor</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+
+
+
+
+
+
+
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body><div id="smartyContainer" style="position: absolute; top: 0px; right: 0px; line-height: initial; z-index: 2147483647; width: auto; font-size: initial;"></div></html>
