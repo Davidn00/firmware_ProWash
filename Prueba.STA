@@ -1,19 +1,19 @@
 
-ROM used:   8364/32768 (26%)
+ROM used:   8382/32768 (26%)
             32768/32768 (100%) including unused fragments
 
             0.8 Average locations per line
-            5.6 Average locations per statement
+            5.5 Average locations per statement
 
-RAM used:   795/2048 (39%) at main() level
-            850/2048 (42%) worst case
+RAM used:   815/2048 (40%) at main() level
+            870/2048 (42%) worst case
 
 Stack used: 9 worst case (0 in main + 9 for interrupts)
 Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  406   157  10  Prueba.c
+  505   191  12  Prueba.c
   854     0   0  C:\Program Files (x86)\PICC\Devices\18f4550.h
   243    88   6  i2c_LCD.c
    78    50   3  Teclado.c
@@ -23,15 +23,15 @@ Lines Stmts  %   Files
   328     0   0  C:\Program Files (x86)\PICC\Drivers\usb_hw_layer.h
   432     0   0  C:\Program Files (x86)\PICC\Drivers\usb_desc_hid.h
  1103     0   0  C:\Program Files (x86)\PICC\Drivers\usb.h
- 1192   249  17  C:\Program Files (x86)\PICC\Drivers\usb.c
+ 1192   249  16  C:\Program Files (x86)\PICC\Drivers\usb.c
  1516   316  21  C:\Program Files (x86)\PICC\Drivers\pic18_usb.c
   435     0   0  C:\Program Files (x86)\PICC\Drivers\string.h
    32     0   0  C:\Program Files (x86)\PICC\Drivers\stddef.h
    28     0   0  C:\Program Files (x86)\PICC\Drivers\ctype.h
    34     0   0  C:\Program Files (x86)\PICC\Drivers\stdbool.h
- 1352   359  24  C:\Program Files (x86)\PICC\Drivers\stdlib.h
+ 1352   359  23  C:\Program Files (x86)\PICC\Drivers\stdlib.h
 ----- -----
-10534  1498 Total
+10633  1532 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
@@ -90,54 +90,54 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0    310   2    4   1659 10.8  usb_Get_Descriptor
 0     14   0    0     76  1.8  usb_finish_set_address
 0    184   1    4    666  8.6  usb_copy_desc_seg_to_ep
-0     34   0    0             @goto49553
+0     34   0    0             @goto11412
 0     80   0    2    182  4.9  @MUL88
 0    404   2    9   1815 10.5  atoi
 0     88   1    6    183  3.2  initMenu
 0    118   1    6    182  4.9  addItem
-0     16   0    0    280  1.8  @const1624
-0     32   0    2     64  4.0  @PSTRINGC_705
+0     16   0    0    156  3.0  @const1676
+0     32   0    2    163  3.1  @PSTRINGC_705
 0     22   0    2     64  4.0  min
 0    398   2   14   1197  7.6  printMenu
-0      2   0    0    207  1.8  @const1638
-0     36   0    2    207  1.8  @PSTRINGR_705
-0     44   0    3     90  3.1  @DIV88
-0    190   1    6    280  1.8  @PRINTF_D_705
+0      2   0    0   3496  4.4  @const1682
+0     36   0    2   3496  4.4  @PSTRINGR_705
+0     44   0    3    160  2.5  @DIV88
+0    190   1    6    172  1.7  @PRINTF_D_705
 0    326   2    7    840  8.8  listenToKey
 0     66   0    4    117  2.2  scaffoldMenu
 0     42   0    1     90  3.1  read_key
-0      4   0    0    156  3.0  @const1667
+0      4   0    0    231  1.8  @const1711
 0     36   0    0    156  3.0  timer0_interrupcion
 0     46   0    0    163  3.1  TECLADO_INTERRUPT
-0      8   0    0    231  1.8  @const1672
-0   1468   9  361   3496  4.4  MAIN
-0     18   0    0    160  2.5  @const1678
-0      2   0    0    328  4.1  @const1680
-0      2   0    0    172  1.7  @const1681
-0     14   0    0    172  1.7  @const1682
-0      8   0    0    172  1.7  @const1683
-0     14   0    0    160  2.5  @const1684
-0      2   0    0    231  1.8  @const1685
- Inline         0    110  1.6  @cinit1
+0      8   0    0     90  3.1  @const1716
+0   1486   9  361   3496  4.4  MAIN
+0     18   0    0     96  1.6  @const1722
+0      2   0    0     90  3.1  @const1724
+0      2   0    0     90  3.1  @const1725
+0     14   0    0     90  3.1  @const1726
+0      8   0    0    245  2.7  @const1727
+0     14   0    0    163  3.1  @const1728
+0      2   0    0    156  3.0  @const1729
+ Inline         0    138  1.7  @cinit1
 
 Program metrics:
     Functions               70
-    Statements              1498
-    Comments                3373
-    Volume (V)              62793
-    Difficulty (D)          303.9
-    Effort to implement (E) 19083447
-    Time to implement (T)   294 hours, 30 minutes
-    Est Delivered Bugs (B)  24
-    Cyclomatic Complexity   168
-    Maintainability (MI)    37
+    Statements              1532
+    Comments                3385
+    Volume (V)              72070
+    Difficulty (D)          316.4
+    Effort to implement (E) 22806420
+    Time to implement (T)   351 hours, 57 minutes
+    Est Delivered Bugs (B)  27
+    Cyclomatic Complexity   172
+    Maintainability (MI)    36
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
 00004-00006     4  0  
 00008-000C4   190  0  
-000C6-07FC6  8110  24404  
+000C6-07FC6  8128  24386  
 07FC8-07FFE    56  0  
 
 

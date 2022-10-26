@@ -59,6 +59,8 @@ int getMSB(int value);
 int getLSB(int value);
 int joinBytes(int msb, int lsb);
 
+//operations
+
 
 /*************************************************
 ****************** LABELS ************************
@@ -190,36 +192,36 @@ EShakeIntensity readShakeIntensity() {
 
 void changeShakeTime(int newTime) {
    write_eeprom(SHAKE_TIME_MSB_ADDR[currentProgram], getMSB(newTime));
-   write_eeprom(SHAKE_TIME_LSB_ADDR[currentProgram] getLSB(newTime));
+   write_eeprom(SHAKE_TIME_LSB_ADDR[currentProgram], getLSB(newTime));
 }
 
 int readShakeTime() {
    int msb = read_eeprom(SHAKE_TIME_MSB_ADDR[currentProgram]);
-   int lsb = read_eeprom(SHAKE_TIME_LSB_ADDR[currentProgram])
+   int lsb = read_eeprom(SHAKE_TIME_LSB_ADDR[currentProgram]);
 
    return joinBytes(msb, lsb);
 }
 
-void switchProgram(int newProgram) {
+void switchProgram(int program) {
    if (program < 0 || program > 3) {
-      return
+      return;
    }
-   currentProgram = newProgram;
+   currentProgram = program;
 }
 
 void initConfigProgram(int program) {
-   switchProgram(newProgram);
+   switchProgram(program);
 
-   changeWashFormat(EWashFormat.UMELISA);
+   // changeWashFormat(EWashFormat.UMELISA);
    changeWaterVolume(30);
    changeCyclesCount(4);
    changeRinseTime(30);
 
-   changePrimeMode(EPrimeMode.CONTINUOUS);
+   // changePrimeMode(EPrimeMode.CONTINUOUS);
    changePrimeTime(2);
 
    changeShakeTime(30);
-   changeShakeIntensity(EShakeIntensity.MEDIUM);
+   // changeShakeIntensity(EShakeIntensity.MEDIUM);
 }
 
 void resetToDefault() {
