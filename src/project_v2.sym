@@ -1,0 +1,65 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  main
+000004  @cinit1
+000014  @cinit2
+
+Project Directory:
+    X:\Documents\Work\delDavid\Tesis_David\src\
+
+Project Files:
+    project_v2.c                                            [26-Oct-22 03:04  CRC=D872A938]
+    project_v2.h                                            [26-Oct-22 03:04  CRC=00000000]
+    C:\Program Files (x86)\PICC\Devices\18F4550.h           [06-Mar-19 14:30  CRC=1CE50E9D]
+    C:\Program Files (x86)\PICC\Drivers\stdbool.h           [21-May-12 11:29  CRC=815AEDE8]
+
+Source signature=F80D93A5
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=B7FE
+
+Units:
+    project_v2 (main)
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   project_v2.xsym
+    Errors:      project_v2.err
+    Ext Symbols: project_v2.esym
+    INHX32:      project_v2.hex
+    Symbols:     project_v2.sym
+    List:        project_v2.lst
+    Debug/COFF:  project_v2.cof
+    Project:     project_v2.ccspjt
+    Call Tree:   project_v2.tre
+    Statistics:  project_v2.STA

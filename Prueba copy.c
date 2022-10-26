@@ -6,13 +6,13 @@
 
 
 
-
 #include "i2c_LCD.c"                                  // Libreria para el manejo del LCD
 #include "Teclado.c"                                  // Libreria para el manejo del teclado matricial 4x4
 #include "tonos_buzzer.c"                             // Libreria para el manejo de los Tonos del buzzer
 #include <math.h>
 
 
+//#include <ncurses.h>
 
 #define USB_HID_DEVICE  TRUE
 #define USB_EP1_TX_ENABLE  USB_ENABLE_INTERRUPT     // Activar EP1 para transferencias masivas IN / interrupcion
@@ -29,7 +29,9 @@
 #use standard_io(a) 
 #define buzzer PIN_C2
 
+#include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include <stdbool.h>
 
 char K;
@@ -37,109 +39,11 @@ int segundos=0,minutos=0;
 int contador=1, cont_submenu1=1,cont_submenu2=1;
 int menu=0,opcion=0,hinicio=0,hfinal=0,garaje=0;
 
-const char *MAIN_MENU_LABEL = "Main Menu";
-const char *WASH_MENU_LABEL = "Wash";
-const char *SHAKE_MENU_LABEL = "Shake";
-const char *PRIME_MENU_LABEL = "Prime";
-const char *WASH_WASH_MENU_LABEL = "Inner Wash";
-const char *WASH_PARAMS_MENU_LABEL = "Select Params";
-const char *W1 = "W1";
-const char *W2 = "W2";
 
-typedef struct TMenu {
-  char *label;
-  struct TMenu *children[5];
-  struct TMenu *parent;
-  int childrenCount;
-  void (*action) ();
-  int currentMenu;
-} TMenu;
-
-typedef TMenu* pMenu;
-
-void initMenu(pMenu item, char *label) {
-   item->childrenCount = 0;
-   item->parent = NULL;
-   item->currentMenu = 0;
-   item->action = NULL;
-   item->label = label;
-}
-
-
-void addItem(pMenu parent, pMenu child) {
-   if (parent->childrenCount >= 100) return;
-   parent->children[parent->childrenCount] = child;
-   parent->childrenCount++;
-   child->parent = parent;
-}
-
-void labelMenu(pMenu item, char* label) {
-  strcpy(item->label, label);
-}
-
-//methods to exec
-void testMenu() {
-  printf(lcd_putc,"menu activated\n");
-}
-
-//declarations
-char tecla ();
-pMenu listenToKey(pMenu menu);
-void printMenu(pMenu menu);
 
 ///**************************************************************************///
 ///******************** FUNCION MENU PRINCIPAL ******************************///
 ///*************************************************************************///
-
-void printMenu(pMenu menu) {
-   LCD_PUTC("\f");
-   lcd_gotoxy(3, 1);
-   printf(lcd_putc, menu->label);
-   for (int i = 0; i < menu->childrenCount; i++) {
-      pMenu child = menu->children[i];
-      lcd_gotoxy(2, i+2);
-      printf(lcd_putc, child->label);
-   }
-}
-
-pMenu listenToKey(pMenu menu) {
-   k = tecla();
-   
-   switch(k) {
-      case '1':
-         if (menu->childrenCount >= 1) {
-            return menu->children[0];
-         }
-         break;
-      case '2':
-         if (menu->childrenCount >= 2) {
-            return menu->children[1];
-         }
-         break;
-      case '3':
-      if (menu->childrenCount >= 3) {
-         return menu->children[2];
-      }
-      break;
-      case '4':
-         if (menu->childrenCount >= 4) {
-            return menu->children[3];
-         }
-         break;
-      default:
-         return menu;
-   }
-}
-
-void scaffoldMenu(pMenu menu) {
-   pMenu nextMenu = menu;
-   while(true) {
-      printMenu(nextMenu);
-      nextMenu = listenToKey(nextMenu);
-   }
-}
-
-
 void menu_principal(void)
 {
          LCD_PUTC("\f");
@@ -401,7 +305,7 @@ void contador_s ()                                 //contador de 1s
 ///**************************************************************************///
 ///******************** FUNCION MENU PRINCIPAL ******************************///
 ///*************************************************************************///
-void main()
+void main ()
 {
    lcd_init(0x4E,20,4);              //Inicializa la pantalla
    lcd_backlight_led(ON);            //Enciende la luz de Fondo
@@ -418,7 +322,7 @@ void main()
    {
    lcd_gotoxy(i,3);
    lcd_putc(".");
-   //delay_ms(10);                    // Es 70ms
+   delay_ms(10);                    // Es 70ms
    }
    lcd_putc("\f");
    printf(lcd_putc,"BIENVENIDO...");
@@ -426,29 +330,214 @@ void main()
    printf(lcd_putc,"MW-2001");
    lcd_gotoxy(1,3);
    printf(lcd_putc,"Version Beta"); 
-   //delay_ms(500);                            // Es 1000ms para una espera de 4s
+   delay_ms(500);                            // Es 1000ms para una espera de 4s
    lcd_putc("\f");
-   
-   TMenu main, wash, prime, shake, washWash, washParams, washWashW1, washWashW2;
-   initMenu(&main, MAIN_MENU_LABEL);
-   initMenu(&wash, WASH_MENU_LABEL);
-   initMenu(&prime, PRIME_MENU_LABEL);
-   initMenu(&shake, SHAKE_MENU_LABEL);
-   initMenu(&washWash, WASH_WASH_MENU_LABEL);
-   initMenu(&washParams, WASH_PARAMS_MENU_LABEL);
-   initMenu(&washWashW1, W1);
-   initMenu(&washWashW2, W2);
-   
-   addItem(&main, &wash);
-   addItem(&main, &prime);
-   addItem(&main, &shake);
-   addItem(&wash, &washWash);
-   addItem(&wash, &washParams);
-   addItem(&washWash, &washWashW1);
-   addItem(&washWash, &washWashW2);
-   
-   
-   
-   scaffoldMenu(&main);
-}
+   menu_principal();
 
+   WHILE(TRUE)
+   {
+      k=tecla();
+      switch (k)
+      {
+      case '1':
+               menu_principal();
+               lcd_gotoxy(1,2);
+               lcd_putc("*");
+               menu=1;
+               contador=0;
+               contador=1;
+      break;
+      case '2':
+               menu_principal();
+               lcd_gotoxy(1,3);
+               lcd_putc("*");
+               menu=2;
+               contador=0;
+               contador=2;
+      break;
+      case '3':
+               menu_principal();
+               lcd_gotoxy(1,4);
+               lcd_putc("*");
+               menu=3;
+               contador=0;
+               contador=3;
+      break;      
+      case '4':
+               lcd_putc("\f");
+               lcd_gotoxy(1,1);
+               lcd_putc("*4-PROGRAMAR");
+               menu=4;
+               contador=0;
+               contador=4;
+      break;
+      case 'B':
+               contador=contador+1;
+                  if(contador==1)
+                  {
+                   menu_principal();
+                   lcd_gotoxy(1,2);
+                   lcd_putc("*");
+                   menu=1;
+                   }
+                   if(contador==2)
+                   {
+                   menu_principal();
+                   lcd_gotoxy(1,3);
+                   lcd_putc("*");
+                   menu=2;
+                   }
+                   if(contador==3)
+                   {
+                   menu_principal();
+                   lcd_gotoxy(1,4);
+                   lcd_putc("*");
+                   menu=3;
+                   }
+                   if(contador==4)
+                   {
+                   lcd_putc("\f");
+                   lcd_gotoxy(1,1);
+                   lcd_putc("*4-PROGRAMAR");
+                   menu=4;
+                   contador=4;
+                   }
+       break;
+       case 'A':
+                 contador=contador-1;
+                   if(contador==4)
+                   {
+                   menu_principal();
+                   lcd_gotoxy(1,4);
+                   lcd_putc("*");
+                   menu=3;
+                   contador==1;
+                   }
+                   if(contador==3)
+                   {
+                   menu_principal();
+                   lcd_gotoxy(1,3);
+                   lcd_putc("*");
+                   menu=2;
+                   }
+                   if(contador==2)
+                   {
+                   menu_principal();
+                   lcd_gotoxy(1,2);
+                   lcd_putc("*");
+                   menu=1;
+                   }
+       break;       
+          }
+///******************* Codigo para entrar a cada MENU ***********************///          
+///**************************************************************************///          
+        if ((K=='#')&&(menu==1))         // Si se selecciona el MENU LAVAR y pulsa Enter
+            {
+            menu_lavar();
+            int esc=0;                    // Variable escape
+            while(esc==0)                  // Si presiona esc sale del ciclo
+            {
+            k=kbd_getc();
+               if(k=='*')
+               {
+               esc=1;
+               menu_principal();
+               contador=0;
+               contador=1;
+               }
+               if(k=='1')
+                  {
+                  submenu_lavar1();
+                  cont_submenu1=1;
+                  char k1 = kbd_getc();
+                        if(k=='A')
+                        {
+                        lcd_gotoxy(11,1);
+                        lcd_putc("*UMMELISA*");
+                        }
+                        if(k=='B')
+                        {
+                        lcd_gotoxy(11,1);
+                        lcd_putc("*MicMELISA*");
+                        }
+
+                     }
+                if(k=='2')
+                  {
+                  submenu_lavar2();
+                  cont_submenu1=2;
+                  contador_s();
+                  generate_tone(buzzer,5000, 100);
+                  }
+        }
+       }       
+///**************************************************************************///
+            if ((K=='#')&&(menu==2))                                               // Si se selecciona el MENU CEBAR y pulsa Enter
+               {
+               menu_cebar();
+               vselechora();
+               int esc=0;
+               while(esc==0)
+                  {
+                  k=kbd_getc();
+                     if(k=='*')
+                     {
+                     esc=1;
+                     menu_principal();
+                     contador=0;
+                     contador=2;
+                     }
+                  }
+               } 
+///**************************************************************************///
+               if ((K=='#')&&(menu==3))                     // Si se selecciona el MENU AGITAR
+                  {
+                  menu_agitar();
+                  int esc=0;
+                    while(esc==0)
+                    {
+                    k=kbd_getc();
+                    if (k=='*')
+                    {
+                    esc=1;
+                    menu_principal();
+                    contador=0;
+                    contador=3;
+                    }
+                    }
+                    }
+ ///************************************************************************///                    
+              if ((K=='#')&&(menu==4))                       // Si se selecciona el MENU PROGRAMAR
+               {
+               menu_programar();
+               int esc=0;                                    // Variable escape
+               while(esc==0)                                 // Si presiona esc sale del ciclo
+               {
+               k=kbd_getc();
+                  if(k=='*')
+                  {
+                  esc=1;
+                  menu_principal();
+                  contador=0;
+                  contador=4;
+                   }
+                   if(k=='1')
+                  {
+                  submenu_crear1();
+                      if(k=='B')
+                        {
+                        submenu_crear2();
+                        if(k=='*')
+                              {
+                              lcd_putc('\f');
+                              menu_programar();
+                              }
+                        }
+                     
+                        }
+                   }
+              }
+          
+      }
+   }
+   

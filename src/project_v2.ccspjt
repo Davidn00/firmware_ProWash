@@ -1,0 +1,45 @@
+[PROJECT]
+Target=project_v2.hex
+Processor_Text=PIC18F4550
+CCSVerions=5.083
+Compiler=PCH
+CCSVersion=5.083
+[Target Data]
+FileList=project_v2.c
+[Directories]
+Include=
+[X:\Documents\Work\delDavid\Tesis_David\src\project_v2]
+Type=4
+[mru-list]
+1=project_v2.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=26-10-2022
+D1_L=4
+D1_L1=[11075]Project Opened.
+D1_L2=[11085]Started Editing.
+D1_L3=[11391]Stopped Editing.
+TotalEdit=1
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L4=[11752]Project Closed.
+
+[Opened Files]
+1=project_v2.c
+t1=1
+Count=2
+2=\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c
+t2=1
+[project_v2.c]
+Type=4
+
+[defines]
+buildcount=3
+[Units]
+Count=1
+1=project_v2 (main)
