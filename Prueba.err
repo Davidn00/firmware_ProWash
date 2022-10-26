@@ -1,11 +1,10 @@
-Compiling \\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba on 26-Oct-22 at 19:21
+Compiling \\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba on 26-Oct-22 at 19:49
 >>> Warning 203 "C:\Program Files (x86)\PICC\Drivers\pic18_usb.c" Line 727(1,1): Condition always TRUE
->>> Warning 205 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 206(1,1): Unsigned variable is never less than zero
->>> Warning 216 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 504(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
->>> Warning 216 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 504(1,2): Interrupts disabled during call to prevent re-entrancy:  (kbd_getc)
+>>> Warning 216 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 529(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+>>> Warning 216 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 529(1,2): Interrupts disabled during call to prevent re-entrancy:  (kbd_getc)
 >>> Warning 202 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\i2c_LCD.c" Line 170(80,84): Variable never used:   data
 >>> Warning 202 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 34(12,18): Variable never used:   opcion
->>> Warning 202 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 78(13,36): Variable never used:   WASH_WASHING_MENU_LABEL
-      Memory usage:   ROM=26%      RAM=40% - 42%
-      0 Errors,  7 Warnings.
+>>> Warning 202 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 88(13,36): Variable never used:   WASH_WASHING_MENU_LABEL
+      Memory usage:   ROM=28%      RAM=40% - 42%
+      0 Errors,  6 Warnings.
 Build Successful.

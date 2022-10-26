@@ -1,19 +1,19 @@
 
-ROM used:   8382/32768 (26%)
+ROM used:   9112/32768 (28%)
             32768/32768 (100%) including unused fragments
 
-            0.8 Average locations per line
-            5.5 Average locations per statement
+            0.9 Average locations per line
+            5.9 Average locations per statement
 
-RAM used:   815/2048 (40%) at main() level
+RAM used:   817/2048 (40%) at main() level
             870/2048 (42%) worst case
 
-Stack used: 9 worst case (0 in main + 9 for interrupts)
+Stack used: 8 worst case (0 in main + 8 for interrupts)
 Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  505   191  12  Prueba.c
+  530   198  13  Prueba.c
   854     0   0  C:\Program Files (x86)\PICC\Devices\18f4550.h
   243    88   6  i2c_LCD.c
    78    50   3  Teclado.c
@@ -31,7 +31,7 @@ Lines Stmts  %   Files
    34     0   0  C:\Program Files (x86)\PICC\Drivers\stdbool.h
  1352   359  23  C:\Program Files (x86)\PICC\Drivers\stdlib.h
 ----- -----
-10633  1532 Total
+10658  1539 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
@@ -40,10 +40,10 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     82   0    1             @I2C_WRITE_1
 0     20   0    1     63  2.3  lcd_backlight_led
 0    172   1    3    574  5.9  i2c_send_nibble
-0     86   1    3    149  2.8  lcd_send_byte
+0     86   0    3    149  2.8  lcd_send_byte
 0     40   0    0     61  1.9  lcd_clear
 0     20   0    0             @const695
-0    272   2    5    902  5.8  lcd_init
+0    272   1    5    902  5.8  lcd_init
 0    114   1    7    681  8.0  lcd_gotoxy
 0     82   0    1    310  5.9  LCD_PUTC
 0    274   2    1   1541  3.4  kbd_getc
@@ -61,10 +61,10 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0    196   1    9    914  5.0  usb_flush_out
 0     74   0    6    264  4.6  usb_stall_ep
 0     94   1    6    329  4.7  usb_unstall_ep
-0     90   1    5    373  6.0  usb_endpoint_stalled
+0     90   0    5    373  6.0  usb_endpoint_stalled
 0     26   0    1     94  2.7  usb_set_address
-0    422   3   12   1743 10.9  usb_set_configured
-0     84   1    5    199  3.2  usb_disable_endpoint
+0    422   2   12   1743 10.9  usb_set_configured
+0     84   0    5    199  3.2  usb_disable_endpoint
 0     30   0    1     99  3.0  usb_disable_endpoints
 0      4   0    0     61  4.0  usb_clear_trn
 0    126   1    2    656  6.8  usb_isr
@@ -90,54 +90,65 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0    310   2    4   1659 10.8  usb_Get_Descriptor
 0     14   0    0     76  1.8  usb_finish_set_address
 0    184   1    4    666  8.6  usb_copy_desc_seg_to_ep
-0     34   0    0             @goto11412
+0     34   0    0             @goto53750
 0     80   0    2    182  4.9  @MUL88
 0    404   2    9   1815 10.5  atoi
-0     88   1    6    183  3.2  initMenu
+0    154   1    3    100  2.3  changeRinseTime
+0     68   0    2     43  2.1  changeCyclesCount
+0     68   0    2     43  2.1  changeWaterVolume
+0     68   0    2     43  2.1  changePrimeTime
+0    154   1    3    100  2.3  changeShakeTime
+0     20   0    1     63  2.6  switchProgram
+0     60   0    1    119  1.3  initConfigProgram
+0     30   0    1     82  2.8  resetToDefault
+0     88   0    6    183  3.2  initMenu
 0    118   1    6    182  4.9  addItem
-0     16   0    0    156  3.0  @const1676
+0     16   0    0    156  3.0  @const1679
 0     32   0    2    163  3.1  @PSTRINGC_705
 0     22   0    2     64  4.0  min
-0    398   2   14   1197  7.6  printMenu
-0      2   0    0   3496  4.4  @const1682
-0     36   0    2   3496  4.4  @PSTRINGR_705
-0     44   0    3    160  2.5  @DIV88
-0    190   1    6    172  1.7  @PRINTF_D_705
-0    326   2    7    840  8.8  listenToKey
-0     66   0    4    117  2.2  scaffoldMenu
 0     42   0    1     90  3.1  read_key
-0      4   0    0    231  1.8  @const1711
+0     44   0    3    160  2.5  @DIV88
+0      4   0    0    172  1.7  @const1693
 0     36   0    0    156  3.0  timer0_interrupcion
 0     46   0    0    163  3.1  TECLADO_INTERRUPT
-0      8   0    0     90  3.1  @const1716
-0   1486   9  361   3496  4.4  MAIN
-0     18   0    0     96  1.6  @const1722
-0      2   0    0     90  3.1  @const1724
-0      2   0    0     90  3.1  @const1725
-0     14   0    0     90  3.1  @const1726
-0      8   0    0    245  2.7  @const1727
-0     14   0    0    163  3.1  @const1728
-0      2   0    0    156  3.0  @const1729
- Inline         0    138  1.7  @cinit1
+0      8   0    0    245  2.7  @const1698
+0    190   1    6     90  3.1  @PRINTF_D_705
+0   1508   8  363   3589  4.9  MAIN
+0     18   0    0    156  3.0  @const1707
+0      2   0    0    163  3.1  @const1709
+0      2   0    0    208  4.7  @const1710
+0     14   0    0    163  3.1  @const1711
+0      8   0    0    208  4.7  @const1712
+0     14   0    0   3589  4.9  @const1713
+0      2   0    0     96  1.6  @const1714
+0     16   0    3     44  2.1  getMSB
+0     10   0    1     35  1.7  getLSB
+0     12   0    0     90  3.1  @const1735
+0    374   2    9    959  8.9  listenToKey
+0     66   0    4    117  2.2  scaffoldMenu
+0    398   2   14   1194  7.7  printMenu
+0      2   0    0     66  3.5  @const1740
+0     36   0    2     53  1.2  @PSTRINGR_705
+ Inline         0    388  4.1  @cinit1
 
 Program metrics:
-    Functions               70
-    Statements              1532
-    Comments                3385
-    Volume (V)              72070
-    Difficulty (D)          316.4
-    Effort to implement (E) 22806420
-    Time to implement (T)   351 hours, 57 minutes
-    Est Delivered Bugs (B)  27
-    Cyclomatic Complexity   172
-    Maintainability (MI)    36
+    Functions               81
+    Statements              1539
+    Comments                3387
+    Volume (V)              70406
+    Difficulty (D)          347.9
+    Effort to implement (E) 24494415
+    Time to implement (T)   378 hours, 0 minutes
+    Est Delivered Bugs (B)  28
+    Cyclomatic Complexity   181
+    Maintainability (MI)    60
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
 00004-00006     4  0  
 00008-000C4   190  0  
-000C6-07FC6  8128  24386  
+000C6-07FC6  8858  23656  
 07FC8-07FFE    56  0  
 
 

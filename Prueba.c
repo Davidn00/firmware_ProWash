@@ -33,6 +33,8 @@ int segundos=0,minutos=0;
 int contador=1;
 int menu=0,opcion=0;
 
+typedef void (*fptr)();
+
 /*************************************************
 ***************** STRUCTURES *********************
 **************************************************/
@@ -42,7 +44,7 @@ typedef struct TMenu {
   struct TMenu *children[5];
   struct TMenu *parent;
   int childrenCount;
-  void (*action) ();
+  fptr action;
   int currentMenu;
 } TMenu;
 
@@ -52,14 +54,22 @@ typedef TMenu* pMenu;
 ****************** DECLARATIONS ************************
 **************************************************/
 char read_key ();
-pMenu listenToKey(pMenu menu);
-void printMenu(pMenu menu);
+
 int min(int, int);
 int getMSB(int value);
 int getLSB(int value);
 int joinBytes(int msb, int lsb);
 
 //operations
+void wash();
+
+//menus
+pMenu listenToKey(pMenu menu);
+void printMenu(pMenu menu);
+void scaffoldMenu(pMenu menu);
+
+
+
 
 
 /*************************************************
@@ -203,7 +213,7 @@ int readShakeTime() {
 }
 
 void switchProgram(int program) {
-   if (program < 0 || program > 3) {
+   if ( program > 3) {
       return;
    }
    currentProgram = program;
@@ -258,10 +268,6 @@ void testMenu() {
 
 
 
-//Operations
-void wash();
-
-
 ///**************************************************************************///
 ///******************** FUNCION MENU PRINCIPAL ******************************///
 ///*************************************************************************///
@@ -270,63 +276,6 @@ int min(int a, int b) {
    return a < b ? a : b;
 }
 
-void printMenu(pMenu menu) {
-   LCD_PUTC("\f");
-   lcd_gotoxy(3, 1);
-   printf(lcd_putc, menu->label);
-   int start = 0;
-   int cMenu = menu->currentMenu;
-   int offsets[3] = {2, 0, 1};
-   int offset = offsets[cMenu % 3];
-   if (cMenu > 3) {
-      start = cMenu - offset - 1;
-   }
-   
-   int menusToShow = min(menu->childrenCount - start, 3);
-   
-   for (int i = 0; i < menusToShow; i++) {
-      pMenu child = menu->children[i+start];
-      lcd_gotoxy(2, i+2);
-      printf(lcd_putc, "%d", start + i +1);
-      lcd_gotoxy(3, i+2);
-      printf(lcd_putc, "-");
-      lcd_gotoxy(4, i+2);
-      printf(lcd_putc, child->label);
-   }
-   if (menu->currentMenu > 0) {
-      lcd_gotoxy(1, offset+2);
-      printf(lcd_putc, "*");
-   }
-}
-
-pMenu listenToKey(pMenu menu) {
-   k = read_key ();
-   char ks[2];
-   ks[0] = (char)k;
-   ks[1] = '\0';
-   int val = atoi(ks);
-   if (val && menu->childrenCount >= val) {
-      menu->currentMenu = val;
-   } else if (k == '*' && menu->parent != NULL) {
-      return menu->parent;
-   } else if (k == 'A' && menu->currentMenu > 1) {
-      menu->currentMenu--;
-   } else if (k == 'B' && menu->currentMenu < menu->childrenCount) {
-      menu->currentMenu++;
-   } else if (k == '#' && menu->currentMenu > 0) {
-      return menu->children[menu->currentMenu-1];
-   }
-   return menu;
-}
-
-void scaffoldMenu(pMenu menu) {
-   pMenu nextMenu = menu;
-   while(true) {
-      printMenu(nextMenu);
-      delay_ms(10);
-      nextMenu = listenToKey(nextMenu);
-   }
-}
 
 ///************************* FUNCION TECLA *********************************///
 ///************************************************************************///
@@ -431,6 +380,8 @@ void main()
    printf(lcd_putc,"Version Beta"); 
    //delay_ms(500);                            // Es 1000ms para una espera de 4s
    lcd_putc("\f");
+
+   resetToDefault();
    
    TMenu main, wash, prime, shake, program, washWash, washParams, 
    wash_format, wash_time, wash_amount, shake_shake, shake_mode,
@@ -461,12 +412,12 @@ void main()
    initMenu(&program_delet, PROGRAM_DELET_MENU_LABEL);
    initMenu(&program_name, PROGRAM_NAME_MENU_LABEL);
 
+
    
    addItem(&main, &wash);
    addItem(&main, &prime);
    addItem(&main, &shake);
    addItem(&main, &program);
-   
    addItem(&wash, &washWash);
    addItem(&wash, &washParams);
    addItem(&washParams, &wash_format);
@@ -482,6 +433,8 @@ void main()
    addItem(&program, &program_edit);
    addItem(&program, &program_delet);
    addItem(&program_create, &program_name);
+
+   washWash.action = &wash;
    
    
    scaffoldMenu(&main);
@@ -501,4 +454,76 @@ int getLSB(int value) {
 
 int joinBytes(int msb, int lsb) {
    return (int)(msb << 8 | lsb);
+}
+
+
+//operations
+void wash() {
+   lcd_gotoxy(2, 3);
+   printf(lcd_putc, "Lavando ...");
+}
+
+//menu handlers
+pMenu listenToKey(pMenu menu) {
+   k = read_key ();
+   char ks[2];
+   ks[0] = (char)k;
+   ks[1] = '\0';
+   int val = atoi(ks);
+   if (val && menu->childrenCount >= val) {
+      menu->currentMenu = val;
+   } else if (k == '*' && menu->parent != NULL) {
+      return menu->parent;
+   } else if (k == 'A' && menu->currentMenu > 1) {
+      menu->currentMenu--;
+   } else if (k == 'B' && menu->currentMenu < menu->childrenCount) {
+      menu->currentMenu++;
+   } else if (k == '#' && menu->currentMenu > 0) {
+      pMenu child = menu->children[menu->currentMenu -1];
+      if (child->action != NULL) {
+         
+         return menu;
+      }
+      return child;
+   }
+   return menu;
+}
+
+void scaffoldMenu(pMenu menu) {
+   pMenu nextMenu = menu;
+   while(true) {
+      printMenu(nextMenu);
+      delay_ms(10);
+      nextMenu = listenToKey(nextMenu);
+   }
+}
+
+
+void printMenu(pMenu menu) {
+   LCD_PUTC("\f");
+   lcd_gotoxy(3, 1);
+   printf(lcd_putc, menu->label);
+   int start = 0;
+   int cMenu = menu->currentMenu;
+   int offsets[3] = {2, 0, 1};
+   int offset = offsets[cMenu % 3];
+   if (cMenu > 3) {
+      start = cMenu - offset - 1;
+   }
+   
+   int menusToShow = min(menu->childrenCount - start, 3);
+   
+   for (int i = 0; i < menusToShow; i++) {
+      pMenu child = menu->children[i+start];
+      lcd_gotoxy(2, i+2);
+      printf(lcd_putc, "%d", start + i +1);
+      lcd_gotoxy(3, i+2);
+      printf(lcd_putc, "-");
+      lcd_gotoxy(4, i+2);
+      printf(lcd_putc, child->label);
+   }
+   if (menu->currentMenu > 0) {
+      lcd_gotoxy(1, offset+2);
+      printf(lcd_putc, "*");
+   }
 }
