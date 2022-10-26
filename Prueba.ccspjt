@@ -11,7 +11,7 @@ Type=4
 1=Prueba.c
 
 [defines]
-buildcount=357
+buildcount=368
 
 [ProjectLog]
 Days=12
@@ -239,18 +239,21 @@ D11_E=1
 D11_D=0
 D11_L6=[85378]Project Closed.
 D12=26-10-2022
-D12_L=4
+D12_L=7
 D12_L1=[39628]Project Opened.
 D12_L2=[39660]Started Editing.
 D12_L3=[42865]Stopped Editing.
 D12_L4=[42911]Started Editing.
+D12_L5=[49166]Stopped Editing.
+D12_L6=[49180]Started Editing.
+D12_L7=[49762]Stopped Editing.
 
 [Opened Files]
 1=Prueba.c
-t1=422
+t1=402
 Count=2
 2=i2c_LCD.c
-t2=160
+t2=73
 3=..\..\..\..\Program Files (x86)\PICC\Drivers\pic18_usb.c
 t3=593
 4=D:\Escuela\Tesis\Capítulo III\para David\programa.c

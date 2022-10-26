@@ -31,6 +31,7 @@
 
 #include <string.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 char K;
 int segundos=0,minutos=0;
@@ -98,43 +99,43 @@ void printMenu(pMenu menu) {
    for (int i = 0; i < menu->childrenCount; i++) {
       pMenu child = menu->children[i];
       lcd_gotoxy(2, i+2);
+      printf(lcd_putc, "%d", i+1);
+      lcd_gotoxy(3, i+2);
+      printf(lcd_putc, "-");
+      lcd_gotoxy(4, i+2);
       printf(lcd_putc, child->label);
+   }
+   if (menu->currentMenu > 0) {
+      lcd_gotoxy(1, menu->currentMenu+1);
+      printf(lcd_putc, "*");
    }
 }
 
 pMenu listenToKey(pMenu menu) {
    k = tecla();
-   
-   switch(k) {
-      case '1':
-         if (menu->childrenCount >= 1) {
-            return menu->children[0];
-         }
-         break;
-      case '2':
-         if (menu->childrenCount >= 2) {
-            return menu->children[1];
-         }
-         break;
-      case '3':
-      if (menu->childrenCount >= 3) {
-         return menu->children[2];
-      }
-      break;
-      case '4':
-         if (menu->childrenCount >= 4) {
-            return menu->children[3];
-         }
-         break;
-      default:
-         return menu;
+   char ks[2];
+   ks[0] = (char)k;
+   ks[1] = '\0';
+   int val = atoi(ks);
+   if (val && menu->childrenCount >= val) {
+      return menu->children[val-1];
+   } else if (k == '*' && menu->parent != NULL) {
+      return menu->parent;
+   } else if (k == 'A' && menu->currentMenu > 1) {
+      menu->currentMenu--;
+   } else if (k == 'B' && menu->currentMenu < menu->childrenCount) {
+      menu->currentMenu++;
+   } else if (k == '#' && menu->currentMenu > 0) {
+      return menu->children[menu->currentMenu-1];
    }
+   return menu;
 }
 
 void scaffoldMenu(pMenu menu) {
    pMenu nextMenu = menu;
    while(true) {
       printMenu(nextMenu);
+      delay_ms(10);
       nextMenu = listenToKey(nextMenu);
    }
 }
