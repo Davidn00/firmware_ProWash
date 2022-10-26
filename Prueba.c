@@ -34,6 +34,18 @@ int contador=1;
 int menu=0,opcion=0;
 
 /*************************************************
+****************** DECLARATIONS ************************
+**************************************************/
+char read_key ();
+pMenu listenToKey(pMenu menu);
+void printMenu(pMenu menu);
+int min(int, int);
+int getMSB(int value);
+int getLSB(int value);
+int joinBytes(int msb, int lsb);
+
+
+/*************************************************
 ****************** LABELS ************************
 **************************************************/
 
@@ -99,8 +111,85 @@ int currentProgram = 0;
 /*************************************************
 *************** CONFIG METHODS *******************
 **************************************************/
+//wash
 void changeWashFormat(EWashFormat newFormat) {
+   write_eeprom(WASH_FORMAT_ADDR[currentProgram], newFormat);
+}
 
+EWashFormat readWashFormat() {
+   return read_eeprom(WASH_FORMAT_ADDR[currentProgram]);
+}
+
+void changeRinseTime(int newTime) {
+   write_eeprom(RINSE_TIME_MSB_ADDR[currentProgram], getMSB(newTime));
+   write_eeprom(RINSE_TIME_LSB_ADDR[currentProgram], getLSB(newTime));
+}
+
+int getRinseTime() {
+   int msb = read_eeprom(RINSE_TIME_MSB_ADDR[currentProgram]);
+   int lsb = read_eeprom(RINSE_TIME_LSB_ADDR[currentProgram]);
+   return joinBytes(msb, lsb);
+}
+
+void changeCyclesCount(int count) {
+   write_eeprom(CYCLES_COUNT_ADDR[currentProgram], count);
+}
+
+int readCyclesCount() {
+   return read_eeprom(CYCLES_COUNT_ADDR[currentProgram]);
+}
+
+void changeWaterVolume(int newVolume) {
+   write_eeprom(WATER_VOLUME_ADDR[currentProgram], newVolume);
+}
+
+int readWaterVolume() {
+   return read_eeprom(WATER_VOLUME_ADDR[currentProgram]);
+}
+
+//prime
+void changePrimeMode(EPrimeMode newMode) {
+   write_eeprom(PRIME_MODE_ADDR[currentProgram], newMode);
+}
+
+EPrimeMode redPrimeMode() {
+   return read_eeprom(PRIME_MODE_ADDR[currentProgram]);
+}
+
+void changePrimeTime(int newTime) {
+   write_eeprom(PRIME_TIME_ADDR[currentProgram], newTime);
+}
+
+int readPrimeTime() {
+   return read_eeprom(PRIME_TIME_ADDR[currentProgram]);
+}
+
+//shake
+void changeShakeDensity(EShakeIntensity density) {
+   write_eeprom(SHAKE_DENSITY_ADDR[currentProgram], density);
+}
+
+EShakeIntensity readShakeDensity() {
+   return read_eeprom(SHAKE_DENSITY_ADDR[currentProgram]);
+}
+
+void changeShakeTime(int newTime) {
+   write_eeprom(SHAKE_TIME_MSB_ADDR[currentProgram], getMSB(newTime));
+   write_eeprom(SHAKE_TIME_LSB_ADDR[currentProgram] getLSB(newTime));
+}
+
+int readShakeTime() {
+   int msb = read_eeprom(SHAKE_TIME_MSB_ADDR[currentProgram]);
+   int lsb = read_eeprom(SHAKE_TIME_LSB_ADDR[currentProgram])
+
+   return joinBytes(msb, lsb);
+}
+
+void switchProgram(int newProgram) {
+   if (program < 0 || program > 3) {
+      return
+   }
+   currentProgram = newProgram;
 }
 
 
@@ -142,12 +231,6 @@ void labelMenu(pMenu item, char* label) {
 void testMenu() {
   printf(lcd_putc,"menu activated\n");
 }
-
-//declarations
-char read_key ();
-pMenu listenToKey(pMenu menu);
-void printMenu(pMenu menu);
-int min(int, int);
 
 
 
@@ -382,3 +465,18 @@ void main()
    scaffoldMenu(&main);
 }
 
+/*************************************************
+****************** DEFINITIONS ************************
+**************************************************/
+
+int getMSB(int value) {
+   return (value & 0xFF00) >> 8;
+}
+
+int getLSB(int value) {
+   return (value & 0x00FF);
+}
+
+int joinBytes(int msb, int lsb) {
+   return (int)(msb << 8 | lsb);
+}
