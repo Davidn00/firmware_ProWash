@@ -1,43 +1,43 @@
 
-ROM used:   8096/32768 (25%)
+ROM used:   8324/32768 (25%)
             32768/32768 (100%) including unused fragments
 
             0.8 Average locations per line
-            5.1 Average locations per statement
+            5.6 Average locations per statement
 
-RAM used:   438/2048 (21%) at main() level
-            493/2048 (24%) worst case
+RAM used:   774/2048 (38%) at main() level
+            829/2048 (40%) worst case
 
-Stack used: 9 worst case (0 in main + 9 for interrupts)
+Stack used: 3 worst case (0 in main + 3 for interrupts)
 Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  470   248  16  Prueba.c
+  331   157  10  Prueba.c
   854     0   0  C:\Program Files (x86)\PICC\Devices\18f4550.h
   243    88   6  i2c_LCD.c
    78    50   3  Teclado.c
    46    21   1  tonos_buzzer.c
- 2227   258  16  C:\Program Files (x86)\PICC\Drivers\math.h
+ 2227   258  17  C:\Program Files (x86)\PICC\Drivers\math.h
   228     0   0  C:\Program Files (x86)\PICC\Drivers\pic18_usb.h
   328     0   0  C:\Program Files (x86)\PICC\Drivers\usb_hw_layer.h
   432     0   0  C:\Program Files (x86)\PICC\Drivers\usb_desc_hid.h
  1103     0   0  C:\Program Files (x86)\PICC\Drivers\usb.h
- 1192   249  16  C:\Program Files (x86)\PICC\Drivers\usb.c
- 1516   316  20  C:\Program Files (x86)\PICC\Drivers\pic18_usb.c
+ 1192   249  17  C:\Program Files (x86)\PICC\Drivers\usb.c
+ 1516   316  21  C:\Program Files (x86)\PICC\Drivers\pic18_usb.c
   435     0   0  C:\Program Files (x86)\PICC\Drivers\string.h
    32     0   0  C:\Program Files (x86)\PICC\Drivers\stddef.h
    28     0   0  C:\Program Files (x86)\PICC\Drivers\ctype.h
    34     0   0  C:\Program Files (x86)\PICC\Drivers\stdbool.h
- 1352   359  23  C:\Program Files (x86)\PICC\Drivers\stdlib.h
+ 1352   359  24  C:\Program Files (x86)\PICC\Drivers\stdlib.h
 ----- -----
-10598  1589 Total
+10459  1498 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
 0     30   0    7             @READ_PROGRAM_MEMORY
 0     42   0    1             @delay_ms1
-0     82   1    1             @I2C_WRITE_1
+0     82   0    1             @I2C_WRITE_1
 0     20   0    1     63  2.3  lcd_backlight_led
 0    172   1    3    574  5.9  i2c_send_nibble
 0     86   1    3    149  2.8  lcd_send_byte
@@ -45,7 +45,7 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     20   0    0             @const695
 0    272   2    5    902  5.8  lcd_init
 0    114   1    7    681  8.0  lcd_gotoxy
-0     82   1    1    310  5.9  LCD_PUTC
+0     82   0    1    310  5.9  LCD_PUTC
 0    274   2    1   1541  3.4  kbd_getc
 0     32   0    0             @const1001
 0     48   0    0             @const1007
@@ -57,7 +57,7 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     18   0    0             @const1030
 0     34   0    0             @const1035
 0     70   0    4    139  4.3  usb_tbe
-0    246   2   10    976  5.9  usb_flush_in
+0    246   1   10    976  5.9  usb_flush_in
 0    196   1    9    914  5.0  usb_flush_out
 0     74   0    6    264  4.6  usb_stall_ep
 0     94   1    6    329  4.7  usb_unstall_ep
@@ -77,7 +77,7 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     14   0    0    151  3.9  usb_isr_stall
 0      6   0    1     30  1.7  usb_request_send_response
 0      4   0    0     22  1.2  usb_request_stall
-0    248   2    3   3124  9.3  usb_isr_tok_dne
+0    248   1    3   3124  9.3  usb_isr_tok_dne
 0     46   0    3    255  4.0  usb_token_reset
 0     78   0    3    274  5.9  usb_endpoint_is_valid
 0     36   0    1    158  3.1  usb_isr_tok_in_dne
@@ -90,97 +90,54 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0    310   2    4   1659 10.8  usb_Get_Descriptor
 0     14   0    0     76  1.8  usb_finish_set_address
 0    184   1    4    666  8.6  usb_copy_desc_seg_to_ep
-0     34   0    0             @goto56968
-0     80   0    2    182  4.9  @MUL88
+0     34   0    0             @goto13642
+0     80   0    2             @MUL88
 0    404   2    9   1815 10.5  atoi
 0     88   1    6    183  3.2  initMenu
 0    118   1    6    182  4.9  addItem
-0     16   0    0    231  1.8  @const1572
-0     32   0    2     64  4.0  @PSTRINGC_705
+0     16   0    0             @const1606
+0     32   0    2             @PSTRINGC_705
 0     22   0    2     64  4.0  min
 0    398   2   14   1197  7.6  printMenu
-0      2   0    0    172  1.7  @const1585
-0     36   0    2    432  6.8  @PSTRINGR_705
-0     44   0    3    432  6.8  @DIV88
-0    190   1    6    280  1.8  @PRINTF_D_705
+0      2   0    0             @const1619
+0     36   0    2             @PSTRINGR_705
+0     44   0    3             @DIV88
+0    190   1    6             @PRINTF_D_705
 0    326   2    7    840  8.8  listenToKey
 0     66   0    4    117  2.2  scaffoldMenu
-0      2   0    0    207  1.8  @const1609
-0     16   0    0    231  1.8  @const1610
-0      8   0    0   7038  9.5  @const1611
-0      8   0    0    207  1.8  @const1612
-0     10   0    0    207  1.8  @const1613
-0      2   0    0     90  3.1  @const1615
-0     12   0    0     96  1.6  @const1616
-0     20   0    0    280  1.8  @const1617
-0      8   0    0    280  1.8  @const1618
-0      2   0    0    280  1.8  @const1620
-0     12   0    0    156  3.0  @const1621
-0     12   0    0    163  3.1  @const1622
-0     12   0    0    280  1.8  @const1623
-0     10   0    0    280  1.8  @const1624
-0      2   0    0    231  1.8  @const1626
-0     12   0    0    138  1.7  @const1627
-0     14   0    0    328  4.1  @const1628
-0     16   0    0    231  1.8  @const1629
-0     10   0    0    231  1.8  @const1630
-0      2   0    0    172  1.7  @const1632
-0     16   0    0    160  2.5  @const1633
-0      8   0    0    328  4.1  @const1634
-0     10   0    0    172  1.7  @const1635
-0     10   0    0    172  1.7  @const1636
-0      2   0    0    160  2.5  @const1638
-0     10   0    0    231  1.8  @const1639
-0     12   0    0    110  1.6  @const1640
-0     14   0    0    110  1.6  @const1641
-0     12   0    0    231  1.8  @const1643
-0     10   0    0    231  1.8  @const1644
-0      2   0    0     96  1.6  @const1646
-0     18   0    0   6466  9.0  @const1647
-0     18   0    0     90  3.1  @const1648
-0     20   0    0     96  1.6  @const1649
-0     18   0    0     96  1.6  @const1650
-0     14   0    0     90  3.1  @const1652
-0     20   0    0     90  3.1  @const1653
-0     42   0    1     90  3.1  tecla
-0      4   0    0    156  3.0  @const1660
+0     42   0    1     90  3.1  read_key
+0      4   0    0             @const1648
 0     36   0    0    156  3.0  timer0_interrupcion
 0     46   0    0    163  3.1  TECLADO_INTERRUPT
-0     10   0    0    160  2.5  @const1671
-0     12   0    0    160  2.5  @const1672
-0     10   0    0    160  2.5  @const1674
-0     12   0    0    160  2.5  @const1675
-0     10   0    0    208  4.7  @const1677
-0     12   0    0    208  4.7  @const1678
-0      8   0    0   1739  4.4  @const1681
-0    730   5  145   1739  4.4  MAIN
-0     18   0    0             @const1687
-0      2   0    0             @const1689
-0      2   0    0             @const1690
-0     14   0    0             @const1691
-0      8   0    0             @const1692
-0     14   0    0             @const1693
-0      2   0    0             @const1694
+0      8   0    0             @const1653
+0   1428   9  361   3496  4.4  MAIN
+0     18   0    0             @const1659
+0      2   0    0             @const1661
+0      2   0    0             @const1662
+0     14   0    0             @const1663
+0      8   0    0             @const1664
+0     14   0    0             @const1665
+0      2   0    0             @const1666
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               105
-    Statements              1589
-    Comments                3369
-    Volume (V)              102069
-    Difficulty (D)          414.5
-    Effort to implement (E) 42312149
-    Time to implement (T)   652 hours, 58 minutes
-    Est Delivered Bugs (B)  40
-    Cyclomatic Complexity   252
-    Maintainability (MI)    121
+    Functions               53
+    Statements              1498
+    Comments                3357
+    Volume (V)              54007
+    Difficulty (D)          260.2
+    Effort to implement (E) 14052641
+    Time to implement (T)   216 hours, 52 minutes
+    Est Delivered Bugs (B)  19
+    Cyclomatic Complexity   157
+    Maintainability (MI)    68
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
 00004-00006     4  0  
 00008-000C4   190  0  
-000C6-07FC6  7842  24672  
+000C6-07FC6  8070  24444  
 07FC8-07FFE    56  0  
 
 

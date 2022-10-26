@@ -1,9 +1,9 @@
-D G "__PCH__" 0 471 ""5.083""
-D G "__DEVICE__" 0 471 "4550"
-D G "__DATE__" 0 471 ""26-Oct-22""
-D G "__TIME__" 0 471 ""15:33:04""
-D G "_UNICODE" 0 471 ""?""
-D G "__EVAL" 0 471 ""?"" "Standard Header file for the PIC18F4550 device ////////////////"
+D G "__PCH__" 0 334 ""5.083""
+D G "__DEVICE__" 0 334 "4550"
+D G "__DATE__" 0 334 ""26-Oct-22""
+D G "__TIME__" 0 334 ""17:43:25""
+D G "_UNICODE" 0 334 ""?""
+D G "__EVAL" 0 334 ""?"" "Standard Header file for the PIC18F4550 device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
 f N "set_tris_a" 1 45 ""
 v L "value" 1 45 "int8" `55 
@@ -1519,11 +1519,11 @@ F N "ldexp" 5 2207 ""
 V L "value" 5 2207 "float" `900 
 V L "exp" 5 2207 "sint8" `901 
 F G "ldexp" 5 2208 "float(float value,sint8 exp)" `899 
-D G "USB_HID_DEVICE" 0 17 "TRUE"
-D G "USB_EP1_TX_ENABLE" 0 18 "USB_ENABLE_INTERRUPT" "Activar EP1 para transferencias masivas IN / interrupcion"
-D G "USB_EP1_TX_SIZE" 0 19 "8"
-D G "USB_EP1_RX_ENABLE" 0 20 "USB_ENABLE_INTERRUPT" "Activar EP1 para transferencias masivas OUT / interrupcion"
-D G "USB_EP1_RX_SIZE" 0 21 "8"
+D G "USB_HID_DEVICE" 0 12 "TRUE"
+D G "USB_EP1_TX_ENABLE" 0 13 "USB_ENABLE_INTERRUPT" "Activar EP1 para transferencias masivas IN / interrupcion"
+D G "USB_EP1_TX_SIZE" 0 14 "8"
+D G "USB_EP1_RX_ENABLE" 0 15 "USB_ENABLE_INTERRUPT" "Activar EP1 para transferencias masivas OUT / interrupcion"
+D G "USB_EP1_RX_SIZE" 0 16 "8"
 D G "__PIC18_USB_H__" 6 136 ""
 D G "__USB_HARDWARE__" 6 138 ""
 D G "__PIC__" 6 141 "1"
@@ -2360,7 +2360,7 @@ F G "usb_copy_desc_seg_to_ep" 10 1151 "void()" `1235
 V L "i" 10 1152 "int8" `1252 
 V L "c" 10 1153 "int8" `1253  "debug_usb(debug_putc, "!%LX! ", &usb_ep0_tx_buffer[0]);"
 C L "usb_copy_desc_seg_to_ep" 10 231 1 "FUNCTION"
-D G "buzzer" 0 30 "PIN_C2"
+D G "buzzer" 0 25 "PIN_C2"
 D G "_STRING" 12 12 ""
 D G "_STDDEF" 13 13 ""
 D G "ptrdiff_t" 13 18 "unsigned int16"
@@ -2817,155 +2817,140 @@ V L "n" 16 1323 "int16" `1510
 V L "pivot" 16 1324 "int16" `1511 
 V L "val" 16 1325 "sint8" `1512 
 C L "bsearch" 16 398 1 "FUNCTION"
-V G "K" 0 36 "int8" `1516 
-V G "segundos" 0 37 "int8" `1517 
-V G "minutos" 0 37 "int8" `1518 
-V G "contador" 0 38 "int8" `1519 
-V G "cont_submenu1" 0 38 "int8" `1520 
-V G "cont_submenu2" 0 38 "int8" `1521 
-V G "menu" 0 39 "int8" `1522 
-V G "opcion" 0 39 "int8" `1523 
-V G "hinicio" 0 39 "int8" `1524 
-V G "hfinal" 0 39 "int8" `1525 
-V G "garaje" 0 39 "int8" `1526 
-V G "MAIN_MENU_LABEL" 0 41 "*int8" `1527 
-V G "WASH_MENU_LABEL" 0 42 "*int8" `1530 
-V G "SHAKE_MENU_LABEL" 0 43 "*int8" `1533 
-V G "PRIME_MENU_LABEL" 0 44 "*int8" `1536 
-V G "PROGRAM_MENU_LABEL" 0 45 "*int8" `1539 
-V G "PROGRAM2_MENU_LABEL" 0 46 "*int8" `1542 
-V G "WASH_WASH_MENU_LABEL" 0 47 "*int8" `1545 
-V G "WASH_PARAMS_MENU_LABEL" 0 48 "*int8" `1548 
-F N "*action" 0 55 ""
-T G "*action" 0 55 "int8()" `1556 
-T G "TMenu" 0 57 "{*int8 label,??0 *[5] children,??0 * parent,int8 childrenCount,int8() *action,? action,action action,int8 currentMenu}" `1560 
-T G "pMenu" 0 59 "TMenu *" `1561 
-F N "initMenu" 0 61 ""
-V L "item" 0 61 "pMenu" `1563 
-V L "label" 0 61 "*int8" `1564 
-F G "initMenu" 0 61 "void(pMenu item,*int8 label)" `1562 
-F N "addItem" 0 70 ""
-V L "parent" 0 70 "pMenu" `1566 
-V L "child" 0 70 "pMenu" `1567 
-F G "addItem" 0 70 "void(pMenu parent,pMenu child)" `1565 
-F N "labelMenu" 0 77 ""
-V L "item" 0 77 "pMenu" `1569 
-V L "label" 0 77 "*int8" `1570 
-F G "labelMenu" 0 77 "void(pMenu item,*int8 label)" `1568 
-C L "testMenu" 0 81 1 "FUNCTION"
-F N "testMenu" 0 82 ""
-F G "testMenu" 0 82 "void()" `1571 
-C L "tecla" 0 81 1 "FUNCTION"
-F N "tecla" 0 87 ""
-f G "tecla" 0 87 "int8()" `1577 
-F N "listenToKey" 0 88 ""
-V L "menu" 0 88 "pMenu" `1579 
-f G "listenToKey" 0 88 "pMenu(pMenu menu)" `1578 
-F N "printMenu" 0 89 ""
-V L "menu" 0 89 "pMenu" `1581 
-f G "printMenu" 0 89 "void(pMenu menu)" `1580 
-F N "min" 0 90 ""
-V L "??65535" 0 90 "int8" `1583 
-V L "??65535" 0 90 "int8" `1584 
-f G "min" 0 90 "int8(int8 ,int8 )" `1582  "/**************************************************************************///"
-C L "min" 0 81 2 "FUNCTION"
-F N "min" 0 96 ""
-V L "a" 0 96 "int8" `1583 
-V L "b" 0 96 "int8" `1587 
-F G "min" 0 96 "int8(int8 a,int8 b)" `1582 
-F N "printMenu" 0 100 ""
-V L "menu" 0 100 "pMenu" `1586 
-F G "printMenu" 0 100 "void(pMenu menu)" `1580 
-V L "start" 0 104 "int8" `1587 
-V L "cMenu" 0 105 "int8" `1588 
-V L "offsets" 0 106 "int8[3]" `1589 
-V L "offset" 0 107 "int8" `1590 
-V L "menusToShow" 0 112 "int8" `1594 
-V L "i" 0 114 "int8" `1595 
-V L "child" 0 115 "pMenu" `1596 
-F N "listenToKey" 0 129 ""
-V L "menu" 0 129 "pMenu" `1604 
-F G "listenToKey" 0 129 "pMenu(pMenu menu)" `1578 
-V L "ks" 0 131 "int8[2]" `1603 
-V L "val" 0 134 "int8" `1604 
-F N "scaffoldMenu" 0 149 ""
-V L "menu" 0 149 "pMenu" `1606 
-F G "scaffoldMenu" 0 149 "void(pMenu menu)" `1605 
-V L "nextMenu" 0 150 "pMenu" `1607 
-F N "menu_principal" 0 159 ""
-F G "menu_principal" 0 160 "void()" `1608 
-C L "menu_lavar" 0 171 2 "*"
-F N "menu_lavar" 0 173 ""
-F G "menu_lavar" 0 174 "void()" `1614 
-C L "menu_cebar" 0 171 2 "FUNCTION"
-F N "menu_cebar" 0 185 ""
-F G "menu_cebar" 0 186 "void()" `1619 
-C L "menu_agitar" 0 197 2 "*"
-F N "menu_agitar" 0 199 ""
-F G "menu_agitar" 0 200 "void()" `1625 
-C L "menu_programar" 0 211 2 "*"
-F N "menu_programar" 0 213 ""
-F G "menu_programar" 0 214 "void()" `1631 
-C L "submenu_lavar1" 0 225 2 "*"
-F N "submenu_lavar1" 0 227 ""
-F G "submenu_lavar1" 0 228 "void()" `1637 
-F N "submenu_lavar2" 0 237 ""
-F G "submenu_lavar2" 0 238 "void()" `1642 
-F N "submenu_crear1" 0 245 ""
-F G "submenu_crear1" 0 246 "void()" `1645 
-F N "submenu_crear2" 0 257 ""
-F G "submenu_crear2" 0 258 "void()" `1651 
-C L "tecla" 0 225 2 "FUNCTION"
-F N "tecla" 0 266 ""
-F G "tecla" 0 267 "int8()" `1577 
-V L "c" 0 268 "int8" `1654 
-C L "tiempo" 0 225 2 "FUNCTION"
-F N "tiempo" 0 278 ""
-F G "tiempo" 0 279 "void()" `1655 
-C L "tiempo" 0 225 1 "FUNCTION"
-C L "tiempo" 0 225 4 "FUNCTION"
-F N "timer0_interrupcion" 0 298 ""
-F G "timer0_interrupcion" 0 299 "void()" `1661 
-C L "timer0_interrupcion" 0 225 1 "FUNCTION"
-F N "TECLADO_INTERRUPT" 0 316 ""
-F G "TECLADO_INTERRUPT" 0 317 "void()" `1662 
-C L "TECLADO_INTERRUPT" 0 225 1 "FUNCTION"
-C L "TECLADO_INTERRUPT" 0 225 1 "FUNCTION"
-C L "TECLADO_INTERRUPT" 0 225 1 "FUNCTION"
-F N "vselechora" 0 327 ""
-F G "vselechora" 0 328 "void()" `1663 
-F N "config_T_enjuague" 0 335 ""
-F G "config_T_enjuague" 0 336 "void()" `1666 
-F N "config_F_lavado" 0 358 ""
-F G "config_F_lavado" 0 359 "void()" `1669 
-V L "garaje" 0 362 "int8" `1670 
-F N "config_F_lavado1" 0 378 ""
-F G "config_F_lavado1" 0 379 "void()" `1673 
-F N "config_F_lavado2" 0 392 ""
-F G "config_F_lavado2" 0 393 "void()" `1676 
-F N "contador_s" 0 405 ""
-C L "contador_s" 0 225 1 "FUNCTION"
-F G "contador_s" 0 406 "void()" `1679 
-V L "contador" 0 409 "int8" `1680 
-C L "MAIN" 0 225 3 "FUNCTION"
-F N "MAIN" 0 420 ""
-F G "MAIN" 0 421 "void()" `1684 
-C L "MAIN" 0 225 1 "FUNCTION"
-C L "MAIN" 0 225 1 "FUNCTION"
-C L "MAIN" 0 225 1 "FUNCTION"
-C L "MAIN" 0 225 1 "FUNCTION"
-C L "MAIN" 0 225 1 "FUNCTION"
-V L "i" 0 432 "int8" `1688 
-C L "MAIN" 0 225 1 "FUNCTION"
-C L "MAIN" 0 225 1 "FUNCTION"
-V L "MAIN" 0 448 "TMenu" `1695 
-V L "wash" 0 448 "TMenu" `1696 
-V L "prime" 0 448 "TMenu" `1697 
-V L "shake" 0 448 "TMenu" `1698 
-V L "program" 0 448 "TMenu" `1699 
-V L "program2" 0 448 "TMenu" `1700 
-V L "washWash" 0 448 "TMenu" `1701 
-V L "washParams" 0 448 "TMenu" `1702 
+V G "K" 0 31 "int8" `1516 
+V G "segundos" 0 32 "int8" `1517 
+V G "minutos" 0 32 "int8" `1518 
+V G "contador" 0 33 "int8" `1519 
+V G "menu" 0 34 "int8" `1520 
+V G "opcion" 0 34 "int8" `1521 
+V G "MAIN_MENU_LABEL" 0 36 "*int8" `1522 
+V G "WASH_MENU_LABEL" 0 37 "*int8" `1525 
+V G "SHAKE_MENU_LABEL" 0 38 "*int8" `1528 
+V G "PRIME_MENU_LABEL" 0 39 "*int8" `1531 
+V G "PROGRAM_MENU_LABEL" 0 40 "*int8" `1534 
+V G "WASH_WASH_MENU_LABEL" 0 42 "*int8" `1537 
+V G "WASH_PARAMS_MENU_LABEL" 0 43 "*int8" `1540 
+V G "WASH_WASHING_MENU_LABEL" 0 45 "*int8" `1543 
+V G "WASH_PARAMS_FORMAT_MENU_LABEL" 0 46 "*int8" `1546 
+V G "WASH_PARAMS_TIME_MENU_LABEL" 0 47 "*int8" `1549 
+V G "WASH_PARAMS_AMOUNT_MENU_LABEL" 0 48 "*int8" `1552 
+V G "SHAKE_SHAKE_MENU_LABEL" 0 50 "*int8" `1555 
+V G "SHAKE_MODE_MENU_LABEL" 0 51 "*int8" `1558 
+V G "SHAKE_TIME_MENU_LABEL" 0 52 "*int8" `1561 
+V G "PRIME_PRIME_MENU_LABEL" 0 54 "*int8" `1564 
+V G "PRIME_MODE_MENU_LABEL" 0 55 "*int8" `1567 
+V G "PRIME_TIME_MENU_LABEL" 0 56 "*int8" `1570 
+V G "PROGRAM_CREATE_MENU_LABEL" 0 59 "*int8" `1573 
+V G "PRPGRAM_EDIT_MENU_LABEL" 0 60 "*int8" `1576 
+V G "PROGRAM_DELET_MENU_LABEL" 0 61 "*int8" `1579 
+V G "PROGRAM_name_MENU_LABEL" 0 63 "*int8" `1582 
+F N "*action" 0 70 ""
+T G "*action" 0 70 "int8()" `1590 
+T G "TMenu" 0 72 "{*int8 label,??0 *[5] children,??0 * parent,int8 childrenCount,int8() *action,? action,action action,int8 currentMenu}" `1594 
+T G "pMenu" 0 74 "TMenu *" `1595 
+F N "initMenu" 0 76 ""
+V L "item" 0 76 "pMenu" `1597 
+V L "label" 0 76 "*int8" `1598 
+F G "initMenu" 0 76 "void(pMenu item,*int8 label)" `1596 
+F N "addItem" 0 84 ""
+V L "parent" 0 84 "pMenu" `1600 
+V L "child" 0 84 "pMenu" `1601 
+F G "addItem" 0 84 "void(pMenu parent,pMenu child)" `1599 
+F N "labelMenu" 0 91 ""
+V L "item" 0 91 "pMenu" `1603 
+V L "label" 0 91 "*int8" `1604 
+F G "labelMenu" 0 91 "void(pMenu item,*int8 label)" `1602 
+C L "testMenu" 0 95 1 "FUNCTION"
+F N "testMenu" 0 96 ""
+F G "testMenu" 0 96 "void()" `1605 
+C L "read_key" 0 95 1 "FUNCTION"
+F N "read_key" 0 101 ""
+f G "read_key" 0 101 "int8()" `1611 
+F N "listenToKey" 0 102 ""
+V L "menu" 0 102 "pMenu" `1613 
+f G "listenToKey" 0 102 "pMenu(pMenu menu)" `1612 
+F N "printMenu" 0 103 ""
+V L "menu" 0 103 "pMenu" `1615 
+f G "printMenu" 0 103 "void(pMenu menu)" `1614 
+F N "min" 0 104 ""
+V L "??65535" 0 104 "int8" `1617 
+V L "??65535" 0 104 "int8" `1618 
+f G "min" 0 104 "int8(int8 ,int8 )" `1616  "/**************************************************************************///"
+C L "min" 0 95 2 "FUNCTION"
+F N "min" 0 110 ""
+V L "a" 0 110 "int8" `1617 
+V L "b" 0 110 "int8" `1621 
+F G "min" 0 110 "int8(int8 a,int8 b)" `1616 
+F N "printMenu" 0 114 ""
+V L "menu" 0 114 "pMenu" `1620 
+F G "printMenu" 0 114 "void(pMenu menu)" `1614 
+V L "start" 0 118 "int8" `1621 
+V L "cMenu" 0 119 "int8" `1622 
+V L "offsets" 0 120 "int8[3]" `1623 
+V L "offset" 0 121 "int8" `1624 
+V L "menusToShow" 0 126 "int8" `1628 
+V L "i" 0 128 "int8" `1629 
+V L "child" 0 129 "pMenu" `1630 
+F N "listenToKey" 0 143 ""
+V L "menu" 0 143 "pMenu" `1638 
+F G "listenToKey" 0 143 "pMenu(pMenu menu)" `1612 
+V L "ks" 0 145 "int8[2]" `1637 
+V L "val" 0 148 "int8" `1638 
+F N "scaffoldMenu" 0 163 ""
+V L "menu" 0 163 "pMenu" `1640 
+F G "scaffoldMenu" 0 163 "void(pMenu menu)" `1639 
+V L "nextMenu" 0 164 "pMenu" `1641 
+C L "read_key" 0 95 2 "FUNCTION"
+F N "read_key" 0 174 ""
+F G "read_key" 0 175 "int8()" `1611 
+V L "c" 0 176 "int8" `1642 
+F N "tiempo" 0 184 ""
+F G "tiempo" 0 185 "void()" `1643 
+C L "tiempo" 0 95 1 "FUNCTION"
+C L "tiempo" 0 95 4 "FUNCTION"
+F N "timer0_interrupcion" 0 204 ""
+F G "timer0_interrupcion" 0 205 "void()" `1649 
+C L "timer0_interrupcion" 0 95 1 "FUNCTION"
+F N "TECLADO_INTERRUPT" 0 222 ""
+F G "TECLADO_INTERRUPT" 0 223 "void()" `1650 
+C L "TECLADO_INTERRUPT" 0 95 1 "FUNCTION"
+C L "TECLADO_INTERRUPT" 0 95 1 "FUNCTION"
+C L "TECLADO_INTERRUPT" 0 95 1 "FUNCTION"
+F N "contador_s" 0 233 ""
+C L "contador_s" 0 95 1 "FUNCTION"
+F G "contador_s" 0 234 "void()" `1651 
+V L "contador" 0 237 "int8" `1652 
+C L "MAIN" 0 95 3 "FUNCTION"
+F N "MAIN" 0 248 ""
+F G "MAIN" 0 249 "void()" `1656 
+C L "MAIN" 0 95 1 "FUNCTION"
+C L "MAIN" 0 95 1 "FUNCTION"
+C L "MAIN" 0 95 1 "FUNCTION"
+C L "MAIN" 0 95 1 "FUNCTION"
+C L "MAIN" 0 95 1 "FUNCTION"
+V L "i" 0 260 "int8" `1660 
+C L "MAIN" 0 95 1 "FUNCTION"
+C L "MAIN" 0 95 1 "FUNCTION"
+V L "MAIN" 0 276 "TMenu" `1667 
+V L "wash" 0 276 "TMenu" `1668 
+V L "prime" 0 276 "TMenu" `1669 
+V L "shake" 0 276 "TMenu" `1670 
+V L "program" 0 276 "TMenu" `1671 
+V L "washWash" 0 276 "TMenu" `1672 
+V L "washParams" 0 276 "TMenu" `1673 
+V L "wash_format" 0 277 "TMenu" `1674 
+V L "wash_time" 0 277 "TMenu" `1675 
+V L "wash_amount" 0 277 "TMenu" `1676 
+V L "shake_shake" 0 277 "TMenu" `1677 
+V L "shake_mode" 0 277 "TMenu" `1678 
+V L "shake_time" 0 278 "TMenu" `1679 
+V L "prime_prime" 0 278 "TMenu" `1680 
+V L "prime_mode" 0 278 "TMenu" `1681 
+V L "prime_time" 0 278 "TMenu" `1682 
+V L "program_create" 0 279 "TMenu" `1683 
+V L "program_edit" 0 279 "TMenu" `1684 
+V L "program_delet" 0 279 "TMenu" `1685 
+V L "program_name" 0 279 "TMenu" `1686 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1
