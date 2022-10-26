@@ -1,12 +1,12 @@
-CCS PCH C Compiler, Version 5.083, 13314               26-oct.-22 17:43
+CCS PCH C Compiler, Version 5.083, 13314               26-Oct-22 18:02
 
-               Filename:   D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.lst
+               Filename:   \\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.lst
 
                ROM used:   8324 bytes (25%)
                            Largest free fragment is 24444
                RAM used:   774 (38%) at main() level
                            829 (40%) worst case
-               Stack used: 3 locations (0 in main + 3 for interrupts)
+               Stack used: 9 locations (0 in main + 9 for interrupts)
                Stack size: 31
 
 *
@@ -14882,6 +14882,15 @@ CCS PCH C Compiler, Version 5.083, 13314               26-oct.-22 17:43
 .................... pMenu listenToKey(pMenu menu); 
 .................... void printMenu(pMenu menu); 
 .................... int min(int, int); 
+....................  
+.................... //EEPROM utils 
+.................... void saveTest() { 
+....................    write_eeprom(0x08, 34); 
+.................... } 
+....................  
+.................... //Operations 
+.................... void wash(); 
+....................  
 ....................  
 .................... ///**************************************************************************/// 
 .................... ///******************** FUNCION MENU PRINCIPAL ******************************/// 

@@ -33,6 +33,10 @@ int segundos=0,minutos=0;
 int contador=1;
 int menu=0,opcion=0;
 
+/*************************************************
+****************** LABELS ************************
+**************************************************/
+
 const char *MAIN_MENU_LABEL = "MENU PRINCIPAL";
 const char *WASH_MENU_LABEL = "LAVAR";
 const char *SHAKE_MENU_LABEL = "AGITAR";
@@ -61,6 +65,74 @@ const char *PRPGRAM_EDIT_MENU_LABEL = "Editar";
 const char *PROGRAM_DELET_MENU_LABEL = "Borrar";
 
 const char *PROGRAM_name_MENU_LABEL = "Nombre";
+
+//configurations
+
+//wash
+#define WASH_FORMAT_ADDR 0x01;
+#define RINSE_TIME_MSB_ADDR 0x02;
+#define RINSE_TIME_LSB_ADDR 0x03;
+#define CYCLES_COUNT_ADDR 0x04;
+#define WATER_VOLUME_ADDR 0x0A;
+
+#define WASH_FORMAT_ADDR_PR1 0x0B;
+#define RINSE_TIME_MSB_ADDR_PR1 0x0C;
+#define RINSE_TIME_LSB_ADDR_PR1 0x0D;
+#define CYCLES_COUNT_ADDR_PR1 0x0E;
+#define WATER_VOLUME_ADDR_PR1 0x0F;
+
+#define WASH_FORMAT_ADDR_PR2 0x10;
+#define RINSE_TIME_MSB_ADDR_PR2 0x11;
+#define RINSE_TIME_LSB_ADDR_PR2 0x12;
+#define CYCLES_COUNT_ADDR_PR2 0x13;
+#define WATER_VOLUME_ADDR_PR2 0x14;
+
+#define WASH_FORMAT_ADDR_PR3 0x15;
+#define RINSE_TIME_MSB_ADDR_PR3 0x16;
+#define RINSE_TIME_LSB_ADDR_PR3 0x17;
+#define CYCLES_COUNT_ADDR_PR3 0x18;
+#define WATER_VOLUME_ADDR_PR3 0x19;
+
+
+//prime
+#define PRIME_MODE_ADDR 0x05;
+#define PRIME_TIME_ADDR 0x06;
+
+#define PRIME_MODE_ADDR_PR1 0x1A;
+#define PRIME_TIME_ADDR_PR1 0x1B;
+
+#define PRIME_MODE_ADDR_PR2 0x1C;
+#define PRIME_TIME_ADDR_PR2 0x1D;
+
+#define PRIME_MODE_ADDR_PR3 0x1E;
+#define PRIME_TIME_ADDR_PR3 0x1F;
+
+
+//shake
+#define SHAKE_DENSITY_ADDR 0x07;
+#define SHAKE_TIME_MSB_ADDR 0x08;
+#define SHAKE_TIME_LSB_ADDR 0x09;
+
+#define SHAKE_DENSITY_ADDR_PR1 0x20;
+#define SHAKE_TIME_MSB_ADDR_PR1 0x21;
+#define SHAKE_TIME_LSB_ADDR_PR1 0x22;
+
+#define SHAKE_DENSITY_ADDR_PR2 0x23;
+#define SHAKE_TIME_MSB_ADDR_PR2 0x24;
+#define SHAKE_TIME_LSB_ADDR_PR2 0x25;
+
+#define SHAKE_DENSITY_ADDR_PR3 0x26;
+#define SHAKE_TIME_MSB_ADDR_PR3 0x27;
+#define SHAKE_TIME_LSB_ADDR_PR3 0x28;
+
+
+//enums
+//wash
+typedef enum EWashFormat { UMELISA, MICROELISA };
+typedef enum EPrimeMode {CONTINUOUS, INTERMITTENT};
+typedef enum EShakeIntensity { LOW, MEDIUM, HIGH};
+
+
 
 typedef struct TMenu {
   char *label;
@@ -102,6 +174,9 @@ char read_key ();
 pMenu listenToKey(pMenu menu);
 void printMenu(pMenu menu);
 int min(int, int);
+
+
+
 
 
 //Operations
@@ -231,7 +306,7 @@ void TECLADO_INTERRUPT(void)
    if(!RB4 || !RB5 || !RB6 ||   !RB7)            //Para no leer el teclado al "soltar" la tecla
    {   
       k= kbd_getc();   
-      RB0=RB1=RB2=RB3=0;                      //Hay que anularlas tanto aquí como al final de Teclado3.c de lo contrario en la colúmna 1,6,7,* se activan los números al soltar la tecla ¿?                                      
+      RB0=RB1=RB2=RB3=0;                      //Hay que anularlas tanto aquï¿½ como al final de Teclado3.c de lo contrario en la colï¿½mna 1,6,7,* se activan los nï¿½meros al soltar la tecla ï¿½?                                      
    }
 } 
 
@@ -255,7 +330,7 @@ void main()
    lcd_init(0x4E,20,4);              //Inicializa la pantalla
    lcd_backlight_led(ON);            //Enciende la luz de Fondo
    set_tris_b(0xF0);                 //RB0..RB3 salidas a teclado, RB4..RB7 entradas de teclado
-   RB0=RB1=RB2=RB3=0;                //Esta línea y la siguiente son para detectar el cambio de estado RB0=RB1=RB2=RB3=0 a RB4=RB5=RB6=RB7=1;
+   RB0=RB1=RB2=RB3=0;                //Esta lï¿½nea y la siguiente son para detectar el cambio de estado RB0=RB1=RB2=RB3=0 a RB4=RB5=RB6=RB7=1;
    port_b_pullups(true);             //Activar las resistencias internas pull up para el puerto B donde esta conectado el teclado
    enable_interrupts ( INT_RB );            
    enable_interrupts ( GLOBAL ); 

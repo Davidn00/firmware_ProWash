@@ -8,12 +8,12 @@ ROM used:   8324/32768 (25%)
 RAM used:   774/2048 (38%) at main() level
             829/2048 (40%) worst case
 
-Stack used: 3 worst case (0 in main + 3 for interrupts)
+Stack used: 9 worst case (0 in main + 9 for interrupts)
 Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  331   157  10  Prueba.c
+  340   158  11  Prueba.c
   854     0   0  C:\Program Files (x86)\PICC\Devices\18f4550.h
   243    88   6  i2c_LCD.c
    78    50   3  Teclado.c
@@ -31,7 +31,7 @@ Lines Stmts  %   Files
    34     0   0  C:\Program Files (x86)\PICC\Drivers\stdbool.h
  1352   359  24  C:\Program Files (x86)\PICC\Drivers\stdlib.h
 ----- -----
-10459  1498 Total
+10468  1499 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
@@ -90,47 +90,47 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0    310   2    4   1659 10.8  usb_Get_Descriptor
 0     14   0    0     76  1.8  usb_finish_set_address
 0    184   1    4    666  8.6  usb_copy_desc_seg_to_ep
-0     34   0    0             @goto13642
-0     80   0    2             @MUL88
+0     34   0    0             @goto63175
+0     80   0    2    182  4.9  @MUL88
 0    404   2    9   1815 10.5  atoi
 0     88   1    6    183  3.2  initMenu
 0    118   1    6    182  4.9  addItem
-0     16   0    0             @const1606
-0     32   0    2             @PSTRINGC_705
+0     16   0    0    117  2.2  @const1606
+0     32   0    2    207  1.8  @PSTRINGC_705
 0     22   0    2     64  4.0  min
 0    398   2   14   1197  7.6  printMenu
-0      2   0    0             @const1619
-0     36   0    2             @PSTRINGR_705
-0     44   0    3             @DIV88
-0    190   1    6             @PRINTF_D_705
+0      2   0    0    207  1.8  @const1621
+0     36   0    2    207  1.8  @PSTRINGR_705
+0     44   0    3     90  3.1  @DIV88
+0    190   1    6    280  1.8  @PRINTF_D_705
 0    326   2    7    840  8.8  listenToKey
 0     66   0    4    117  2.2  scaffoldMenu
 0     42   0    1     90  3.1  read_key
-0      4   0    0             @const1648
+0      4   0    0    156  3.0  @const1650
 0     36   0    0    156  3.0  timer0_interrupcion
 0     46   0    0    163  3.1  TECLADO_INTERRUPT
-0      8   0    0             @const1653
+0      8   0    0    231  1.8  @const1655
 0   1428   9  361   3496  4.4  MAIN
-0     18   0    0             @const1659
-0      2   0    0             @const1661
-0      2   0    0             @const1662
-0     14   0    0             @const1663
-0      8   0    0             @const1664
-0     14   0    0             @const1665
-0      2   0    0             @const1666
- Inline         0             @cinit1
+0     18   0    0    160  2.5  @const1661
+0      2   0    0    328  4.1  @const1663
+0      2   0    0    172  1.7  @const1664
+0     14   0    0    172  1.7  @const1665
+0      8   0    0    172  1.7  @const1666
+0     14   0    0    160  2.5  @const1667
+0      2   0    0    231  1.8  @const1668
+ Inline         0    110  1.6  @cinit1
 
 Program metrics:
-    Functions               53
-    Statements              1498
-    Comments                3357
-    Volume (V)              54007
-    Difficulty (D)          260.2
-    Effort to implement (E) 14052641
-    Time to implement (T)   216 hours, 52 minutes
-    Est Delivered Bugs (B)  19
-    Cyclomatic Complexity   157
-    Maintainability (MI)    68
+    Functions               70
+    Statements              1499
+    Comments                3359
+    Volume (V)              62777
+    Difficulty (D)          302.2
+    Effort to implement (E) 18973464
+    Time to implement (T)   292 hours, 48 minutes
+    Est Delivered Bugs (B)  24
+    Cyclomatic Complexity   168
+    Maintainability (MI)    37
 
  Segment     Used  Free
 -----------  ----  ----
