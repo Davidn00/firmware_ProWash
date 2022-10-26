@@ -34,6 +34,21 @@ int contador=1;
 int menu=0,opcion=0;
 
 /*************************************************
+***************** STRUCTURES *********************
+**************************************************/
+
+typedef struct TMenu {
+  char *label;
+  struct TMenu *children[5];
+  struct TMenu *parent;
+  int childrenCount;
+  void (*action) ();
+  int currentMenu;
+} TMenu;
+
+typedef TMenu* pMenu;
+
+/*************************************************
 ****************** DECLARATIONS ************************
 **************************************************/
 char read_key ();
@@ -212,23 +227,6 @@ void resetToDefault() {
       initConfigProgram(i);
    }
 }
-
-
-
-/*************************************************
-***************** STRUCTURES *********************
-**************************************************/
-
-typedef struct TMenu {
-  char *label;
-  struct TMenu *children[5];
-  struct TMenu *parent;
-  int childrenCount;
-  void (*action) ();
-  int currentMenu;
-} TMenu;
-
-typedef TMenu* pMenu;
 
 void initMenu(pMenu item, char *label) {
    item->childrenCount = 0;

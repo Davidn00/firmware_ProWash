@@ -1,16 +1,104 @@
-Compiling \\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba on 26-Oct-22 at 18:40
+Compiling \\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba on 26-Oct-22 at 19:14
 >>> Warning 203 "C:\Program Files (x86)\PICC\Drivers\pic18_usb.c" Line 727(1,1): Condition always TRUE
->>> Warning 216 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 404(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
->>> Warning 216 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 404(1,2): Interrupts disabled during call to prevent re-entrancy:  (kbd_getc)
->>> Warning 202 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\i2c_LCD.c" Line 170(80,84): Variable never used:   data
->>> Warning 202 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 34(12,18): Variable never used:   opcion
->>> Warning 202 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 49(13,36): Variable never used:   WASH_WASHING_MENU_LABEL
->>> Warning 202 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 72(6,22): Variable never used:   WASH_FORMAT_ADDR
->>> Warning 202 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 73(6,25): Variable never used:   RINSE_TIME_MSB_ADDR
->>> Warning 202 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 74(6,25): Variable never used:   RINSE_TIME_LSB_ADDR
->>> Warning 202 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 75(6,23): Variable never used:   CYCLES_COUNT_ADDR
->>> Warning 202 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 76(6,23): Variable never used:   WATER_VOLUME_ADDR
->>> Warning 202 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 116(5,19): Variable never used:   currentProgram
-      Memory usage:   ROM=26%      RAM=39% - 42%
-      0 Errors,  12 Warnings.
-Build Successful.
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 40(1,6): Expecting a (
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 40(18,19): Expecting a declaration
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 40(19,24): Expecting a (
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 40(29,30): Expecting a declaration
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 40(30,31): Expecting a declaration
+*** Error 32 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 41(16,21): Expecting a , or )
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 41(26,27): Expecting a declaration
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 41(27,28): Expecting a declaration
+*** Error 32 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 178(51,52): Expecting a , or )
+*** Error 36 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 183(61,62): Expecting a ; or ,
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 186(1,2): Expecting a declaration
+*** Error 117 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 188(36,37): Improper use of a function identifier
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 189(7,8): Expecting a declaration
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 189(8,15): Expecting a (
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 189(18,19): Expecting a declaration
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 189(20,22): Expecting a declaration
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 189(23,30): Expecting a (
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 189(33,34): Expecting a declaration
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 189(34,35): Expecting a declaration
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 189(36,37): Expecting a declaration
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 190(7,13): Expecting a declaration
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 191(4,5): Expecting a declaration
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 192(4,18): Expecting a (
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 192(21,31): Expecting a (
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 193(1,2): Expecting a declaration
+*** Error 117 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 195(37,38): Improper use of a function identifier
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 196(17,18): Expecting a declaration
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 196(18,28): Expecting a (
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 196(29,30): Expecting a declaration
+*** Error 28 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 198(32,33): Expecting an identifier
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 198(40,41): Expecting a declaration
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 198(41,42): Expecting a declaration
+*** Error 28 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 199(22,24): Expecting an identifier
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 199(25,26): Expecting a declaration
+*** Error 28 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 200(22,23): Expecting an identifier
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 200(24,25): Expecting a declaration
+*** Error 28 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 201(20,22): Expecting an identifier
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 201(23,24): Expecting a declaration
+*** Error 28 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 203(30,31): Expecting an identifier
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 203(41,42): Expecting a declaration
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 203(42,43): Expecting a declaration
+*** Error 28 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 204(20,21): Expecting an identifier
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 204(22,23): Expecting a declaration
+*** Error 28 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 206(20,22): Expecting an identifier
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 206(23,24): Expecting a declaration
+*** Error 28 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 207(40,41): Expecting an identifier
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 207(47,48): Expecting a declaration
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 207(48,49): Expecting a declaration
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 208(1,2): Expecting a declaration
+*** Error 117 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 210(23,24): Improper use of a function identifier
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 211(8,9): Expecting a declaration
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 211(20,21): Expecting a (
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 211(24,25): Expecting a declaration
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 211(25,26): Expecting a declaration
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 211(27,28): Expecting a (
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 211(30,31): Expecting a declaration
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 211(32,33): Expecting a declaration
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 213(4,5): Expecting a declaration
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 214(1,2): Expecting a declaration
+*** Error 117 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 233(40,41): Improper use of a function identifier
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 234(8,10): Expecting a declaration
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 234(10,23): Expecting a (
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 234(26,27): Expecting a declaration
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 234(27,28): Expecting a declaration
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 235(4,8): Expecting a (
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 235(10,16): Expecting a (
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 235(19,24): Expecting a declaration
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 235(23,24): Expecting a declaration
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 236(4,8): Expecting a (
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 236(10,21): Expecting a (
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 236(24,25): Expecting a declaration
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 236(25,26): Expecting a declaration
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 237(4,8): Expecting a (
+*** Error 28 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 237(17,18): Expecting an identifier
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 237(23,24): Expecting a declaration
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 238(4,8): Expecting a (
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 238(10,15): Expecting a (
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 238(18,23): Expecting a (
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 239(1,2): Expecting a declaration
+*** Error 117 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 241(41,42): Improper use of a function identifier
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 242(7,8): Expecting a declaration
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 242(8,14): Expecting a (
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 242(16,29): Expecting a (
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 242(33,36): Expecting a declaration
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 242(36,37): Expecting a declaration
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 242(38,44): Expecting a declaration
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 242(44,45): Expecting a declaration
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 243(4,10): Expecting a (
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 243(12,20): Expecting a (
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 243(21,27): Expecting a (
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 243(29,42): Expecting a (
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 243(44,45): Expecting a declaration
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 243(46,51): Expecting a (
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 244(4,10): Expecting a (
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 244(12,25): Expecting a (
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 244(27,28): Expecting a declaration
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 245(4,9): Expecting a (
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 245(11,17): Expecting a (
+*** Error 48 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 245(20,26): Expecting a (
+*** Error 43 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 246(1,2): Expecting a declaration
+      100 Errors,  1 Warnings.
+Build Failed.
