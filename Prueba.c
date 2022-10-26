@@ -69,61 +69,21 @@ const char *PROGRAM_name_MENU_LABEL = "Nombre";
 //configurations
 
 //wash
-#define WASH_FORMAT_ADDR 0x01;
-#define RINSE_TIME_MSB_ADDR 0x02;
-#define RINSE_TIME_LSB_ADDR 0x03;
-#define CYCLES_COUNT_ADDR 0x04;
-#define WATER_VOLUME_ADDR 0x0A;
-
-#define WASH_FORMAT_ADDR_PR1 0x0B;
-#define RINSE_TIME_MSB_ADDR_PR1 0x0C;
-#define RINSE_TIME_LSB_ADDR_PR1 0x0D;
-#define CYCLES_COUNT_ADDR_PR1 0x0E;
-#define WATER_VOLUME_ADDR_PR1 0x0F;
-
-#define WASH_FORMAT_ADDR_PR2 0x10;
-#define RINSE_TIME_MSB_ADDR_PR2 0x11;
-#define RINSE_TIME_LSB_ADDR_PR2 0x12;
-#define CYCLES_COUNT_ADDR_PR2 0x13;
-#define WATER_VOLUME_ADDR_PR2 0x14;
-
-#define WASH_FORMAT_ADDR_PR3 0x15;
-#define RINSE_TIME_MSB_ADDR_PR3 0x16;
-#define RINSE_TIME_LSB_ADDR_PR3 0x17;
-#define CYCLES_COUNT_ADDR_PR3 0x18;
-#define WATER_VOLUME_ADDR_PR3 0x19;
-
+byte WASH_FORMAT_ADDR[4] = {0x01, 0x0B, 0x10, 0x15};
+byte RINSE_TIME_MSB_ADDR[4] = {0x02, 0x0C, 0x11, 0x16};
+byte RINSE_TIME_LSB_ADDR[4] = {0x03, 0x0D, 0x12, 0x17};
+byte CYCLES_COUNT_ADDR[4] = {0x04, 0x0E, 0x13, 0x18};
+byte WATER_VOLUME_ADDR[4] = {0x0A, 0x0F, 0x14, 0x19};
 
 //prime
-#define PRIME_MODE_ADDR 0x05;
-#define PRIME_TIME_ADDR 0x06;
-
-#define PRIME_MODE_ADDR_PR1 0x1A;
-#define PRIME_TIME_ADDR_PR1 0x1B;
-
-#define PRIME_MODE_ADDR_PR2 0x1C;
-#define PRIME_TIME_ADDR_PR2 0x1D;
-
-#define PRIME_MODE_ADDR_PR3 0x1E;
-#define PRIME_TIME_ADDR_PR3 0x1F;
+byte PRIME_MODE_ADDR[4] = {0x05, 0x1A, 0x1C, 0x1E};
+byte PRIME_TIME_ADDR[4] = {0x06, 0x1B, 0x1D, 0x1F};
 
 
 //shake
-#define SHAKE_DENSITY_ADDR 0x07;
-#define SHAKE_TIME_MSB_ADDR 0x08;
-#define SHAKE_TIME_LSB_ADDR 0x09;
-
-#define SHAKE_DENSITY_ADDR_PR1 0x20;
-#define SHAKE_TIME_MSB_ADDR_PR1 0x21;
-#define SHAKE_TIME_LSB_ADDR_PR1 0x22;
-
-#define SHAKE_DENSITY_ADDR_PR2 0x23;
-#define SHAKE_TIME_MSB_ADDR_PR2 0x24;
-#define SHAKE_TIME_LSB_ADDR_PR2 0x25;
-
-#define SHAKE_DENSITY_ADDR_PR3 0x26;
-#define SHAKE_TIME_MSB_ADDR_PR3 0x27;
-#define SHAKE_TIME_LSB_ADDR_PR3 0x28;
+byte SHAKE_DENSITY_ADDR[4] = {0x07, 0x20, 0x23, 0x26};
+byte SHAKE_TIME_MSB_ADDR[4] = {0x08, 0x21, 0x24, 0x27};
+byte SHAKE_TIME_LSB_ADDR[4] = {0x09, 0x22, 0x25, 0x28};
 
 
 //enums
@@ -132,7 +92,21 @@ typedef enum EWashFormat { UMELISA, MICROELISA };
 typedef enum EPrimeMode {CONTINUOUS, INTERMITTENT};
 typedef enum EShakeIntensity { LOW, MEDIUM, HIGH};
 
+int currentProgram = 0;
 
+
+
+/*************************************************
+*************** CONFIG METHODS *******************
+**************************************************/
+void changeWashFormat(EWashFormat newFormat) {
+
+}
+
+
+/*************************************************
+***************** STRUCTURES *********************
+**************************************************/
 
 typedef struct TMenu {
   char *label;

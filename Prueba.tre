@@ -1,5 +1,5 @@
 ÀÄPrueba
-   ÃÄMAIN  0/1428  Ram=361
+   ÃÄMAIN  0/1468  Ram=361
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄlcd_init  0/272  Ram=5
    ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
@@ -180,7 +180,7 @@
    ³     ³  ³  ³  ÃÄusb_request_stall  0/4  Ram=0
    ³     ³  ³  ³  ÃÄusb_request_stall  0/4  Ram=0
    ³     ³  ³  ³  ÀÄusb_copy_desc_seg_to_ep  0/184  Ram=4
-   ³     ³  ³  ³     ÃÄ@goto63175  0/34  Ram=0
+   ³     ³  ³  ³     ÃÄ@goto49553  0/34  Ram=0
    ³     ³  ³  ³     ÃÄ@const1024  0/58  Ram=0
    ³     ³  ³  ³     ÃÄ@const1013  0/48  Ram=0
    ³     ³  ³  ³     ÃÄ@READ_PROGRAM_MEMORY  0/30  Ram=7
