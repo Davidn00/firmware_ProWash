@@ -93,7 +93,7 @@ byte PRIME_TIME_ADDR[4] = {0x06, 0x1B, 0x1D, 0x1F};
 
 
 //shake
-byte SHAKE_DENSITY_ADDR[4] = {0x07, 0x20, 0x23, 0x26};
+byte SHAKE_INTENSITY_ADDR[4] = {0x07, 0x20, 0x23, 0x26};
 byte SHAKE_TIME_MSB_ADDR[4] = {0x08, 0x21, 0x24, 0x27};
 byte SHAKE_TIME_LSB_ADDR[4] = {0x09, 0x22, 0x25, 0x28};
 
@@ -165,12 +165,12 @@ int readPrimeTime() {
 }
 
 //shake
-void changeShakeDensity(EShakeIntensity density) {
-   write_eeprom(SHAKE_DENSITY_ADDR[currentProgram], density);
+void changeShakeIntensity(EShakeIntensity intensity) {
+   write_eeprom(SHAKE_INTENSITY_ADDR[currentProgram], intensity);
 }
 
-EShakeIntensity readShakeDensity() {
-   return read_eeprom(SHAKE_DENSITY_ADDR[currentProgram]);
+EShakeIntensity readShakeIntensity() {
+   return read_eeprom(SHAKE_INTENSITY_ADDR[currentProgram]);
 }
 
 void changeShakeTime(int newTime) {
@@ -191,6 +191,28 @@ void switchProgram(int newProgram) {
    }
    currentProgram = newProgram;
 }
+
+void initConfigProgram(int program) {
+   switchProgram(newProgram);
+
+   changeWashFormat(EWashFormat.UMELISA);
+   changeWaterVolume(30);
+   changeCyclesCount(4);
+   changeRinseTime(30);
+
+   changePrimeMode(EPrimeMode.CONTINUOUS);
+   changePrimeTime(2);
+
+   changeShakeTime(30);
+   changeShakeIntensity(EShakeIntensity.MEDIUM);
+}
+
+void resetToDefault() {
+   for (int i = 0; i < 4; i++) {
+      initConfigProgram(i);
+   }
+}
+
 
 
 /*************************************************
