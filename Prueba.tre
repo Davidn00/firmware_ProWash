@@ -1,5 +1,5 @@
 ÀÄPrueba
-   ÃÄMAIN  0/714  Ram=145
+   ÃÄMAIN  0/730  Ram=145
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄlcd_init  0/272  Ram=5
    ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
@@ -78,7 +78,7 @@
    ³  ÃÄaddItem  0/118  Ram=6
    ³  ÃÄaddItem  0/118  Ram=6
    ³  ÀÄscaffoldMenu  0/66  Ram=4
-   ³     ÃÄprintMenu  0/310  Ram=7
+   ³     ÃÄprintMenu  0/398  Ram=14
    ³     ³  ÃÄ@PSTRINGC_705  0/32  Ram=2
    ³     ³  ³  ÀÄ*
    ³     ³  ÃÄlcd_gotoxy  0/114  Ram=7
@@ -86,6 +86,8 @@
    ³     ³  ÃÄ@PSTRINGR_705  0/36  Ram=2
    ³     ³  ³  ÀÄLCD_PUTC  0/82  Ram=1
    ³     ³  ³     ÀÄ*
+   ³     ³  ÃÄ@DIV88  0/44  Ram=3
+   ³     ³  ÃÄmin  0/22  Ram=2
    ³     ³  ÃÄlcd_gotoxy  0/114  Ram=7
    ³     ³  ³  ÀÄ*
    ³     ³  ÃÄ@PRINTF_D_705  0/190  Ram=6
@@ -112,7 +114,7 @@
    ³     ³  ÀÄLCD_PUTC  0/82  Ram=1
    ³     ³     ÀÄ*
    ³     ÃÄ@delay_ms1  0/42  Ram=1
-   ³     ÀÄlistenToKey  0/358  Ram=7
+   ³     ÀÄlistenToKey  0/326  Ram=7
    ³        ÃÄtecla  0/42  Ram=1
    ³        ³  ÀÄkbd_getc  0/274  Ram=1
    ³        ÀÄatoi  0/404  Ram=9
@@ -154,7 +156,7 @@
    ³     ³  ³  ³  ÃÄusb_request_stall  0/4  Ram=0
    ³     ³  ³  ³  ÃÄusb_request_stall  0/4  Ram=0
    ³     ³  ³  ³  ÀÄusb_copy_desc_seg_to_ep  0/184  Ram=4
-   ³     ³  ³  ³     ÃÄ@goto24037  0/34  Ram=0
+   ³     ³  ³  ³     ÃÄ@goto56968  0/34  Ram=0
    ³     ³  ³  ³     ÃÄ@const1024  0/58  Ram=0
    ³     ³  ³  ³     ÃÄ@const1013  0/48  Ram=0
    ³     ³  ³  ³     ÃÄ@READ_PROGRAM_MEMORY  0/30  Ram=7

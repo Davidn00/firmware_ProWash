@@ -42,10 +42,10 @@ const char *MAIN_MENU_LABEL = "Main Menu";
 const char *WASH_MENU_LABEL = "Wash";
 const char *SHAKE_MENU_LABEL = "Shake";
 const char *PRIME_MENU_LABEL = "Prime";
+const char *PROGRAM_MENU_LABEL = "Program";
+const char *PROGRAM2_MENU_LABEL = "Program2";
 const char *WASH_WASH_MENU_LABEL = "Inner Wash";
 const char *WASH_PARAMS_MENU_LABEL = "Select Params";
-const char *W1 = "W1";
-const char *W2 = "W2";
 
 typedef struct TMenu {
   char *label;
@@ -87,26 +87,41 @@ void testMenu() {
 char tecla ();
 pMenu listenToKey(pMenu menu);
 void printMenu(pMenu menu);
+int min(int, int);
 
 ///**************************************************************************///
 ///******************** FUNCION MENU PRINCIPAL ******************************///
 ///*************************************************************************///
 
+int min(int a, int b) {
+   return a < b ? a : b;
+}
+
 void printMenu(pMenu menu) {
    LCD_PUTC("\f");
    lcd_gotoxy(3, 1);
    printf(lcd_putc, menu->label);
-   for (int i = 0; i < menu->childrenCount; i++) {
-      pMenu child = menu->children[i];
+   int start = 0;
+   int cMenu = menu->currentMenu;
+   int offsets[3] = {2, 0, 1};
+   int offset = offsets[cMenu % 3];
+   if (cMenu > 3) {
+      start = cMenu - offset - 1;
+   }
+   
+   int menusToShow = min(menu->childrenCount - start, 3);
+   
+   for (int i = 0; i < menusToShow; i++) {
+      pMenu child = menu->children[i+start];
       lcd_gotoxy(2, i+2);
-      printf(lcd_putc, "%d", i+1);
+      printf(lcd_putc, "%d", start + i +1);
       lcd_gotoxy(3, i+2);
       printf(lcd_putc, "-");
       lcd_gotoxy(4, i+2);
       printf(lcd_putc, child->label);
    }
    if (menu->currentMenu > 0) {
-      lcd_gotoxy(1, menu->currentMenu+1);
+      lcd_gotoxy(1, offset+2);
       printf(lcd_putc, "*");
    }
 }
@@ -118,7 +133,7 @@ pMenu listenToKey(pMenu menu) {
    ks[1] = '\0';
    int val = atoi(ks);
    if (val && menu->childrenCount >= val) {
-      return menu->children[val-1];
+      menu->currentMenu = val;
    } else if (k == '*' && menu->parent != NULL) {
       return menu->parent;
    } else if (k == 'A' && menu->currentMenu > 1) {
@@ -430,25 +445,24 @@ void main()
    //delay_ms(500);                            // Es 1000ms para una espera de 4s
    lcd_putc("\f");
    
-   TMenu main, wash, prime, shake, washWash, washParams, washWashW1, washWashW2;
+   TMenu main, wash, prime, shake, program, program2, washWash, washParams;
    initMenu(&main, MAIN_MENU_LABEL);
    initMenu(&wash, WASH_MENU_LABEL);
    initMenu(&prime, PRIME_MENU_LABEL);
    initMenu(&shake, SHAKE_MENU_LABEL);
    initMenu(&washWash, WASH_WASH_MENU_LABEL);
    initMenu(&washParams, WASH_PARAMS_MENU_LABEL);
-   initMenu(&washWashW1, W1);
-   initMenu(&washWashW2, W2);
+   initMenu(&program, PROGRAM_MENU_LABEL);
+   initMenu(&program2, PROGRAM2_MENU_LABEL);
+
    
    addItem(&main, &wash);
    addItem(&main, &prime);
    addItem(&main, &shake);
+   addItem(&main, &program);
+   addItem(&main, &program2);
    addItem(&wash, &washWash);
    addItem(&wash, &washParams);
-   addItem(&washWash, &washWashW1);
-   addItem(&washWash, &washWashW2);
-   
-   
    
    scaffoldMenu(&main);
 }

@@ -1,0 +1,10 @@
+Compiling \\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba on 26-Oct-22 at 15:33
+>>> Warning 203 "C:\Program Files (x86)\PICC\Drivers\pic18_usb.c" Line 727(1,1): Condition always TRUE
+>>> Warning 216 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 468(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+>>> Warning 216 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 468(1,2): Interrupts disabled during call to prevent re-entrancy:  (kbd_getc)
+>>> Warning 202 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\i2c_LCD.c" Line 170(80,84): Variable never used:   data
+>>> Warning 202 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 38(33,46): Variable never used:   cont_submenu2
+>>> Warning 202 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 39(12,18): Variable never used:   opcion
+      Memory usage:   ROM=25%      RAM=21% - 24%
+      0 Errors,  6 Warnings.
+Build Successful.

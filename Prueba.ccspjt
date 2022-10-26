@@ -11,7 +11,7 @@ Type=4
 1=Prueba.c
 
 [defines]
-buildcount=368
+buildcount=379
 
 [ProjectLog]
 Days=12
@@ -239,7 +239,7 @@ D11_E=1
 D11_D=0
 D11_L6=[85378]Project Closed.
 D12=26-10-2022
-D12_L=7
+D12_L=10
 D12_L1=[39628]Project Opened.
 D12_L2=[39660]Started Editing.
 D12_L3=[42865]Stopped Editing.
@@ -247,10 +247,13 @@ D12_L4=[42911]Started Editing.
 D12_L5=[49166]Stopped Editing.
 D12_L6=[49180]Started Editing.
 D12_L7=[49762]Stopped Editing.
+D12_L8=[52357]Started Editing.
+D12_L9=[52697]Stopped Editing.
+D12_L10=[54749]Started Editing.
 
 [Opened Files]
 1=Prueba.c
-t1=402
+t1=98
 Count=2
 2=i2c_LCD.c
 t2=73

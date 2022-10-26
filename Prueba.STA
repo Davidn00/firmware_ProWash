@@ -1,19 +1,19 @@
 
-ROM used:   8002/32768 (24%)
+ROM used:   8096/32768 (25%)
             32768/32768 (100%) including unused fragments
 
             0.8 Average locations per line
             5.1 Average locations per statement
 
-RAM used:   427/2048 (21%) at main() level
-            475/2048 (23%) worst case
+RAM used:   438/2048 (21%) at main() level
+            493/2048 (24%) worst case
 
 Stack used: 9 worst case (0 in main + 9 for interrupts)
 Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  456   242  15  Prueba.c
+  470   248  16  Prueba.c
   854     0   0  C:\Program Files (x86)\PICC\Devices\18f4550.h
   243    88   6  i2c_LCD.c
    78    50   3  Teclado.c
@@ -31,7 +31,7 @@ Lines Stmts  %   Files
    34     0   0  C:\Program Files (x86)\PICC\Drivers\stdbool.h
  1352   359  23  C:\Program Files (x86)\PICC\Drivers\stdlib.h
 ----- -----
-10584  1583 Total
+10598  1589 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
@@ -90,96 +90,97 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0    310   2    4   1659 10.8  usb_Get_Descriptor
 0     14   0    0     76  1.8  usb_finish_set_address
 0    184   1    4    666  8.6  usb_copy_desc_seg_to_ep
-0     34   0    0             @goto24037
+0     34   0    0             @goto56968
 0     80   0    2    182  4.9  @MUL88
-0    404   3    9   1815 10.5  atoi
+0    404   2    9   1815 10.5  atoi
 0     88   1    6    183  3.2  initMenu
 0    118   1    6    182  4.9  addItem
 0     16   0    0    231  1.8  @const1572
-0     32   0    2    231  1.8  @PSTRINGC_705
-0    310   2    7    741  6.1  printMenu
-0      2   0    0    172  1.7  @const1582
-0     36   0    2    172  1.7  @PSTRINGR_705
+0     32   0    2     64  4.0  @PSTRINGC_705
+0     22   0    2     64  4.0  min
+0    398   2   14   1197  7.6  printMenu
+0      2   0    0    172  1.7  @const1585
+0     36   0    2    432  6.8  @PSTRINGR_705
 0     44   0    3    432  6.8  @DIV88
-0    190   1    6    117  2.2  @PRINTF_D_705
-0    358   2    7    861  8.9  listenToKey
+0    190   1    6    280  1.8  @PRINTF_D_705
+0    326   2    7    840  8.8  listenToKey
 0     66   0    4    117  2.2  scaffoldMenu
-0      2   0    0    207  1.8  @const1601
-0     16   0    0    207  1.8  @const1602
-0      8   0    0    231  1.8  @const1603
-0      8   0    0   7038  9.5  @const1604
-0     10   0    0    207  1.8  @const1605
-0      2   0    0    280  1.8  @const1607
-0     12   0    0     90  3.1  @const1608
-0     20   0    0     96  1.6  @const1609
-0      8   0    0    280  1.8  @const1610
-0      2   0    0    280  1.8  @const1612
-0     12   0    0    280  1.8  @const1613
-0     12   0    0    156  3.0  @const1614
-0     12   0    0    163  3.1  @const1615
-0     10   0    0    280  1.8  @const1616
-0      2   0    0    231  1.8  @const1618
-0     12   0    0    231  1.8  @const1619
-0     14   0    0    138  1.7  @const1620
-0     16   0    0    328  4.1  @const1621
-0     10   0    0    231  1.8  @const1622
-0      2   0    0    172  1.7  @const1624
-0     16   0    0    172  1.7  @const1625
-0      8   0    0    160  2.5  @const1626
-0     10   0    0    328  4.1  @const1627
-0     10   0    0    172  1.7  @const1628
-0      2   0    0    110  1.6  @const1630
-0     10   0    0    160  2.5  @const1631
-0     12   0    0    231  1.8  @const1632
-0     14   0    0    110  1.6  @const1633
-0     12   0    0   1198  4.3  @const1635
-0     10   0    0    231  1.8  @const1636
-0      2   0    0     96  1.6  @const1638
-0     18   0    0     96  1.6  @const1639
-0     18   0    0   6466  9.0  @const1640
-0     20   0    0     90  3.1  @const1641
-0     18   0    0     96  1.6  @const1642
-0     14   0    0    138  1.7  @const1644
-0     20   0    0     90  3.1  @const1645
+0      2   0    0    207  1.8  @const1609
+0     16   0    0    231  1.8  @const1610
+0      8   0    0   7038  9.5  @const1611
+0      8   0    0    207  1.8  @const1612
+0     10   0    0    207  1.8  @const1613
+0      2   0    0     90  3.1  @const1615
+0     12   0    0     96  1.6  @const1616
+0     20   0    0    280  1.8  @const1617
+0      8   0    0    280  1.8  @const1618
+0      2   0    0    280  1.8  @const1620
+0     12   0    0    156  3.0  @const1621
+0     12   0    0    163  3.1  @const1622
+0     12   0    0    280  1.8  @const1623
+0     10   0    0    280  1.8  @const1624
+0      2   0    0    231  1.8  @const1626
+0     12   0    0    138  1.7  @const1627
+0     14   0    0    328  4.1  @const1628
+0     16   0    0    231  1.8  @const1629
+0     10   0    0    231  1.8  @const1630
+0      2   0    0    172  1.7  @const1632
+0     16   0    0    160  2.5  @const1633
+0      8   0    0    328  4.1  @const1634
+0     10   0    0    172  1.7  @const1635
+0     10   0    0    172  1.7  @const1636
+0      2   0    0    160  2.5  @const1638
+0     10   0    0    231  1.8  @const1639
+0     12   0    0    110  1.6  @const1640
+0     14   0    0    110  1.6  @const1641
+0     12   0    0    231  1.8  @const1643
+0     10   0    0    231  1.8  @const1644
+0      2   0    0     96  1.6  @const1646
+0     18   0    0   6466  9.0  @const1647
+0     18   0    0     90  3.1  @const1648
+0     20   0    0     96  1.6  @const1649
+0     18   0    0     96  1.6  @const1650
+0     14   0    0     90  3.1  @const1652
+0     20   0    0     90  3.1  @const1653
 0     42   0    1     90  3.1  tecla
-0      4   0    0    156  3.0  @const1652
+0      4   0    0    156  3.0  @const1660
 0     36   0    0    156  3.0  timer0_interrupcion
 0     46   0    0    163  3.1  TECLADO_INTERRUPT
-0     10   0    0    160  2.5  @const1663
-0     12   0    0    160  2.5  @const1664
-0     10   0    0    160  2.5  @const1666
-0     12   0    0    160  2.5  @const1667
-0     10   0    0    208  4.7  @const1669
-0     12   0    0    208  4.7  @const1670
-0      8   0    0   1739  4.4  @const1673
-0    714   4  145   1739  4.4  MAIN
-0     18   0    0             @const1679
-0      2   0    0             @const1681
-0      2   0    0             @const1682
-0     14   0    0             @const1683
-0      8   0    0             @const1684
-0     14   0    0             @const1685
-0      2   0    0             @const1686
+0     10   0    0    160  2.5  @const1671
+0     12   0    0    160  2.5  @const1672
+0     10   0    0    160  2.5  @const1674
+0     12   0    0    160  2.5  @const1675
+0     10   0    0    208  4.7  @const1677
+0     12   0    0    208  4.7  @const1678
+0      8   0    0   1739  4.4  @const1681
+0    730   5  145   1739  4.4  MAIN
+0     18   0    0             @const1687
+0      2   0    0             @const1689
+0      2   0    0             @const1690
+0     14   0    0             @const1691
+0      8   0    0             @const1692
+0     14   0    0             @const1693
+0      2   0    0             @const1694
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               104
-    Statements              1583
+    Functions               105
+    Statements              1589
     Comments                3369
-    Volume (V)              102495
-    Difficulty (D)          403.2
-    Effort to implement (E) 41330949
-    Time to implement (T)   637 hours, 49 minutes
+    Volume (V)              102069
+    Difficulty (D)          414.5
+    Effort to implement (E) 42312149
+    Time to implement (T)   652 hours, 58 minutes
     Est Delivered Bugs (B)  40
-    Cyclomatic Complexity   249
-    Maintainability (MI)    119
+    Cyclomatic Complexity   252
+    Maintainability (MI)    121
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
 00004-00006     4  0  
 00008-000C4   190  0  
-000C6-07FC6  7748  24766  
+000C6-07FC6  7842  24672  
 07FC8-07FFE    56  0  
 
 
