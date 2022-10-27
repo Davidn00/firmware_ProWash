@@ -1,9 +1,9 @@
-D G "__PCH__" 0 531 ""5.083""
-D G "__DEVICE__" 0 531 "4550"
-D G "__DATE__" 0 531 ""26-Oct-22""
-D G "__TIME__" 0 531 ""19:49:40""
-D G "_UNICODE" 0 531 ""?""
-D G "__EVAL" 0 531 ""?"" "Standard Header file for the PIC18F4550 device ////////////////"
+D G "__PCH__" 0 533 ""5.083""
+D G "__DEVICE__" 0 533 "4550"
+D G "__DATE__" 0 533 ""26-Oct-22""
+D G "__TIME__" 0 533 ""20:25:58""
+D G "_UNICODE" 0 533 ""?""
+D G "__EVAL" 0 533 ""?"" "Standard Header file for the PIC18F4550 device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
 f N "set_tris_a" 1 45 ""
 v L "value" 1 45 "int8" `55 
@@ -2823,37 +2823,37 @@ V G "minutos" 0 32 "int8" `1518
 V G "contador" 0 33 "int8" `1519 
 V G "menu" 0 34 "int8" `1520 
 V G "opcion" 0 34 "int8" `1521 
-F N "*fptr" 0 36 ""
-T G "*fptr" 0 36 "void()" `1522  "***************** STRUCTURES *********************"
-T G "TMenu" 0 49 "{*int8 label,??0 *[5] children,??0 * parent,int8 childrenCount,fptr action,int8 currentMenu}" `1531 
-T G "pMenu" 0 51 "TMenu *" `1532  "****************** DECLARATIONS ************************"
-F N "read_key" 0 56 ""
-f G "read_key" 0 56 "int8()" `1533 
-F N "min" 0 58 ""
-V L "??65535" 0 58 "int8" `1535 
-V L "??65535" 0 58 "int8" `1536 
-f G "min" 0 58 "int8(int8 ,int8 )" `1534 
-F N "getMSB" 0 59 ""
-V L "value" 0 59 "int8" `1538 
-f G "getMSB" 0 59 "int8(int8 value)" `1537 
-F N "getLSB" 0 60 ""
-V L "value" 0 60 "int8" `1540 
-f G "getLSB" 0 60 "int8(int8 value)" `1539 
-F N "joinBytes" 0 61 ""
-V L "msb" 0 61 "int8" `1542 
-V L "lsb" 0 61 "int8" `1543 
-f G "joinBytes" 0 61 "int8(int8 msb,int8 lsb)" `1541  "operations"
-F N "wash" 0 64 ""
-f G "wash" 0 64 "void()" `1544  "menus"
+F N "*_fptr" 0 38 ""
+T G "*_fptr" 0 38 "void()" `1522  "***************** STRUCTURES *********************"
+T G "TMenu" 0 51 "{*int8 label,??0 *[5] children,??0 * parent,int8 childrenCount,_fptr action,int8 currentMenu}" `1531 
+T G "pMenu" 0 53 "TMenu *" `1532  "****************** DECLARATIONS ************************"
+F N "read_key" 0 58 ""
+f G "read_key" 0 58 "int8()" `1533 
+F N "min" 0 60 ""
+V L "??65535" 0 60 "int8" `1535 
+V L "??65535" 0 60 "int8" `1536 
+f G "min" 0 60 "int8(int8 ,int8 )" `1534 
+F N "getMSB" 0 61 ""
+V L "value" 0 61 "int8" `1538 
+f G "getMSB" 0 61 "int8(int8 value)" `1537 
+F N "getLSB" 0 62 ""
+V L "value" 0 62 "int8" `1540 
+f G "getLSB" 0 62 "int8(int8 value)" `1539 
+F N "joinBytes" 0 63 ""
+V L "msb" 0 63 "int8" `1542 
+V L "lsb" 0 63 "int8" `1543 
+f G "joinBytes" 0 63 "int8(int8 msb,int8 lsb)" `1541  "menus"
 F N "listenToKey" 0 67 ""
-V L "menu" 0 67 "pMenu" `1546 
-f G "listenToKey" 0 67 "pMenu(pMenu menu)" `1545 
+V L "menu" 0 67 "pMenu" `1545 
+f G "listenToKey" 0 67 "pMenu(pMenu menu)" `1544 
 F N "printMenu" 0 68 ""
-V L "menu" 0 68 "pMenu" `1548 
-f G "printMenu" 0 68 "void(pMenu menu)" `1547 
+V L "menu" 0 68 "pMenu" `1547 
+f G "printMenu" 0 68 "void(pMenu menu)" `1546 
 F N "scaffoldMenu" 0 69 ""
-V L "menu" 0 69 "pMenu" `1550 
-f G "scaffoldMenu" 0 69 "void(pMenu menu)" `1549  "****************** LABELS ************************"
+V L "menu" 0 69 "pMenu" `1549 
+f G "scaffoldMenu" 0 69 "void(pMenu menu)" `1548  "ops"
+F N "washOp" 0 72 ""
+f G "washOp" 0 72 "void()" `1550  "****************** LABELS ************************"
 V G "MAIN_MENU_LABEL" 0 79 "*int8" `1551 
 V G "WASH_MENU_LABEL" 0 80 "*int8" `1554 
 V G "SHAKE_MENU_LABEL" 0 81 "*int8" `1557 
@@ -2875,20 +2875,20 @@ V G "PROGRAM_CREATE_MENU_LABEL" 0 102 "*int8" `1602
 V G "PRPGRAM_EDIT_MENU_LABEL" 0 103 "*int8" `1605 
 V G "PROGRAM_DELET_MENU_LABEL" 0 104 "*int8" `1608 
 V G "PROGRAM_name_MENU_LABEL" 0 106 "*int8" `1611 
-C L "scaffoldMenu" 0 108 2 "FUNCTION"
+C L "washOp" 0 108 2 "FUNCTION"
 V G "WASH_FORMAT_ADDR" 0 111 "int8[4]" `1614 
 V G "RINSE_TIME_MSB_ADDR" 0 112 "int8[4]" `1615 
 V G "RINSE_TIME_LSB_ADDR" 0 113 "int8[4]" `1616 
 V G "CYCLES_COUNT_ADDR" 0 114 "int8[4]" `1617 
 V G "WATER_VOLUME_ADDR" 0 115 "int8[4]" `1618 
-C L "scaffoldMenu" 0 108 1 "FUNCTION"
+C L "washOp" 0 108 1 "FUNCTION"
 V G "PRIME_MODE_ADDR" 0 118 "int8[4]" `1619 
 V G "PRIME_TIME_ADDR" 0 119 "int8[4]" `1620 
-C L "scaffoldMenu" 0 108 1 "FUNCTION"
+C L "washOp" 0 108 1 "FUNCTION"
 V G "SHAKE_INTENSITY_ADDR" 0 123 "int8[4]" `1621 
 V G "SHAKE_TIME_MSB_ADDR" 0 124 "int8[4]" `1622 
 V G "SHAKE_TIME_LSB_ADDR" 0 125 "int8[4]" `1623 
-C L "scaffoldMenu" 0 108 2 "FUNCTION"
+C L "washOp" 0 108 2 "FUNCTION"
 E G "UMELISA" 0 130 "0" `1625 
 E G "MICROELISA" 0 130 "1" `1626 
 V G "" 0 130 ""
@@ -2900,7 +2900,7 @@ E G "MEDIUM" 0 132 "1" `1632
 E G "HIGH" 0 132 "2" `1633 
 V G "" 0 132 ""
 V G "currentProgram" 0 134 "int8" `1634 
-C L "scaffoldMenu" 0 138 2 "*"
+C L "washOp" 0 138 2 "*"
 F N "changeWashFormat" 0 142 ""
 V L "newFormat" 0 142 "int8" `1636 
 F G "changeWashFormat" 0 142 "void(int8 newFormat)" `1635 
@@ -3041,30 +3041,31 @@ F N "joinBytes" 0 455 ""
 V L "msb" 0 455 "int8" `1542 
 V L "lsb" 0 455 "int8" `1737 
 F G "joinBytes" 0 455 "int8(int8 msb,int8 lsb)" `1541 
-C L "wash" 0 443 1 "FUNCTION"
-F N "wash" 0 461 ""
-F G "wash" 0 461 "void()" `1544 
+C L "washOp" 0 443 1 "FUNCTION"
+F N "washOp" 0 461 ""
+F G "washOp" 0 461 "void()" `1550 
 C L "listenToKey" 0 443 1 "FUNCTION"
-F N "listenToKey" 0 467 ""
-V L "menu" 0 467 "pMenu" `1737 
-F G "listenToKey" 0 467 "pMenu(pMenu menu)" `1545 
-V L "ks" 0 469 "int8[2]" `1736 
-V L "val" 0 472 "int8" `1737 
-V L "child" 0 482 "pMenu" `1738 
-F N "scaffoldMenu" 0 492 ""
-V L "menu" 0 492 "pMenu" `1740 
-F G "scaffoldMenu" 0 492 "void(pMenu menu)" `1549 
-V L "nextMenu" 0 493 "pMenu" `1739 
-F N "printMenu" 0 502 ""
-V L "menu" 0 502 "pMenu" `1741 
-F G "printMenu" 0 502 "void(pMenu menu)" `1547 
-V L "start" 0 506 "int8" `1742 
-V L "cMenu" 0 507 "int8" `1743 
-V L "offsets" 0 508 "int8[3]" `1744 
-V L "offset" 0 509 "int8" `1745 
-V L "menusToShow" 0 514 "int8" `1746 
-V L "i" 0 516 "int8" `1747 
-V L "child" 0 517 "pMenu" `1748 
+F N "listenToKey" 0 469 ""
+V L "menu" 0 469 "pMenu" `1738 
+F G "listenToKey" 0 469 "pMenu(pMenu menu)" `1544 
+V L "ks" 0 471 "int8[2]" `1737 
+V L "val" 0 474 "int8" `1738 
+V L "child" 0 484 "pMenu" `1739 
+V L "toAct" 0 486 "_fptr" `1740 
+F N "scaffoldMenu" 0 495 ""
+V L "menu" 0 495 "pMenu" `1742 
+F G "scaffoldMenu" 0 495 "void(pMenu menu)" `1548 
+V L "nextMenu" 0 496 "pMenu" `1741 
+F N "printMenu" 0 505 ""
+V L "menu" 0 505 "pMenu" `1743 
+F G "printMenu" 0 505 "void(pMenu menu)" `1546 
+V L "start" 0 509 "int8" `1744 
+V L "cMenu" 0 510 "int8" `1745 
+V L "offsets" 0 511 "int8[3]" `1746 
+V L "offset" 0 512 "int8" `1747 
+V L "menusToShow" 0 517 "int8" `1748 
+V L "i" 0 519 "int8" `1749 
+V L "child" 0 520 "pMenu" `1750 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1

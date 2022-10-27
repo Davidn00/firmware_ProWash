@@ -33,7 +33,9 @@ int segundos=0,minutos=0;
 int contador=1;
 int menu=0,opcion=0;
 
-typedef void (*fptr)();
+
+
+typedef void (*_fptr)(void); 
 
 /*************************************************
 ***************** STRUCTURES *********************
@@ -44,7 +46,7 @@ typedef struct TMenu {
   struct TMenu *children[5];
   struct TMenu *parent;
   int childrenCount;
-  fptr action;
+  _fptr action;
   int currentMenu;
 } TMenu;
 
@@ -60,16 +62,14 @@ int getMSB(int value);
 int getLSB(int value);
 int joinBytes(int msb, int lsb);
 
-//operations
-void wash();
 
 //menus
 pMenu listenToKey(pMenu menu);
 void printMenu(pMenu menu);
 void scaffoldMenu(pMenu menu);
 
-
-
+//ops
+void washOp(void);
 
 
 /*************************************************
@@ -434,7 +434,7 @@ void main()
    addItem(&program, &program_delet);
    addItem(&program_create, &program_name);
 
-   washWash.action = &wash;
+   washWash.action = washOp;
    
    
    scaffoldMenu(&main);
@@ -458,9 +458,11 @@ int joinBytes(int msb, int lsb) {
 
 
 //operations
-void wash() {
+void washOp(void) {
+   lcd_putc("\f");
    lcd_gotoxy(2, 3);
    printf(lcd_putc, "Lavando ...");
+   delay_ms(5000);
 }
 
 //menu handlers
@@ -481,7 +483,8 @@ pMenu listenToKey(pMenu menu) {
    } else if (k == '#' && menu->currentMenu > 0) {
       pMenu child = menu->children[menu->currentMenu -1];
       if (child->action != NULL) {
-         
+         _fptr toAct = child->action;
+         (*toAct)();
          return menu;
       }
       return child;

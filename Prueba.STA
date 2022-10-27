@@ -1,9 +1,9 @@
 
-ROM used:   9112/32768 (28%)
+ROM used:   9246/32768 (28%)
             32768/32768 (100%) including unused fragments
 
             0.9 Average locations per line
-            5.9 Average locations per statement
+            6.0 Average locations per statement
 
 RAM used:   817/2048 (40%) at main() level
             870/2048 (42%) worst case
@@ -13,7 +13,7 @@ Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  530   198  13  Prueba.c
+  533   201  13  Prueba.c
   854     0   0  C:\Program Files (x86)\PICC\Devices\18f4550.h
   243    88   6  i2c_LCD.c
    78    50   3  Teclado.c
@@ -24,14 +24,14 @@ Lines Stmts  %   Files
   432     0   0  C:\Program Files (x86)\PICC\Drivers\usb_desc_hid.h
  1103     0   0  C:\Program Files (x86)\PICC\Drivers\usb.h
  1192   249  16  C:\Program Files (x86)\PICC\Drivers\usb.c
- 1516   316  21  C:\Program Files (x86)\PICC\Drivers\pic18_usb.c
+ 1516   316  20  C:\Program Files (x86)\PICC\Drivers\pic18_usb.c
   435     0   0  C:\Program Files (x86)\PICC\Drivers\string.h
    32     0   0  C:\Program Files (x86)\PICC\Drivers\stddef.h
    28     0   0  C:\Program Files (x86)\PICC\Drivers\ctype.h
    34     0   0  C:\Program Files (x86)\PICC\Drivers\stdbool.h
  1352   359  23  C:\Program Files (x86)\PICC\Drivers\stdlib.h
 ----- -----
-10658  1539 Total
+10661  1542 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
@@ -46,7 +46,7 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0    272   1    5    902  5.8  lcd_init
 0    114   1    7    681  8.0  lcd_gotoxy
 0     82   0    1    310  5.9  LCD_PUTC
-0    274   2    1   1541  3.4  kbd_getc
+0    274   1    1   1541  3.4  kbd_getc
 0     32   0    0             @const1001
 0     48   0    0             @const1007
 0     48   0    0             @const1013
@@ -90,9 +90,10 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0    310   2    4   1659 10.8  usb_Get_Descriptor
 0     14   0    0     76  1.8  usb_finish_set_address
 0    184   1    4    666  8.6  usb_copy_desc_seg_to_ep
-0     34   0    0             @goto53750
+0     34   0    0             @goto2371
 0     80   0    2    182  4.9  @MUL88
 0    404   2    9   1815 10.5  atoi
+0     14   0    0    207  1.8  @GOTOPTR
 0    154   1    3    100  2.3  changeRinseTime
 0     68   0    2     43  2.1  changeCyclesCount
 0     68   0    2     43  2.1  changeWaterVolume
@@ -113,7 +114,7 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     46   0    0    163  3.1  TECLADO_INTERRUPT
 0      8   0    0    245  2.7  @const1698
 0    190   1    6     90  3.1  @PRINTF_D_705
-0   1508   8  363   3589  4.9  MAIN
+0   1510   8  363   3581  4.9  MAIN
 0     18   0    0    156  3.0  @const1707
 0      2   0    0    163  3.1  @const1709
 0      2   0    0    208  4.7  @const1710
@@ -123,32 +124,34 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0      2   0    0     96  1.6  @const1714
 0     16   0    3     44  2.1  getMSB
 0     10   0    1     35  1.7  getLSB
-0     12   0    0     90  3.1  @const1735
-0    374   2    9    959  8.9  listenToKey
+0     78   0    1     98  1.5  washOp
+0      2   0    0     90  3.1  @const1735
+0     12   0    0   1052  9.4  @const1736
+0    412   2   11   1052  9.4  listenToKey
 0     66   0    4    117  2.2  scaffoldMenu
 0    398   2   14   1194  7.7  printMenu
-0      2   0    0     66  3.5  @const1740
-0     36   0    2     53  1.2  @PSTRINGR_705
+0      2   0    0     53  1.2  @const1742
+0     36   0    2     66  3.5  @PSTRINGR_705
  Inline         0    388  4.1  @cinit1
 
 Program metrics:
-    Functions               81
-    Statements              1539
+    Functions               84
+    Statements              1542
     Comments                3387
-    Volume (V)              70406
-    Difficulty (D)          347.9
-    Effort to implement (E) 24494415
-    Time to implement (T)   378 hours, 0 minutes
-    Est Delivered Bugs (B)  28
-    Cyclomatic Complexity   181
-    Maintainability (MI)    60
+    Volume (V)              73579
+    Difficulty (D)          360.9
+    Effort to implement (E) 26555169
+    Time to implement (T)   409 hours, 48 minutes
+    Est Delivered Bugs (B)  30
+    Cyclomatic Complexity   187
+    Maintainability (MI)    68
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
 00004-00006     4  0  
 00008-000C4   190  0  
-000C6-07FC6  8858  23656  
+000C6-07FC6  8992  23522  
 07FC8-07FFE    56  0  
 
 
