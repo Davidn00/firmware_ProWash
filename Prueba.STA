@@ -1,21 +1,21 @@
 
-ROM used:   11010/32768 (34%)
+ROM used:   11268/32768 (34%)
             32768/32768 (100%) including unused fragments
 
             1.0 Average locations per line
-            6.9 Average locations per statement
+            7.0 Average locations per statement
 
-RAM used:   817/2048 (40%) at main() level
-            886/2048 (43%) worst case
+RAM used:   816/2048 (40%) at main() level
+            885/2048 (43%) worst case
 
 Stack used: 5 worst case (0 in main + 5 for interrupts)
 Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  603   244  15  Prueba.c
+  633   260  16  Prueba.c
   854     0   0  C:\Program Files (x86)\PICC\Devices\18f4550.h
-  243    88   6  i2c_LCD.c
+  243    88   5  i2c_LCD.c
    78    50   3  Teclado.c
    46    21   1  tonos_buzzer.c
  2227   258  16  C:\Program Files (x86)\PICC\Drivers\math.h
@@ -29,9 +29,9 @@ Lines Stmts  %   Files
    32     0   0  C:\Program Files (x86)\PICC\Drivers\stddef.h
    28     0   0  C:\Program Files (x86)\PICC\Drivers\ctype.h
    34     0   0  C:\Program Files (x86)\PICC\Drivers\stdbool.h
- 1352   359  23  C:\Program Files (x86)\PICC\Drivers\stdlib.h
+ 1352   359  22  C:\Program Files (x86)\PICC\Drivers\stdlib.h
 ----- -----
-10731  1585 Total
+10761  1601 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
@@ -52,7 +52,7 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0    586   3   27    806  6.5  generate_tone
 0    148   1   13             @DIV3232
 0     70   0    5             @DIV1616
-0     92   0   14             @MUL3232
+0     94   0   14             @MUL3232
 0     66   0    6             @WRITEBITA
 0     32   0    0             @const1001
 0     48   0    0             @const1007
@@ -97,14 +97,15 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0    310   1    4   1659 10.8  usb_Get_Descriptor
 0     14   0    0     76  1.8  usb_finish_set_address
 0    184   1    4    666  8.6  usb_copy_desc_seg_to_ep
-0     34   0    0             @goto13797
+0     34   0    0             @goto31678
+0    126   1    9    290  6.0  strcat
 0     80   0    2             @MUL88
-0    404   2    9   1815 10.5  atoi
-0    114   1    4    101  3.8  rand
+0    402   2    9   1815 10.5  atoi
 0     14   0    0             @GOTOPTR
-0     64   0    2     44  1.9  changeWashFormat
+0     66   0    2     44  1.9  changeWashFormat
 0     50   0    2     29  1.9  readWashFormat
-0    146   1    3    100  2.3  changeRinseTime
+0    148   1    3    100  2.3  changeRinseTime
+0    104   0    5    117  3.5  getRinseTime
 0     66   0    2     43  2.1  changeCyclesCount
 0     66   0    2     43  2.1  changeWaterVolume
 0     66   0    2     43  2.1  changePrimeTime
@@ -117,14 +118,14 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     16   0    0             @const1688
 0     32   0    2   1194  7.7  @PSTRINGC_705
 0     22   0    2     64  4.0  min
-0     42   0    1     90  3.1  read_key
+0     40   0    1     90  3.1  read_key
 0     44   0    3             @DIV88
 0      4   0    0   1194  7.7  @const1702
 0     36   0    0    156  3.0  timer0_interrupcion
 0     46   0    0    163  3.1  TECLADO_INTERRUPT
 0      8   0    0             @const1707
 0    190   1    6             @PRINTF_D_705
-0   1550   7  363   3693  4.9  MAIN
+0   1552   7  363   3693  4.9  MAIN
 0     18   0    0             @const1716
 0      2   0    0             @const1718
 0      2   0    0             @const1719
@@ -134,41 +135,42 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0      2   0    0             @const1723
 0     16   0    3     44  2.1  getMSB
 0     10   0    1     35  1.7  getLSB
+0     14   0    3     68  3.1  joinBytes
 0     80   0    1    223  4.3  getOptionKey
 0    138   1    2    249  3.5  washOp
 0      2   0    0             @const1745
 0     12   0    0    129  3.4  @const1746
-0     44   0    3    129  3.4  saveFormat
-0    164   1    3    562  6.8  formatWash
+0    164   1    3    560  7.0  washFormat
 0      2   0    0   1052  9.4  @const1752
 0     36   0    2   1052  9.4  @PSTRINGR_705
 0     12   0    0    117  2.2  @const1754
 0     16   0    0   1052  9.4  @const1755
-0     34   0    0   1052  9.4  @goto15906
+0     34   0    0   1052  9.4  @goto33750
+0    168   1   11    566  5.5  washTime
 0    416   2   11   1052  9.4  listenToKey
 0     68   0    4    117  2.2  scaffoldMenu
 0    398   2   14   1194  7.7  printMenu
-0      2   0    0             @const1763
+0      2   0    0             @const1769
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               80
-    Statements              1585
-    Comments                3387
-    Volume (V)              76871
-    Difficulty (D)          382.0
-    Effort to implement (E) 29367106
-    Time to implement (T)   453 hours, 12 minutes
-    Est Delivered Bugs (B)  32
-    Cyclomatic Complexity   204
-    Maintainability (MI)    56
+    Functions               82
+    Statements              1601
+    Comments                3397
+    Volume (V)              78820
+    Difficulty (D)          392.3
+    Effort to implement (E) 30920475
+    Time to implement (T)   477 hours, 10 minutes
+    Est Delivered Bugs (B)  33
+    Cyclomatic Complexity   206
+    Maintainability (MI)    61
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
 00004-00006     4  0  
 00008-000C4   190  0  
-000C6-07FC6  10756  21758  
+000C6-07FC6  11014  21500  
 07FC8-07FFE    56  0  
 
 

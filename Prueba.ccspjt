@@ -11,7 +11,7 @@ Type=4
 1=Prueba.c
 
 [defines]
-buildcount=426
+buildcount=432
 
 [ProjectLog]
 Days=13
@@ -19,7 +19,7 @@ D1=07-10-2022
 D1_L=7
 D1_L1=[60436]Started Editing.
 D1_L2=[71287]Stopped Editing.
-TotalEdit=1365
+TotalEdit=1422
 TotalDebug=0
 D1_E=193
 D1_D=0
@@ -286,11 +286,11 @@ D12_L41=[76365]Started Editing.
 D12_L42=[76668]Stopped Editing.
 D12_L43=[77103]Project Closed.
 D13=31-10-2022
-D13_L=9
+D13_L=12
 D13_L1=[18931]Project Opened.
 D13_L2=[19932]Started Editing.
 D13_L3=[20816]Stopped Editing.
-D13_E=147
+D13_E=204
 D13_D=0
 D13_L4=[20816]Project Closed.
 D13_L5=[42391]Project Opened.
@@ -298,14 +298,17 @@ D13_L6=[42769]Started Editing.
 D13_L7=[43379]Stopped Editing.
 D13_L8=[43822]Started Editing.
 D13_L9=[51405]Stopped Editing.
+D13_L10=[55415]Stopped Editing.
+D13_L11=[55415]Project Closed.
+D13_L12=[55437]Project Opened.
 
 [Opened Files]
-1=Prueba.c
-t1=511
-Count=3
-2=i2c_LCD.c
-t2=89
-3=Teclado.c
+1=Teclado.c
+t1=17
+Count=2
+2=Prueba.c
+t2=17
+3=Prueba.c
 t3=17
 4=D:\Escuela\Tesis\Capítulo III\para David\programa.c
 t4=198

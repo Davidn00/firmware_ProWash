@@ -31,7 +31,7 @@
 char K;
 int segundos=0,minutos=0;
 int contador=1;
-int menu=0,opcion=0;
+int menu=0;
 
 //enums
 //wash
@@ -77,9 +77,10 @@ void scaffoldMenu(pMenu menu);
 
 //operations
 void washOp(void);
-void formatWash(void);
 void saveFormat(void);
 void readFormat(void);
+void washFormat(void);
+void washTime(void);
 
 EOptionKey getOptionKey ();
 
@@ -265,9 +266,6 @@ void testMenu() {
 }
 
 
-
-
-
 ///**************************************************************************///
 ///******************** FUNCION MENU PRINCIPAL ******************************///
 ///*************************************************************************///
@@ -435,8 +433,9 @@ void main()
    addItem(&program_create, &program_name);
 
    washWash.action = washOp;
-   wash_format.action = formatWash;
-   wash_time.action =  saveFormat;
+   wash_format.action = washFormat;
+   wash_time.action =  washTime;
+   
    
    scaffoldMenu(&main);
 }
@@ -477,7 +476,7 @@ EOptionKey getOptionKey (){
    }
 }
 
-//operations
+//operations with program param
 void washOp(void) {
    lcd_putc("\f");
    lcd_gotoxy(2, 3);
@@ -495,7 +494,7 @@ void saveFormat(void) {
    if(rand()%2==0){
       z = UMELISA;
    }
-    else{
+   else{
       z = MICROELISA;
    }
    changeWashFormat(z);
@@ -507,7 +506,7 @@ void readFormat(void) {
   delay_ms(250);
 }
 
-void formatWash(void){
+void washFormat(void){
    EWashFormat x = readWashFormat();
    while(true){
    lcd_putc("\f");
@@ -534,6 +533,37 @@ void formatWash(void){
    }
 }
 
+void washTime(void){
+   int x = getRinseTime();
+   char charValue [4] = {"\0"};
+   strcat(charValue, k);
+   while (true){
+      printf(lcd_putc, charValue);
+      k = read_key ();
+      char ks[2];
+      ks[0] = (char)k;
+      ks[1] = '\0';
+      int val = atoi(ks);
+      if (val) {
+      strcat(charValue, k);
+      int newValue= atoi(charValue);
+         if (newValue == 0 || newValue > 300){
+         strcpy(charValue,"");
+              
+         }
+      }  
+   /*} else if (k == '*' != NULL) {
+      return ;
+   } else if (k == 'A' ) {
+      
+   } else if (k == 'B' ) {
+     
+   } else if (k == '#') {
+   
+      if () {
+      }*/
+       }
+}
 
 //menu handlers
 pMenu listenToKey(pMenu menu) {

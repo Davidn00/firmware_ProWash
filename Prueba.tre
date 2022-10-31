@@ -1,5 +1,5 @@
 ÀÄPrueba
-   ÃÄMAIN  0/1550  Ram=363
+   ÃÄMAIN  0/1552  Ram=363
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄlcd_init  0/272  Ram=5
    ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
@@ -67,7 +67,7 @@
    ³  ³     ÃÄswitchProgram  0/20  Ram=1
    ³  ³     ÃÄchangeWaterVolume  0/66  Ram=2
    ³  ³     ÃÄchangeCyclesCount  0/66  Ram=2
-   ³  ³     ÃÄchangeRinseTime  0/146  Ram=3
+   ³  ³     ÃÄchangeRinseTime  0/148  Ram=3
    ³  ³     ³  ÃÄgetMSB  0/16  Ram=3
    ³  ³     ³  ÀÄgetLSB  0/10  Ram=1
    ³  ³     ÃÄchangePrimeTime  0/66  Ram=2
@@ -151,9 +151,9 @@
    ³     ³     ÀÄ*
    ³     ÃÄ@delay_ms1  0/42  Ram=1
    ³     ÀÄlistenToKey  0/416  Ram=11
-   ³        ÃÄread_key  0/42  Ram=1
+   ³        ÃÄread_key  0/40  Ram=1
    ³        ³  ÀÄkbd_getc  0/274  Ram=1
-   ³        ÃÄatoi  0/404  Ram=9
+   ³        ÃÄatoi  0/402  Ram=9
    ³        ³  ÀÄ@MUL88  0/80  Ram=2
    ³        ÃÄwashOp  0/138  Ram=2
    ³        ³  ÃÄ@PSTRINGC_705  0/32  Ram=2
@@ -171,7 +171,7 @@
    ³        ³  ³  ÃÄ@DIV3232  0/148  Ram=13
    ³        ³  ³  ÃÄ@DIV1616  0/70  Ram=5
    ³        ³  ³  ÃÄ@DIV1616  0/70  Ram=5
-   ³        ³  ³  ÃÄ@MUL3232  0/92  Ram=14
+   ³        ³  ³  ÃÄ@MUL3232  0/94  Ram=14
    ³        ³  ³  ÃÄ@DIV3232  0/148  Ram=13
    ³        ³  ³  ÃÄ@DIV3232  0/148  Ram=13
    ³        ³  ³  ÃÄdo_delay  0/92  Ram=5
@@ -185,7 +185,7 @@
    ³        ³  ³  ÃÄ@WRITEBITA  0/66  Ram=6
    ³        ³  ³  ÀÄ@WRITEBITA  0/66  Ram=6
    ³        ³  ÀÄ@delay_ms1  0/42  Ram=1
-   ³        ÃÄformatWash  0/164  Ram=3
+   ³        ÃÄwashFormat  0/164  Ram=3
    ³        ³  ÃÄreadWashFormat  0/50  Ram=2
    ³        ³  ÃÄ@PSTRINGC_705  0/32  Ram=2
    ³        ³  ³  ÀÄ*
@@ -203,13 +203,22 @@
    ³        ³  ³  ÀÄ*
    ³        ³  ÃÄgetOptionKey  0/80  Ram=1
    ³        ³  ³  ÀÄkbd_getc  0/274  Ram=1
-   ³        ³  ÃÄ@goto15906  0/34  Ram=0
-   ³        ³  ÀÄchangeWashFormat  0/64  Ram=2
-   ³        ÀÄsaveFormat  0/44  Ram=3
-   ³           ÃÄrand  0/114  Ram=4
-   ³           ³  ÃÄ@MUL3232  0/92  Ram=14
-   ³           ³  ÀÄ@DIV1616  0/70  Ram=5
-   ³           ÀÄchangeWashFormat  0/64  Ram=2
+   ³        ³  ÃÄ@goto33750  0/34  Ram=0
+   ³        ³  ÀÄchangeWashFormat  0/66  Ram=2
+   ³        ÀÄwashTime  0/168  Ram=11
+   ³           ÃÄgetRinseTime  0/104  Ram=5
+   ³           ³  ÀÄjoinBytes  0/14  Ram=3
+   ³           ÃÄstrcat  0/126  Ram=9
+   ³           ÃÄ@PSTRINGR_705  0/36  Ram=2
+   ³           ³  ÀÄ*
+   ³           ÃÄread_key  0/40  Ram=1
+   ³           ³  ÀÄ*
+   ³           ÃÄatoi  0/402  Ram=9
+   ³           ³  ÀÄ*
+   ³           ÃÄstrcat  0/126  Ram=9
+   ³           ÃÄatoi  0/402  Ram=9
+   ³           ³  ÀÄ*
+   ³           ÀÄ@const1016  0/18  Ram=0
    ÃÄusb_isr  0/126  Ram=2
    ³  ÃÄusb_isr_activity  0/18  Ram=0
    ³  ÃÄusb_isr_stall  0/14  Ram=0
@@ -247,7 +256,7 @@
    ³     ³  ³  ³  ÃÄusb_request_stall  0/4  Ram=0
    ³     ³  ³  ³  ÃÄusb_request_stall  0/4  Ram=0
    ³     ³  ³  ³  ÀÄusb_copy_desc_seg_to_ep  0/184  Ram=4
-   ³     ³  ³  ³     ÃÄ@goto13797  0/34  Ram=0
+   ³     ³  ³  ³     ÃÄ@goto31678  0/34  Ram=0
    ³     ³  ³  ³     ÃÄ@const1024  0/58  Ram=0
    ³     ³  ³  ³     ÃÄ@const1013  0/48  Ram=0
    ³     ³  ³  ³     ÃÄ@READ_PROGRAM_MEMORY  0/30  Ram=7
