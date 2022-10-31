@@ -1,9 +1,9 @@
-D G "__PCH__" 0 533 ""5.083""
-D G "__DEVICE__" 0 533 "4550"
-D G "__DATE__" 0 533 ""26-Oct-22""
-D G "__TIME__" 0 533 ""20:25:58""
-D G "_UNICODE" 0 533 ""?""
-D G "__EVAL" 0 533 ""?"" "Standard Header file for the PIC18F4550 device ////////////////"
+D G "__PCH__" 0 604 ""5.083""
+D G "__DEVICE__" 0 604 "4550"
+D G "__DATE__" 0 604 ""31-Oct-22""
+D G "__TIME__" 0 604 ""14:13:55""
+D G "_UNICODE" 0 604 ""?""
+D G "__EVAL" 0 604 ""?"" "Standard Header file for the PIC18F4550 device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
 f N "set_tris_a" 1 45 ""
 v L "value" 1 45 "int8" `55 
@@ -2823,249 +2823,275 @@ V G "minutos" 0 32 "int8" `1518
 V G "contador" 0 33 "int8" `1519 
 V G "menu" 0 34 "int8" `1520 
 V G "opcion" 0 34 "int8" `1521 
-F N "*_fptr" 0 38 ""
-T G "*_fptr" 0 38 "void()" `1522  "***************** STRUCTURES *********************"
-T G "TMenu" 0 51 "{*int8 label,??0 *[5] children,??0 * parent,int8 childrenCount,_fptr action,int8 currentMenu}" `1531 
-T G "pMenu" 0 53 "TMenu *" `1532  "****************** DECLARATIONS ************************"
-F N "read_key" 0 58 ""
-f G "read_key" 0 58 "int8()" `1533 
-F N "min" 0 60 ""
-V L "??65535" 0 60 "int8" `1535 
-V L "??65535" 0 60 "int8" `1536 
-f G "min" 0 60 "int8(int8 ,int8 )" `1534 
-F N "getMSB" 0 61 ""
-V L "value" 0 61 "int8" `1538 
-f G "getMSB" 0 61 "int8(int8 value)" `1537 
-F N "getLSB" 0 62 ""
-V L "value" 0 62 "int8" `1540 
-f G "getLSB" 0 62 "int8(int8 value)" `1539 
-F N "joinBytes" 0 63 ""
-V L "msb" 0 63 "int8" `1542 
-V L "lsb" 0 63 "int8" `1543 
-f G "joinBytes" 0 63 "int8(int8 msb,int8 lsb)" `1541  "menus"
-F N "listenToKey" 0 67 ""
-V L "menu" 0 67 "pMenu" `1545 
-f G "listenToKey" 0 67 "pMenu(pMenu menu)" `1544 
-F N "printMenu" 0 68 ""
-V L "menu" 0 68 "pMenu" `1547 
-f G "printMenu" 0 68 "void(pMenu menu)" `1546 
-F N "scaffoldMenu" 0 69 ""
-V L "menu" 0 69 "pMenu" `1549 
-f G "scaffoldMenu" 0 69 "void(pMenu menu)" `1548  "ops"
-F N "washOp" 0 72 ""
-f G "washOp" 0 72 "void()" `1550  "****************** LABELS ************************"
-V G "MAIN_MENU_LABEL" 0 79 "*int8" `1551 
-V G "WASH_MENU_LABEL" 0 80 "*int8" `1554 
-V G "SHAKE_MENU_LABEL" 0 81 "*int8" `1557 
-V G "PRIME_MENU_LABEL" 0 82 "*int8" `1560 
-V G "PROGRAM_MENU_LABEL" 0 83 "*int8" `1563 
-V G "WASH_WASH_MENU_LABEL" 0 85 "*int8" `1566 
-V G "WASH_PARAMS_MENU_LABEL" 0 86 "*int8" `1569 
-V G "WASH_WASHING_MENU_LABEL" 0 88 "*int8" `1572 
-V G "WASH_PARAMS_FORMAT_MENU_LABEL" 0 89 "*int8" `1575 
-V G "WASH_PARAMS_TIME_MENU_LABEL" 0 90 "*int8" `1578 
-V G "WASH_PARAMS_AMOUNT_MENU_LABEL" 0 91 "*int8" `1581 
-V G "SHAKE_SHAKE_MENU_LABEL" 0 93 "*int8" `1584 
-V G "SHAKE_MODE_MENU_LABEL" 0 94 "*int8" `1587 
-V G "SHAKE_TIME_MENU_LABEL" 0 95 "*int8" `1590 
-V G "PRIME_PRIME_MENU_LABEL" 0 97 "*int8" `1593 
-V G "PRIME_MODE_MENU_LABEL" 0 98 "*int8" `1596 
-V G "PRIME_TIME_MENU_LABEL" 0 99 "*int8" `1599 
-V G "PROGRAM_CREATE_MENU_LABEL" 0 102 "*int8" `1602 
-V G "PRPGRAM_EDIT_MENU_LABEL" 0 103 "*int8" `1605 
-V G "PROGRAM_DELET_MENU_LABEL" 0 104 "*int8" `1608 
-V G "PROGRAM_name_MENU_LABEL" 0 106 "*int8" `1611 
-C L "washOp" 0 108 2 "FUNCTION"
-V G "WASH_FORMAT_ADDR" 0 111 "int8[4]" `1614 
-V G "RINSE_TIME_MSB_ADDR" 0 112 "int8[4]" `1615 
-V G "RINSE_TIME_LSB_ADDR" 0 113 "int8[4]" `1616 
-V G "CYCLES_COUNT_ADDR" 0 114 "int8[4]" `1617 
-V G "WATER_VOLUME_ADDR" 0 115 "int8[4]" `1618 
-C L "washOp" 0 108 1 "FUNCTION"
-V G "PRIME_MODE_ADDR" 0 118 "int8[4]" `1619 
-V G "PRIME_TIME_ADDR" 0 119 "int8[4]" `1620 
-C L "washOp" 0 108 1 "FUNCTION"
-V G "SHAKE_INTENSITY_ADDR" 0 123 "int8[4]" `1621 
-V G "SHAKE_TIME_MSB_ADDR" 0 124 "int8[4]" `1622 
-V G "SHAKE_TIME_LSB_ADDR" 0 125 "int8[4]" `1623 
-C L "washOp" 0 108 2 "FUNCTION"
-E G "UMELISA" 0 130 "0" `1625 
-E G "MICROELISA" 0 130 "1" `1626 
-V G "" 0 130 ""
-E G "CONTINUOUS" 0 131 "0" `1628 
-E G "INTERMITTENT" 0 131 "1" `1629 
-V G "" 0 131 ""
-E G "LOW" 0 132 "0" `1631 
-E G "MEDIUM" 0 132 "1" `1632 
-E G "HIGH" 0 132 "2" `1633 
-V G "" 0 132 ""
-V G "currentProgram" 0 134 "int8" `1634 
-C L "washOp" 0 138 2 "*"
+E G "UMELISA" 0 38 "0" `1523 
+E G "MICROELISA" 0 38 "1" `1524 
+V G "" 0 38 ""
+E G "CONTINUOUS" 0 39 "0" `1526 
+E G "INTERMITTENT" 0 39 "1" `1527 
+V G "" 0 39 ""
+E G "LOW" 0 40 "0" `1529 
+E G "MEDIUM" 0 40 "1" `1530 
+E G "HIGH" 0 40 "2" `1531 
+V G "" 0 40 ""
+E G "OK" 0 41 "0" `1533 
+E G "CANCEL" 0 41 "1" `1534 
+E G "LEFT" 0 41 "2" `1535 
+E G "RIGHT" 0 41 "3" `1536 
+V G "" 0 41 ""
+V G "currentProgram" 0 43 "int8" `1537 
+F N "*_fptr" 0 45 ""
+T G "*_fptr" 0 45 "void()" `1538  "***************** STRUCTURES *********************"
+T G "TMenu" 0 58 "{*int8 label,??0 *[5] children,??0 * parent,int8 childrenCount,_fptr action,int8 currentMenu}" `1547 
+T G "pMenu" 0 60 "TMenu *" `1548  "****************** DECLARATIONS ************************"
+F N "read_key" 0 65 ""
+f G "read_key" 0 65 "int8()" `1549 
+F N "min" 0 67 ""
+V L "??65535" 0 67 "int8" `1551 
+V L "??65535" 0 67 "int8" `1552 
+f G "min" 0 67 "int8(int8 ,int8 )" `1550 
+F N "getMSB" 0 68 ""
+V L "value" 0 68 "int8" `1554 
+f G "getMSB" 0 68 "int8(int8 value)" `1553 
+F N "getLSB" 0 69 ""
+V L "value" 0 69 "int8" `1556 
+f G "getLSB" 0 69 "int8(int8 value)" `1555 
+F N "joinBytes" 0 70 ""
+V L "msb" 0 70 "int8" `1558 
+V L "lsb" 0 70 "int8" `1559 
+f G "joinBytes" 0 70 "int8(int8 msb,int8 lsb)" `1557  "menus"
+F N "listenToKey" 0 74 ""
+V L "menu" 0 74 "pMenu" `1561 
+f G "listenToKey" 0 74 "pMenu(pMenu menu)" `1560 
+F N "printMenu" 0 75 ""
+V L "menu" 0 75 "pMenu" `1563 
+f G "printMenu" 0 75 "void(pMenu menu)" `1562 
+F N "scaffoldMenu" 0 76 ""
+V L "menu" 0 76 "pMenu" `1565 
+f G "scaffoldMenu" 0 76 "void(pMenu menu)" `1564  "operations"
+F N "washOp" 0 79 ""
+f G "washOp" 0 79 "void()" `1566 
+F N "formatWash" 0 80 ""
+f G "formatWash" 0 80 "void()" `1567 
+F N "saveFormat" 0 81 ""
+f G "saveFormat" 0 81 "void()" `1568 
+F N "readFormat" 0 82 ""
+f G "readFormat" 0 82 "void()" `1569 
+F N "getOptionKey" 0 84 ""
+f G "getOptionKey" 0 84 "EOptionKey()" `1570  "****************** LABELS ************************"
+V G "MAIN_MENU_LABEL" 0 90 "*int8" `1571 
+V G "WASH_MENU_LABEL" 0 91 "*int8" `1574 
+V G "SHAKE_MENU_LABEL" 0 92 "*int8" `1577 
+V G "PRIME_MENU_LABEL" 0 93 "*int8" `1580 
+V G "PROGRAM_MENU_LABEL" 0 94 "*int8" `1583 
+V G "WASH_WASH_MENU_LABEL" 0 96 "*int8" `1586 
+V G "WASH_PARAMS_MENU_LABEL" 0 97 "*int8" `1589 
+V G "WASH_WASHING_MENU_LABEL" 0 99 "*int8" `1592 
+V G "WASH_PARAMS_FORMAT_MENU_LABEL" 0 100 "*int8" `1595 
+V G "WASH_PARAMS_TIME_MENU_LABEL" 0 101 "*int8" `1598 
+V G "WASH_PARAMS_AMOUNT_MENU_LABEL" 0 102 "*int8" `1601 
+V G "SHAKE_SHAKE_MENU_LABEL" 0 104 "*int8" `1604 
+V G "SHAKE_MODE_MENU_LABEL" 0 105 "*int8" `1607 
+V G "SHAKE_TIME_MENU_LABEL" 0 106 "*int8" `1610 
+V G "PRIME_PRIME_MENU_LABEL" 0 108 "*int8" `1613 
+V G "PRIME_MODE_MENU_LABEL" 0 109 "*int8" `1616 
+V G "PRIME_TIME_MENU_LABEL" 0 110 "*int8" `1619 
+V G "PROGRAM_CREATE_MENU_LABEL" 0 113 "*int8" `1622 
+V G "PRPGRAM_EDIT_MENU_LABEL" 0 114 "*int8" `1625 
+V G "PROGRAM_DELET_MENU_LABEL" 0 115 "*int8" `1628 
+V G "PROGRAM_name_MENU_LABEL" 0 117 "*int8" `1631 
+C L "getOptionKey" 0 36 2 "FUNCTION"
+V G "WASH_FORMAT_ADDR" 0 122 "int8[4]" `1634 
+V G "RINSE_TIME_MSB_ADDR" 0 123 "int8[4]" `1635 
+V G "RINSE_TIME_LSB_ADDR" 0 124 "int8[4]" `1636 
+V G "CYCLES_COUNT_ADDR" 0 125 "int8[4]" `1637 
+V G "WATER_VOLUME_ADDR" 0 126 "int8[4]" `1638 
+C L "getOptionKey" 0 36 1 "FUNCTION"
+V G "PRIME_MODE_ADDR" 0 129 "int8[4]" `1639 
+V G "PRIME_TIME_ADDR" 0 130 "int8[4]" `1640 
+C L "getOptionKey" 0 36 1 "FUNCTION"
+V G "SHAKE_INTENSITY_ADDR" 0 134 "int8[4]" `1641 
+V G "SHAKE_TIME_MSB_ADDR" 0 135 "int8[4]" `1642 
+V G "SHAKE_TIME_LSB_ADDR" 0 136 "int8[4]" `1643 
+C L "getOptionKey" 0 138 2 "*"
 F N "changeWashFormat" 0 142 ""
-V L "newFormat" 0 142 "int8" `1636 
-F G "changeWashFormat" 0 142 "void(int8 newFormat)" `1635 
+V L "newFormat" 0 142 "int8" `1645 
+F G "changeWashFormat" 0 142 "void(int8 newFormat)" `1644 
 F N "readWashFormat" 0 146 ""
-F G "readWashFormat" 0 146 "int8()" `1637 
+F G "readWashFormat" 0 146 "int8()" `1646 
 F N "changeRinseTime" 0 150 ""
-V L "newTime" 0 150 "int8" `1639 
-F G "changeRinseTime" 0 150 "void(int8 newTime)" `1638 
+V L "newTime" 0 150 "int8" `1648 
+F G "changeRinseTime" 0 150 "void(int8 newTime)" `1647 
 F N "getRinseTime" 0 155 ""
-F G "getRinseTime" 0 155 "int8()" `1640 
-V L "msb" 0 156 "int8" `1641 
-V L "lsb" 0 157 "int8" `1642 
+F G "getRinseTime" 0 155 "int8()" `1649 
+V L "msb" 0 156 "int8" `1650 
+V L "lsb" 0 157 "int8" `1651 
 F N "changeCyclesCount" 0 161 ""
-V L "count" 0 161 "int8" `1644 
-F G "changeCyclesCount" 0 161 "void(int8 count)" `1643 
+V L "count" 0 161 "int8" `1653 
+F G "changeCyclesCount" 0 161 "void(int8 count)" `1652 
 F N "readCyclesCount" 0 165 ""
-F G "readCyclesCount" 0 165 "int8()" `1645 
+F G "readCyclesCount" 0 165 "int8()" `1654 
 F N "changeWaterVolume" 0 169 ""
-V L "newVolume" 0 169 "int8" `1647 
-F G "changeWaterVolume" 0 169 "void(int8 newVolume)" `1646 
+V L "newVolume" 0 169 "int8" `1656 
+F G "changeWaterVolume" 0 169 "void(int8 newVolume)" `1655 
 F N "readWaterVolume" 0 173 ""
-F G "readWaterVolume" 0 173 "int8()" `1648 
+F G "readWaterVolume" 0 173 "int8()" `1657 
 C L "changePrimeMode" 0 138 1 "FUNCTION"
 F N "changePrimeMode" 0 178 ""
-V L "newMode" 0 178 "int8" `1650 
-F G "changePrimeMode" 0 178 "void(int8 newMode)" `1649 
+V L "newMode" 0 178 "int8" `1659 
+F G "changePrimeMode" 0 178 "void(int8 newMode)" `1658 
 F N "redPrimeMode" 0 182 ""
-F G "redPrimeMode" 0 182 "int8()" `1651 
+F G "redPrimeMode" 0 182 "int8()" `1660 
 F N "changePrimeTime" 0 186 ""
-V L "newTime" 0 186 "int8" `1653 
-F G "changePrimeTime" 0 186 "void(int8 newTime)" `1652 
+V L "newTime" 0 186 "int8" `1662 
+F G "changePrimeTime" 0 186 "void(int8 newTime)" `1661 
 F N "readPrimeTime" 0 190 ""
-F G "readPrimeTime" 0 190 "int8()" `1654 
+F G "readPrimeTime" 0 190 "int8()" `1663 
 C L "changeShakeIntensity" 0 138 1 "FUNCTION"
 F N "changeShakeIntensity" 0 195 ""
-V L "intensity" 0 195 "EShakeIntensity" `1656 
-F G "changeShakeIntensity" 0 195 "void(EShakeIntensity intensity)" `1655 
+V L "intensity" 0 195 "EShakeIntensity" `1665 
+F G "changeShakeIntensity" 0 195 "void(EShakeIntensity intensity)" `1664 
 F N "readShakeIntensity" 0 199 ""
-F G "readShakeIntensity" 0 199 "EShakeIntensity()" `1657 
+F G "readShakeIntensity" 0 199 "EShakeIntensity()" `1666 
 F N "changeShakeTime" 0 203 ""
-V L "newTime" 0 203 "int8" `1659 
-F G "changeShakeTime" 0 203 "void(int8 newTime)" `1658 
+V L "newTime" 0 203 "int8" `1668 
+F G "changeShakeTime" 0 203 "void(int8 newTime)" `1667 
 F N "readShakeTime" 0 208 ""
-F G "readShakeTime" 0 208 "int8()" `1660 
-V L "msb" 0 209 "int8" `1661 
-V L "lsb" 0 210 "int8" `1662 
+F G "readShakeTime" 0 208 "int8()" `1669 
+V L "msb" 0 209 "int8" `1670 
+V L "lsb" 0 210 "int8" `1671 
 F N "switchProgram" 0 215 ""
-V L "program" 0 215 "int8" `1664 
-F G "switchProgram" 0 215 "void(int8 program)" `1663 
+V L "program" 0 215 "int8" `1673 
+F G "switchProgram" 0 215 "void(int8 program)" `1672 
 F N "initConfigProgram" 0 222 ""
-V L "program" 0 222 "int8" `1666 
-F G "initConfigProgram" 0 222 "void(int8 program)" `1665 
+V L "program" 0 222 "int8" `1675 
+F G "initConfigProgram" 0 222 "void(int8 program)" `1674 
 C L "initConfigProgram" 0 138 1 "FUNCTION"
 C L "initConfigProgram" 0 138 1 "FUNCTION"
 C L "initConfigProgram" 0 138 1 "FUNCTION"
 F N "resetToDefault" 0 237 ""
-F G "resetToDefault" 0 237 "void()" `1667 
-V L "i" 0 238 "int8" `1668 
+F G "resetToDefault" 0 237 "void()" `1676 
+V L "i" 0 238 "int8" `1677 
 F N "initMenu" 0 243 ""
-V L "item" 0 243 "pMenu" `1670 
-V L "label" 0 243 "*int8" `1671 
-F G "initMenu" 0 243 "void(pMenu item,*int8 label)" `1669 
+V L "item" 0 243 "pMenu" `1679 
+V L "label" 0 243 "*int8" `1680 
+F G "initMenu" 0 243 "void(pMenu item,*int8 label)" `1678 
 F N "addItem" 0 251 ""
-V L "parent" 0 251 "pMenu" `1673 
-V L "child" 0 251 "pMenu" `1674 
-F G "addItem" 0 251 "void(pMenu parent,pMenu child)" `1672 
+V L "parent" 0 251 "pMenu" `1682 
+V L "child" 0 251 "pMenu" `1683 
+F G "addItem" 0 251 "void(pMenu parent,pMenu child)" `1681 
 F N "labelMenu" 0 258 ""
-V L "item" 0 258 "pMenu" `1676 
-V L "label" 0 258 "*int8" `1677 
-F G "labelMenu" 0 258 "void(pMenu item,*int8 label)" `1675 
+V L "item" 0 258 "pMenu" `1685 
+V L "label" 0 258 "*int8" `1686 
+F G "labelMenu" 0 258 "void(pMenu item,*int8 label)" `1684 
 C L "testMenu" 0 138 1 "FUNCTION"
 F N "testMenu" 0 263 ""
-F G "testMenu" 0 263 "void()" `1678 
+F G "testMenu" 0 263 "void()" `1687 
 C L "min" 0 138 3 "FUNCTION"
 F N "min" 0 275 ""
-V L "a" 0 275 "int8" `1535 
-V L "b" 0 275 "int8" `1686 
-F G "min" 0 275 "int8(int8 a,int8 b)" `1534 
+V L "a" 0 275 "int8" `1551 
+V L "b" 0 275 "int8" `1695 
+F G "min" 0 275 "int8(int8 a,int8 b)" `1550 
 C L "read_key" 0 138 2 "FUNCTION"
 F N "read_key" 0 282 ""
-F G "read_key" 0 283 "int8()" `1533 
-V L "c" 0 284 "int8" `1684 
+F G "read_key" 0 283 "int8()" `1549 
+V L "c" 0 284 "int8" `1693 
 F N "tiempo" 0 292 ""
-F G "tiempo" 0 293 "void(int8 b)" `1685 
+F G "tiempo" 0 293 "void(int8 b)" `1694 
 C L "tiempo" 0 138 1 "FUNCTION"
 C L "tiempo" 0 138 4 "FUNCTION"
 F N "timer0_interrupcion" 0 312 ""
-F G "timer0_interrupcion" 0 313 "void()" `1694 
+F G "timer0_interrupcion" 0 313 "void()" `1703 
 C L "timer0_interrupcion" 0 138 1 "FUNCTION"
 F N "TECLADO_INTERRUPT" 0 330 ""
-F G "TECLADO_INTERRUPT" 0 331 "void()" `1695 
+F G "TECLADO_INTERRUPT" 0 331 "void()" `1704 
 C L "TECLADO_INTERRUPT" 0 138 1 "FUNCTION"
 C L "TECLADO_INTERRUPT" 0 138 1 "FUNCTION"
 C L "TECLADO_INTERRUPT" 0 138 1 "FUNCTION"
 F N "contador_s" 0 341 ""
 C L "contador_s" 0 138 1 "FUNCTION"
-F G "contador_s" 0 342 "void()" `1696 
-V L "contador" 0 345 "int8" `1697 
+F G "contador_s" 0 342 "void()" `1705 
+V L "contador" 0 345 "int8" `1706 
 C L "MAIN" 0 138 3 "FUNCTION"
 F N "MAIN" 0 356 ""
-F G "MAIN" 0 357 "void()" `1704 
+F G "MAIN" 0 357 "void()" `1713 
 C L "MAIN" 0 138 1 "FUNCTION"
 C L "MAIN" 0 138 1 "FUNCTION"
 C L "MAIN" 0 138 1 "FUNCTION"
 C L "MAIN" 0 138 1 "FUNCTION"
 C L "MAIN" 0 138 1 "FUNCTION"
-V L "i" 0 368 "int8" `1708 
+V L "i" 0 368 "int8" `1717 
 C L "MAIN" 0 138 1 "FUNCTION"
 C L "MAIN" 0 138 1 "FUNCTION"
-V L "MAIN" 0 386 "TMenu" `1715 
-V L "wash" 0 386 "TMenu" `1716 
-V L "prime" 0 386 "TMenu" `1717 
-V L "shake" 0 386 "TMenu" `1718 
-V L "program" 0 386 "TMenu" `1719 
-V L "washWash" 0 386 "TMenu" `1720 
-V L "washParams" 0 386 "TMenu" `1721 
-V L "wash_format" 0 387 "TMenu" `1722 
-V L "wash_time" 0 387 "TMenu" `1723 
-V L "wash_amount" 0 387 "TMenu" `1724 
-V L "shake_shake" 0 387 "TMenu" `1725 
-V L "shake_mode" 0 387 "TMenu" `1726 
-V L "shake_time" 0 388 "TMenu" `1727 
-V L "prime_prime" 0 388 "TMenu" `1728 
-V L "prime_mode" 0 388 "TMenu" `1729 
-V L "prime_time" 0 388 "TMenu" `1730 
-V L "program_create" 0 389 "TMenu" `1731 
-V L "program_edit" 0 389 "TMenu" `1732 
-V L "program_delet" 0 389 "TMenu" `1733 
-V L "program_name" 0 389 "TMenu" `1734 
-C L "getMSB" 0 443 1 "*"
-F N "getMSB" 0 447 ""
-V L "value" 0 447 "int8" `1736 
-F G "getMSB" 0 447 "int8(int8 value)" `1537 
-F N "getLSB" 0 451 ""
-V L "value" 0 451 "int8" `1736 
-F G "getLSB" 0 451 "int8(int8 value)" `1539 
-F N "joinBytes" 0 455 ""
-V L "msb" 0 455 "int8" `1542 
-V L "lsb" 0 455 "int8" `1737 
-F G "joinBytes" 0 455 "int8(int8 msb,int8 lsb)" `1541 
-C L "washOp" 0 443 1 "FUNCTION"
-F N "washOp" 0 461 ""
-F G "washOp" 0 461 "void()" `1550 
-C L "listenToKey" 0 443 1 "FUNCTION"
-F N "listenToKey" 0 469 ""
-V L "menu" 0 469 "pMenu" `1738 
-F G "listenToKey" 0 469 "pMenu(pMenu menu)" `1544 
-V L "ks" 0 471 "int8[2]" `1737 
-V L "val" 0 474 "int8" `1738 
-V L "child" 0 484 "pMenu" `1739 
-V L "toAct" 0 486 "_fptr" `1740 
-F N "scaffoldMenu" 0 495 ""
-V L "menu" 0 495 "pMenu" `1742 
-F G "scaffoldMenu" 0 495 "void(pMenu menu)" `1548 
-V L "nextMenu" 0 496 "pMenu" `1741 
-F N "printMenu" 0 505 ""
-V L "menu" 0 505 "pMenu" `1743 
-F G "printMenu" 0 505 "void(pMenu menu)" `1546 
-V L "start" 0 509 "int8" `1744 
-V L "cMenu" 0 510 "int8" `1745 
-V L "offsets" 0 511 "int8[3]" `1746 
-V L "offset" 0 512 "int8" `1747 
-V L "menusToShow" 0 517 "int8" `1748 
-V L "i" 0 519 "int8" `1749 
-V L "child" 0 520 "pMenu" `1750 
+V L "MAIN" 0 386 "TMenu" `1724 
+V L "wash" 0 386 "TMenu" `1725 
+V L "prime" 0 386 "TMenu" `1726 
+V L "shake" 0 386 "TMenu" `1727 
+V L "program" 0 386 "TMenu" `1728 
+V L "washWash" 0 386 "TMenu" `1729 
+V L "washParams" 0 386 "TMenu" `1730 
+V L "wash_format" 0 387 "TMenu" `1731 
+V L "wash_time" 0 387 "TMenu" `1732 
+V L "wash_amount" 0 387 "TMenu" `1733 
+V L "shake_shake" 0 387 "TMenu" `1734 
+V L "shake_mode" 0 387 "TMenu" `1735 
+V L "shake_time" 0 388 "TMenu" `1736 
+V L "prime_prime" 0 388 "TMenu" `1737 
+V L "prime_mode" 0 388 "TMenu" `1738 
+V L "prime_time" 0 388 "TMenu" `1739 
+V L "program_create" 0 389 "TMenu" `1740 
+V L "program_edit" 0 389 "TMenu" `1741 
+V L "program_delet" 0 389 "TMenu" `1742 
+V L "program_name" 0 389 "TMenu" `1743 
+C L "getMSB" 0 444 1 "*"
+F N "getMSB" 0 448 ""
+V L "value" 0 448 "int8" `1745 
+F G "getMSB" 0 448 "int8(int8 value)" `1553 
+F N "getLSB" 0 452 ""
+V L "value" 0 452 "int8" `1745 
+F G "getLSB" 0 452 "int8(int8 value)" `1555 
+F N "joinBytes" 0 456 ""
+V L "msb" 0 456 "int8" `1558 
+V L "lsb" 0 456 "int8" `1746 
+F G "joinBytes" 0 456 "int8(int8 msb,int8 lsb)" `1557 
+F N "getOptionKey" 0 460 ""
+F G "getOptionKey" 0 460 "EOptionKey()" `1570 
+V L "v" 0 462 "int8" `1744 
+C L "washOp" 0 444 1 "FUNCTION"
+F N "washOp" 0 481 ""
+F G "washOp" 0 481 "void()" `1566 
+V L "i" 0 486 "int8" `1747 
+F N "saveFormat" 0 493 ""
+F G "saveFormat" 0 493 "void()" `1568 
+V L "z" 0 494 "EWashFormat" `1748 
+F N "readFormat" 0 504 ""
+F G "readFormat" 0 504 "void()" `1569 
+V L "z" 0 505 "EWashFormat" `1749 
+F N "formatWash" 0 510 ""
+F G "formatWash" 0 510 "void()" `1567 
+V L "x" 0 511 "EWashFormat" `1751 
+V L "b" 0 524 "EOptionKey" `1756 
+C L "listenToKey" 0 444 1 "FUNCTION"
+F N "listenToKey" 0 539 ""
+V L "menu" 0 539 "pMenu" `1759 
+F G "listenToKey" 0 539 "pMenu(pMenu menu)" `1560 
+V L "ks" 0 541 "int8[2]" `1758 
+V L "val" 0 544 "int8" `1759 
+V L "child" 0 554 "pMenu" `1760 
+V L "toAct" 0 556 "_fptr" `1761 
+F N "scaffoldMenu" 0 565 ""
+V L "menu" 0 565 "pMenu" `1763 
+F G "scaffoldMenu" 0 565 "void(pMenu menu)" `1564 
+V L "nextMenu" 0 566 "pMenu" `1762 
+F N "printMenu" 0 575 ""
+V L "menu" 0 575 "pMenu" `1764 
+F G "printMenu" 0 575 "void(pMenu menu)" `1562 
+V L "start" 0 579 "int8" `1764 
+V L "cMenu" 0 580 "int8" `1765 
+V L "offsets" 0 581 "int8[3]" `1766 
+V L "offset" 0 582 "int8" `1767 
+V L "menusToShow" 0 587 "int8" `1768 
+V L "i" 0 589 "int8" `1769 
+V L "child" 0 590 "pMenu" `1770 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1

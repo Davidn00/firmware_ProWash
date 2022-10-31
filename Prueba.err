@@ -1,10 +1,12 @@
-Compiling \\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba on 26-Oct-22 at 20:25
+Compiling D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba on 31-Oct-22 at 14:13
 >>> Warning 203 "C:\Program Files (x86)\PICC\Drivers\pic18_usb.c" Line 727(1,1): Condition always TRUE
->>> Warning 216 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 532(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
->>> Warning 216 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 532(1,2): Interrupts disabled during call to prevent re-entrancy:  (kbd_getc)
->>> Warning 202 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\i2c_LCD.c" Line 170(80,84): Variable never used:   data
->>> Warning 202 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 34(12,18): Variable never used:   opcion
->>> Warning 202 "\\Mac\Home\Documents\Work\delDavid\Tesis_David\Prueba.c" Line 88(13,36): Variable never used:   WASH_WASHING_MENU_LABEL
-      Memory usage:   ROM=28%      RAM=40% - 42%
-      0 Errors,  6 Warnings.
+>>> Warning 209 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 505(1,1): Assignment to enum is not of the correct type
+>>> Warning 209 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 511(1,1): Assignment to enum is not of the correct type
+>>> Warning 216 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 602(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+>>> Warning 216 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 602(1,2): Interrupts disabled during call to prevent re-entrancy:  (kbd_getc)
+>>> Warning 202 "D:\Escuela\Tesis\Programa\Firmware Lacho\i2c_LCD.c" Line 170(13,17): Variable never used:   data
+>>> Warning 202 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 34(12,18): Variable never used:   opcion
+>>> Warning 202 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 99(13,36): Variable never used:   WASH_WASHING_MENU_LABEL
+      Memory usage:   ROM=34%      RAM=40% - 43%
+      0 Errors,  8 Warnings.
 Build Successful.

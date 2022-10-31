@@ -33,9 +33,16 @@ int segundos=0,minutos=0;
 int contador=1;
 int menu=0,opcion=0;
 
+//enums
+//wash
+typedef enum EWashFormat { UMELISA, MICROELISA };
+typedef enum EPrimeMode {CONTINUOUS, INTERMITTENT};
+typedef enum EShakeIntensity { LOW, MEDIUM, HIGH};
+typedef enum EOptionKey {OK, CANCEL, LEFT, RIGHT};
 
+int currentProgram = 0;
 
-typedef void (*_fptr)(void); 
+typedef void (*_fptr)(void);
 
 /*************************************************
 ***************** STRUCTURES *********************
@@ -68,9 +75,13 @@ pMenu listenToKey(pMenu menu);
 void printMenu(pMenu menu);
 void scaffoldMenu(pMenu menu);
 
-//ops
+//operations
 void washOp(void);
+void formatWash(void);
+void saveFormat(void);
+void readFormat(void);
 
+EOptionKey getOptionKey ();
 
 /*************************************************
 ****************** LABELS ************************
@@ -123,17 +134,6 @@ byte PRIME_TIME_ADDR[4] = {0x06, 0x1B, 0x1D, 0x1F};
 byte SHAKE_INTENSITY_ADDR[4] = {0x07, 0x20, 0x23, 0x26};
 byte SHAKE_TIME_MSB_ADDR[4] = {0x08, 0x21, 0x24, 0x27};
 byte SHAKE_TIME_LSB_ADDR[4] = {0x09, 0x22, 0x25, 0x28};
-
-
-//enums
-//wash
-typedef enum EWashFormat { UMELISA, MICROELISA };
-typedef enum EPrimeMode {CONTINUOUS, INTERMITTENT};
-typedef enum EShakeIntensity { LOW, MEDIUM, HIGH};
-
-int currentProgram = 0;
-
-
 
 /*************************************************
 *************** CONFIG METHODS *******************
@@ -435,7 +435,8 @@ void main()
    addItem(&program_create, &program_name);
 
    washWash.action = washOp;
-   
+   wash_format.action = formatWash;
+   wash_time.action =  saveFormat;
    
    scaffoldMenu(&main);
 }
@@ -456,14 +457,83 @@ int joinBytes(int msb, int lsb) {
    return (int)(msb << 8 | lsb);
 }
 
+EOptionKey getOptionKey (){
+   while(true){
+   char v = kbd_getc();
+      switch(v) {
+         case 'C':
+         return RIGHT;
+         break;
+         case 'D': 
+         return LEFT;
+         break;
+         case '*': 
+         return CANCEL;
+         break;
+         case '#':
+         return OK;
+         break;
+      }
+   }
+}
 
 //operations
 void washOp(void) {
    lcd_putc("\f");
    lcd_gotoxy(2, 3);
    printf(lcd_putc, "Lavando ...");
-   delay_ms(5000);
+   delay_ms(500);
+   for( int i=0; i<5; i++)
+   {
+   generate_tone(PIN_C2, 500, 25);
+   delay_ms(100);
+   }
 }
+
+void saveFormat(void) { 
+   EWashFormat z;
+   if(rand()%2==0){
+      z = UMELISA;
+   }
+    else{
+      z = MICROELISA;
+   }
+   changeWashFormat(z);
+}
+
+void readFormat(void) {
+  EWashFormat z = readWashFormat();
+  printf(lcd_putc,"%d", z);
+  delay_ms(250);
+}
+
+void formatWash(void){
+   EWashFormat x = readWashFormat();
+   while(true){
+   lcd_putc("\f");
+   lcd_gotoxy(1, 1);
+   printf(lcd_putc, WASH_PARAMS_MENU_LABEL);
+    if (x == UMELISA){
+    lcd_gotoxy(1, 2);
+    printf(lcd_putc, "< UMELISA >");
+   }
+   else{
+    lcd_gotoxy(1, 2);
+    printf(lcd_putc, "< MICROELISA >");
+   }
+    EOptionKey b = getOptionKey();
+    switch(b) {
+         case RIGHT:
+         case LEFT:
+         x = !x;
+         break;
+         case OK:
+         changeWashFormat(x);
+         case CANCEL: return;
+      }
+   }
+}
+
 
 //menu handlers
 pMenu listenToKey(pMenu menu) {
