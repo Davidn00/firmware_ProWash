@@ -1,15 +1,11 @@
-Compiling D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba on 31-Oct-22 at 15:20
+Compiling D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba on 31-Oct-22 at 22:05
 >>> Warning 203 "C:\Program Files (x86)\PICC\Drivers\pic18_usb.c" Line 727(1,1): Condition always TRUE
 >>> Warning 209 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 504(1,1): Assignment to enum is not of the correct type
 >>> Warning 209 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 510(1,1): Assignment to enum is not of the correct type
->>> Warning 240 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 539(22,23): Pointer types do not match
->>> Warning 240 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 548(25,26): Pointer types do not match
->>> Warning 206 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 550(1,1): Variable of this data type is never greater than this constant
->>> Warning 216 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 632(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
->>> Warning 216 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 632(1,2): Interrupts disabled during call to prevent re-entrancy:  (kbd_getc)
+>>> Warning 216 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 640(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+>>> Warning 216 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 640(1,2): Interrupts disabled during call to prevent re-entrancy:  (kbd_getc)
 >>> Warning 202 "D:\Escuela\Tesis\Programa\Firmware Lacho\i2c_LCD.c" Line 170(13,17): Variable never used:   data
 >>> Warning 202 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 100(13,36): Variable never used:   WASH_WASHING_MENU_LABEL
->>> Warning 202 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 537(8,9): Variable never used:   x
-      Memory usage:   ROM=34%      RAM=40% - 43%
-      0 Errors,  11 Warnings.
+      Memory usage:   ROM=36%      RAM=40% - 43%
+      0 Errors,  7 Warnings.
 Build Successful.

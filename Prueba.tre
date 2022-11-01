@@ -63,17 +63,17 @@
    ³  ÃÄ@PSTRINGC_705  0/32  Ram=2
    ³  ³  ÀÄ*
    ³  ÃÄresetToDefault  0/30  Ram=1
-   ³  ³  ÀÄinitConfigProgram  0/60  Ram=1
+   ³  ³  ÀÄinitConfigProgram  0/62  Ram=1
    ³  ³     ÃÄswitchProgram  0/20  Ram=1
    ³  ³     ÃÄchangeWaterVolume  0/66  Ram=2
    ³  ³     ÃÄchangeCyclesCount  0/66  Ram=2
-   ³  ³     ÃÄchangeRinseTime  0/148  Ram=3
-   ³  ³     ³  ÃÄgetMSB  0/16  Ram=3
-   ³  ³     ³  ÀÄgetLSB  0/10  Ram=1
+   ³  ³     ÃÄchangeRinseTime  0/154  Ram=4
+   ³  ³     ³  ÃÄgetMSB  0/14  Ram=4
+   ³  ³     ³  ÀÄgetLSB  0/16  Ram=2
    ³  ³     ÃÄchangePrimeTime  0/66  Ram=2
-   ³  ³     ÀÄchangeShakeTime  0/148  Ram=3
-   ³  ³        ÃÄgetMSB  0/16  Ram=3
-   ³  ³        ÀÄgetLSB  0/10  Ram=1
+   ³  ³     ÀÄchangeShakeTime  0/158  Ram=3
+   ³  ³        ÃÄgetMSB  0/14  Ram=4
+   ³  ³        ÀÄgetLSB  0/16  Ram=2
    ³  ÃÄinitMenu  0/88  Ram=6
    ³  ÃÄinitMenu  0/88  Ram=6
    ³  ÃÄinitMenu  0/88  Ram=6
@@ -203,22 +203,33 @@
    ³        ³  ³  ÀÄ*
    ³        ³  ÃÄgetOptionKey  0/80  Ram=1
    ³        ³  ³  ÀÄkbd_getc  0/274  Ram=1
-   ³        ³  ÃÄ@goto33750  0/34  Ram=0
+   ³        ³  ÃÄ@goto61401  0/34  Ram=0
    ³        ³  ÀÄchangeWashFormat  0/66  Ram=2
-   ³        ÀÄwashTime  0/168  Ram=11
-   ³           ÃÄgetRinseTime  0/104  Ram=5
-   ³           ³  ÀÄjoinBytes  0/14  Ram=3
-   ³           ÃÄstrcat  0/126  Ram=9
+   ³        ÀÄwashTime  0/292  Ram=7
+   ³           ÃÄgetRinseTime  0/108  Ram=7
+   ³           ³  ÀÄjoinBytes  0/20  Ram=3
+   ³           ÃÄ@delay_ms1  0/42  Ram=1
+   ³           ÃÄ@PSTRINGC_705  0/32  Ram=2
+   ³           ³  ÀÄ*
+   ³           ÃÄlcd_gotoxy  0/114  Ram=7
+   ³           ³  ÀÄ*
    ³           ÃÄ@PSTRINGR_705  0/36  Ram=2
    ³           ³  ÀÄ*
+   ³           ÃÄlcd_gotoxy  0/114  Ram=7
+   ³           ³  ÀÄ*
+   ³           ÃÄ@PRINTF_LD_705  0/258  Ram=9
+   ³           ³  ÀÄLCD_PUTC  0/82  Ram=1
+   ³           ³     ÀÄ*
+   ³           ÃÄ@PSTRINGCN_705  0/44  Ram=3
+   ³           ³  ÀÄLCD_PUTC  0/82  Ram=1
+   ³           ³     ÀÄ*
    ³           ÃÄread_key  0/40  Ram=1
    ³           ³  ÀÄ*
    ³           ÃÄatoi  0/402  Ram=9
    ³           ³  ÀÄ*
-   ³           ÃÄstrcat  0/126  Ram=9
-   ³           ÃÄatoi  0/402  Ram=9
+   ³           ÃÄchangeRinseTime  0/154  Ram=4
    ³           ³  ÀÄ*
-   ³           ÀÄ@const1016  0/18  Ram=0
+   ³           ÀÄ@MUL1616  0/36  Ram=5
    ÃÄusb_isr  0/126  Ram=2
    ³  ÃÄusb_isr_activity  0/18  Ram=0
    ³  ÃÄusb_isr_stall  0/14  Ram=0
@@ -256,7 +267,7 @@
    ³     ³  ³  ³  ÃÄusb_request_stall  0/4  Ram=0
    ³     ³  ³  ³  ÃÄusb_request_stall  0/4  Ram=0
    ³     ³  ³  ³  ÀÄusb_copy_desc_seg_to_ep  0/184  Ram=4
-   ³     ³  ³  ³     ÃÄ@goto31678  0/34  Ram=0
+   ³     ³  ³  ³     ÃÄ@goto59146  0/34  Ram=0
    ³     ³  ³  ³     ÃÄ@const1024  0/58  Ram=0
    ³     ³  ³  ³     ÃÄ@const1013  0/48  Ram=0
    ³     ³  ³  ³     ÃÄ@READ_PROGRAM_MEMORY  0/30  Ram=7

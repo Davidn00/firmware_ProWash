@@ -65,9 +65,9 @@ typedef TMenu* pMenu;
 char read_key ();
 
 int min(int, int);
-int getMSB(int value);
-int getLSB(int value);
-int joinBytes(int msb, int lsb);
+int getMSB(long value);
+int getLSB(long value);
+long joinBytes(int msb, int lsb);
 
 
 //menus
@@ -148,14 +148,14 @@ EWashFormat readWashFormat() {
    return read_eeprom(WASH_FORMAT_ADDR[currentProgram]);
 }
 
-void changeRinseTime(int newTime) {
+void changeRinseTime(long newTime) {
    write_eeprom(RINSE_TIME_MSB_ADDR[currentProgram], getMSB(newTime));
    write_eeprom(RINSE_TIME_LSB_ADDR[currentProgram], getLSB(newTime));
 }
 
-int getRinseTime() {
-   int msb = read_eeprom(RINSE_TIME_MSB_ADDR[currentProgram]);
-   int lsb = read_eeprom(RINSE_TIME_LSB_ADDR[currentProgram]);
+long getRinseTime() {
+   long msb = read_eeprom(RINSE_TIME_MSB_ADDR[currentProgram]);
+   long lsb = read_eeprom(RINSE_TIME_LSB_ADDR[currentProgram]);
    return joinBytes(msb, lsb);
 }
 
@@ -444,15 +444,15 @@ void main()
 ****************** DEFINITIONS ************************
 **************************************************/
 
-int getMSB(int value) {
+int getMSB(long value) {
    return (value & 0xFF00) >> 8;
 }
 
-int getLSB(int value) {
+int getLSB(long value) {
    return (value & 0x00FF);
 }
 
-int joinBytes(int msb, int lsb) {
+long joinBytes(int msb, int lsb) {
    return (int)(msb << 8 | lsb);
 }
 
@@ -512,14 +512,14 @@ void washFormat(void){
    lcd_putc("\f");
    lcd_gotoxy(1, 1);
    printf(lcd_putc, WASH_PARAMS_MENU_LABEL);
-    if (x == UMELISA){
-    lcd_gotoxy(1, 2);
-    printf(lcd_putc, "< UMELISA >");
-   }
-   else{
-    lcd_gotoxy(1, 2);
-    printf(lcd_putc, "< MICROELISA >");
-   }
+      if (x == UMELISA){
+       lcd_gotoxy(1, 2);
+       printf(lcd_putc, "< UMELISA >");
+      }
+      else{
+       lcd_gotoxy(1, 2);
+       printf(lcd_putc, "< MICROELISA >");
+      }
     EOptionKey b = getOptionKey();
     switch(b) {
          case RIGHT:
@@ -534,37 +534,45 @@ void washFormat(void){
 }
 
 void washTime(void){
-   int x = getRinseTime();
-   char charValue [4] = {"\0"};
-   strcat(charValue, k);
+   long x = getRinseTime(); 
    while (true){
-      printf(lcd_putc, charValue);
+      delay_ms(150);
+      lcd_putc("\f");
+      lcd_gotoxy(1, 1);
+      printf(lcd_putc, WASH_PARAMS_MENU_LABEL);
+      lcd_gotoxy(1, 3);
+      printf(lcd_putc,"%ld seg ",x);
       k = read_key ();
       char ks[2];
       ks[0] = (char)k;
       ks[1] = '\0';
       int val = atoi(ks);
-      if (val) {
-      strcat(charValue, k);
-      int newValue= atoi(charValue);
-         if (newValue == 0 || newValue > 300){
-         strcpy(charValue,"");
-              
+         if(k=='A') {
          }
-      }  
-   /*} else if (k == '*' != NULL) {
-      return ;
-   } else if (k == 'A' ) {
-      
-   } else if (k == 'B' ) {
-     
-   } else if (k == '#') {
-   
-      if () {
-      }*/
-       }
-}
-
+         else if(K=='B'){
+         }
+         else if(K=='C'){
+         }
+         else if(K=='D')
+         {
+         }
+         else if(K=='*'){
+         return;
+         }
+         else if(K=='#'){
+         if(x > 0){
+         changeRinseTime(x);
+         return;
+         }
+         }
+          else{
+            x = x*10 + val;
+               if (x >300){
+               x=0;
+               }
+            }
+      }
+ }
 //menu handlers
 pMenu listenToKey(pMenu menu) {
    k = read_key ();

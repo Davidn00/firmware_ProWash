@@ -11,7 +11,7 @@ Type=4
 1=Prueba.c
 
 [defines]
-buildcount=432
+buildcount=458
 
 [ProjectLog]
 Days=13
@@ -19,7 +19,7 @@ D1=07-10-2022
 D1_L=7
 D1_L1=[60436]Started Editing.
 D1_L2=[71287]Stopped Editing.
-TotalEdit=1422
+TotalEdit=1496
 TotalDebug=0
 D1_E=193
 D1_D=0
@@ -286,11 +286,11 @@ D12_L41=[76365]Started Editing.
 D12_L42=[76668]Stopped Editing.
 D12_L43=[77103]Project Closed.
 D13=31-10-2022
-D13_L=12
+D13_L=21
 D13_L1=[18931]Project Opened.
 D13_L2=[19932]Started Editing.
 D13_L3=[20816]Stopped Editing.
-D13_E=204
+D13_E=278
 D13_D=0
 D13_L4=[20816]Project Closed.
 D13_L5=[42391]Project Opened.
@@ -301,11 +301,20 @@ D13_L9=[51405]Stopped Editing.
 D13_L10=[55415]Stopped Editing.
 D13_L11=[55415]Project Closed.
 D13_L12=[55437]Project Opened.
+D13_L13=[55859]Started Editing.
+D13_L14=[57618]Stopped Editing.
+D13_L15=[57708]Started Editing.
+D13_L16=[58435]Stopped Editing.
+D13_L17=[58435]Project Closed.
+D13_L18=[76763]Project Opened.
+D13_L19=[77519]Started Editing.
+D13_L20=[79711]Stopped Editing.
+D13_L21=[79711]Project Closed.
 
 [Opened Files]
-1=Teclado.c
-t1=17
-Count=2
+1=Prueba.c
+t1=536
+Count=1
 2=Prueba.c
 t2=17
 3=Prueba.c
