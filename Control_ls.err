@@ -1,0 +1,5 @@
+Compiling D:\Escuela\Tesis\Programa\Firmware Lacho\Control_ls on 03-Nov-22 at 05:36
+>>> Warning 202 "D:\Escuela\Tesis\Programa\Firmware Lacho\i2c_LCD.c" Line 170(13,17): Variable never used:   data
+*** Error 53 "D:\Escuela\Tesis\Programa\Firmware Lacho\Control_ls.c" Line 26(23,24): Expecting function name
+      1 Errors,  1 Warnings.
+Build Failed.

@@ -1,11 +1,10 @@
-Compiling D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba on 31-Oct-22 at 22:05
->>> Warning 203 "C:\Program Files (x86)\PICC\Drivers\pic18_usb.c" Line 727(1,1): Condition always TRUE
->>> Warning 209 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 504(1,1): Assignment to enum is not of the correct type
->>> Warning 209 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 510(1,1): Assignment to enum is not of the correct type
->>> Warning 216 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 640(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
->>> Warning 216 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 640(1,2): Interrupts disabled during call to prevent re-entrancy:  (kbd_getc)
->>> Warning 202 "D:\Escuela\Tesis\Programa\Firmware Lacho\i2c_LCD.c" Line 170(13,17): Variable never used:   data
->>> Warning 202 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 100(13,36): Variable never used:   WASH_WASHING_MENU_LABEL
-      Memory usage:   ROM=36%      RAM=40% - 43%
-      0 Errors,  7 Warnings.
-Build Successful.
+Compiling D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba on 03-Nov-22 at 02:44
+*** Error 18 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 10(10,22): File can not be opened
+    Not in source "D:\Escuela\Tesis\Programa\Firmware Lacho\Control_ls"
+    Not in local "Control_ls"
+    Not in project "D:\Escuela\Tesis\Programa\Firmware Lacho\Control_ls"
+    Not in default "D:\Escuela\Tesis\Programa\Firmware Lacho\Control_ls"
+    Not in "C:\Program Files (x86)\PICC\Devices\Control_ls"
+    Not in "C:\Program Files (x86)\PICC\Drivers\Control_ls"
+      1 Errors,  0 Warnings.
+Build Failed.

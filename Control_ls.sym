@@ -1,0 +1,73 @@
+000     @SCRATCH
+001     @SCRATCH
+002     @SCRATCH
+003     @SCRATCH
+F81.0   RB0
+F81     puerto_tcl
+F81.1   RB1
+F81.2   RB2
+F81.3   RB3
+F81.4   RB4
+F81.5   RB5
+F81.6   RB6
+F81.7   RB7
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0136  StrtoulGO
+0136  StrtolGO
+
+Project Directory:
+    D:\Escuela\Tesis\Programa\Firmware Lacho\
+
+Project Files:
+    Control_ls.c                                            [03-Nov-22 05:36  CRC=F96043F3]
+    C:\Program Files (x86)\PICC\Devices\18f4550.h           [06-Mar-19 14:30  CRC=1CE50E9D]
+    i2c_LCD.c                                               [26-Oct-22 14:43  CRC=E880C774]
+    Teclado.c                                               [09-Oct-22 11:49  CRC=D18F007D]
+    tonos_buzzer.c                                          [09-Oct-22 11:55  CRC=5B962E84]
+    C:\Program Files (x86)\PICC\Drivers\math.h              [22-Sep-16 08:36  CRC=9CF8C837]
+    C:\Program Files (x86)\PICC\Drivers\string.h            [26-Mar-15 12:34  CRC=C4814297]
+    C:\Program Files (x86)\PICC\Drivers\stddef.h            [30-Jan-19 11:26  CRC=897CEC6C]
+    C:\Program Files (x86)\PICC\Drivers\ctype.h             [03-Jan-08 14:55  CRC=2D1F019F]
+    C:\Program Files (x86)\PICC\Drivers\stdbool.h           [21-May-12 11:29  CRC=815AEDE8]
+    C:\Program Files (x86)\PICC\Drivers\stdlib.h            [30-Jan-19 11:25  CRC=1277854C]
+
+Source signature=EA4B3A5E
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=0000
+
+Units:
+    Control_ls (main)
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   Control_ls.xsym
+    Errors:      Control_ls.err
+    Ext Symbols: Control_ls.esym
+    Symbols:     Control_ls.sym

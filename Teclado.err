@@ -1,4 +1,4 @@
-Compiling C:\Users\David\Desktop\Firmware Lacho\Teclado on 21-oct.-22 at 13:15
-*** Error 128 "C:\Users\David\Desktop\Firmware Lacho\Teclado.c" Line 22(2,6): A #DEVICE required before this line
+Compiling D:\Escuela\Tesis\Programa\Firmware Lacho\Teclado on 01-Nov-22 at 22:19
+*** Error 128 "D:\Escuela\Tesis\Programa\Firmware Lacho\Teclado.c" Line 22(2,6): A #DEVICE required before this line
       1 Errors,  0 Warnings.
 Build Failed.
