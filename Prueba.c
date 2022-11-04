@@ -2,13 +2,14 @@
 #device ADC = 10
 #fuses HS,NOWDT,NOPROTECT,NOPUT,NOLVP,BROWNOUT
 //#use delay(clock=4M)
-#use delay(internal=4MHZ)                           
+#use delay(internal=4MHz)                           
 #use i2c(Master,Fast=100000, sda=PIN_C7, scl=PIN_C6,force_sw)  
 
 #include "i2c_LCD.c"                                  // Libreria para el manejo del LCD
 #include "Teclado.c"                                  // Libreria para el manejo del teclado matricial 4x4
-#include "Control_ls"
-#include "tonos_buzzer.c"                             // Libreria para el manejo de los Tonos del buzzer
+#include "Control_ls.h"
+#include "motors.h"
+#include "tonos_buzzer.c"                             // Libreria para el manejo de los Tonos del buzzer#include "map_function.c"
 #include <math.h>
 
 #define USB_HID_DEVICE  TRUE
@@ -24,7 +25,7 @@
 #byte TRISE=0XF96
 #byte PORTE=0xF84
 #use standard_io(a) 
-#define buzzer PIN_C2
+#define buzzer PIN_E2
 
 #include <string.h>
 #include <stdbool.h>
@@ -34,6 +35,7 @@ char K;
 int segundos=0,minutos=0;
 int contador=1, menu=0;
 int8 dataPC[8];
+
 //enums
 //wash
 typedef enum EWashFormat { UMELISA, MiCROELISA };
@@ -391,10 +393,17 @@ void contador_s ()                                 //contador de 1s
 ///******************** FUNCION MENU PRINCIPAL ******************************///
 ///*************************************************************************///
 void main(){
-   setup_adc_ports(AN0);               // Configuracion del ADC
-   setup_adc(adc_clock_internal);
+   //setup_adc_ports(AN0);               // Configuracion del ADC
+   //setup_adc(adc_clock_internal);
    usb_init();
    usb_task();
+   
+   setup_timer_2(t2_div_by_16, 255, 1);
+   setup_ccp1(ccp_pwm);
+   setup_adc_ports(AN0);
+   
+   setup_adc(adc_clock_internal);
+   set_pwm1_duty(0);
    
    lcd_init(0x4E,20,4);              //Inicializa la pantalla
    lcd_backlight_led(ON);            //Enciende la luz de Fondo
@@ -408,7 +417,7 @@ void main(){
       {
          delay_ms(1000);
          disable_interrupts(INT_TIMER0);
-         generate_tone(PIN_C2,200,5);
+         generate_tone(PIN_E2,200,5);
          if (usb_kbhit(1)){                                                      // Verifica si ha recibido dato por USB
          usb_get_packet(1, dataPC, 1);                                           // Lee el valor del dato recibido por USB
          }
@@ -421,7 +430,7 @@ void main(){
    {
    lcd_gotoxy(i,3);
    lcd_putc(".");
-   //delay_ms(10);                    // Es 70ms
+   delay_ms(30);                    // Es 70ms
    }
    lcd_putc("\f");
    printf(lcd_putc,"BIENVENIDO...");
@@ -429,7 +438,7 @@ void main(){
    printf(lcd_putc,"MW-2001");
    lcd_gotoxy(1,3);
    printf(lcd_putc,"Version Beta"); 
-   //delay_ms(500);                            // Es 1000ms para una espera de 4s
+   delay_ms(500);                            // Es 1000ms para una espera de 4s
    lcd_putc("\f");
 
    resetToDefault();
@@ -437,9 +446,8 @@ void main(){
    TMenu main, wash, prime, shake, program, washWash, washParams, 
    wash_format, wash_mode, wash_time, wash_aspiration, wash_volume, 
    wash_amount, shake_shake, shake_intensity, shake_time, prime_prime, prime_mode, 
-   prime_time, program_reset, program_edit, program_delet, program_name,
-   name_program1, name_program2, name_program3, nameProgramReset1,
-   nameProgramReset2, nameProgramReset3;
+   prime_time, program_reset, program_edit, name_program1, name_program2, 
+   name_program3, nameProgramReset1, nameProgramReset2, nameProgramReset3;
    
    
    initMenu(&main, MAIN_MENU_LABEL);
@@ -582,7 +590,7 @@ void washOp(void) {
    delay_ms(500);
    for( int i=0; i<5; i++)
    {
-   generate_tone(PIN_C2, 500, 25);
+   generate_tone(PIN_E2, 500, 25);
    delay_ms(100);
    }
 }
@@ -979,8 +987,9 @@ void scaffoldMenu(pMenu menu) {
    pMenu nextMenu = menu;
    while(true) {
       printMenu(nextMenu);
-      delay_ms(10);
+      delay_ms(250);
       nextMenu = listenToKey(nextMenu);
+     // controlDispense();
    }
 }
 

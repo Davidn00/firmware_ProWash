@@ -1,3 +1,6 @@
+
+
+void controlDispense();
 void controlAspiration();
 
 void controlVal();
@@ -7,7 +10,3 @@ void washOperation();
 void primeOreration();
 void shakeOreration();
 
-void controlDispense(){ 
-   
-
-}

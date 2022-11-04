@@ -1,0 +1,54 @@
+[PROJECT]
+Target=Prueba.hex
+Processor_Text=PIC18F4550
+CCSVersion=5.083
+Compiler=PCH
+[Target Data]
+FileList=Prueba.c
+[Prueba.c]
+Type=4
+[mru-list]
+1=Prueba.c
+
+[defines]
+buildcount=9
+
+[Opened Files]
+1=Prueba.c
+t1=973
+2=control_ls.c
+t2=1
+Count=4
+3=control_ls.h
+t3=1
+4=motors.h
+t4=1
+5=motors.c
+t5=1
+
+[ProjectLog]
+Days=1
+D1=04-11-2022
+D1_L=12
+D1_L1=[1692]Stopped Editing.
+TotalEdit=25
+TotalDebug=0
+D1_E=25
+D1_D=0
+D1_L2=[1692]Project Closed.
+D1_L3=[2104]Project Opened.
+D1_L4=[2733]Started Editing.
+D1_L5=[2964]Stopped Editing.
+D1_L6=[2964]Project Closed.
+D1_L7=[2985]Project Opened.
+D1_L8=[3016]Started Editing.
+D1_L9=[3821]Stopped Editing.
+D1_L10=[3849]Started Editing.
+D1_L11=[4173]Stopped Editing.
+D1_L12=[4173]Project Closed.
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=Prueba (main)

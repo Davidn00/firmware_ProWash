@@ -1,10 +1,20 @@
-Compiling D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba on 03-Nov-22 at 02:44
-*** Error 18 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 10(10,22): File can not be opened
-    Not in source "D:\Escuela\Tesis\Programa\Firmware Lacho\Control_ls"
-    Not in local "Control_ls"
-    Not in project "D:\Escuela\Tesis\Programa\Firmware Lacho\Control_ls"
-    Not in default "D:\Escuela\Tesis\Programa\Firmware Lacho\Control_ls"
-    Not in "C:\Program Files (x86)\PICC\Devices\Control_ls"
-    Not in "C:\Program Files (x86)\PICC\Drivers\Control_ls"
-      1 Errors,  0 Warnings.
-Build Failed.
+Compiling D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba on 04-Nov-22 at 01:06
+>>> Warning 237 "D:\Escuela\Tesis\Programa\Firmware Lacho\motors.h" Line 31(21,22): Extra comma
+>>> Warning 237 "D:\Escuela\Tesis\Programa\Firmware Lacho\motors.h" Line 38(21,22): Extra comma
+>>> Warning 203 "C:\Program Files (x86)\PICC\Drivers\pic18_usb.c" Line 727(1,1): Condition always TRUE
+>>> Warning 209 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 610(1,1): Assignment to enum is not of the correct type
+>>> Warning 209 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 616(1,1): Assignment to enum is not of the correct type
+>>> Warning 209 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 643(1,1): Assignment to enum is not of the correct type
+>>> Warning 209 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 711(1,1): Assignment to enum is not of the correct type
+>>> Warning 209 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 821(1,1): Assignment to enum is not of the correct type
+>>> Warning 216 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 1074(1,2): Interrupts disabled during call to prevent re-entrancy:  (usb_token_reset)
+>>> Warning 216 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 1074(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+>>> Warning 216 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 1074(1,2): Interrupts disabled during call to prevent re-entrancy:  (usb_flush_out)
+>>> Warning 216 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 1074(1,2): Interrupts disabled during call to prevent re-entrancy:  (kbd_getc)
+>>> Warning 202 "D:\Escuela\Tesis\Programa\Firmware Lacho\i2c_LCD.c" Line 170(13,17): Variable never used:   data
+>>> Warning 202 "D:\Escuela\Tesis\Programa\Firmware Lacho\motors.h" Line 27(10,23): Variable never used:   sequenceRight
+>>> Warning 202 "D:\Escuela\Tesis\Programa\Firmware Lacho\motors.h" Line 34(10,22): Variable never used:   sequenceLeft
+>>> Warning 202 "D:\Escuela\Tesis\Programa\Firmware Lacho\Prueba.c" Line 142(13,37): Variable never used:   PROGRAM_DELET_MENU_LABEL
+      Memory usage:   ROM=48%      RAM=55% - 58%
+      0 Errors,  16 Warnings.
+Build Successful.
